@@ -1,0 +1,108 @@
+{
+  "exam_id": "MPME-ELECTROMEC-2026-CALIB",
+  "titre": "Calibration — Ingénieur Électromécanique",
+  "sous_titre": "Ministère du Pétrole, des Mines et de l'Énergie",
+  "version": "0.1 (échantillon de validation)",
+  "duree_secondes_par_question": 144,
+  "bareme": {
+    "points_par_question": 1.0,
+    "credit_partiel": true,
+    "penalite_par_option_fausse": "1/nb_correctes",
+    "plancher_par_question": 0
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "domaine": "Électrotechnique & machines électriques",
+      "niveau_bloom": "Connaissance",
+      "difficulte": 1,
+      "type": "unique",
+      "enonce": "Un moteur asynchrone triphasé 400 V, 30 kW, entraînant une pompe centrifuge, est démarré en étoile-triangle. Par rapport à un démarrage direct sur le réseau, comment évolue le courant appelé en ligne pendant le premier temps (couplage étoile) ?",
+      "options": [
+        { "id": "a", "texte": "Il est divisé par √3.", "correcte": false, "feedback": "Incorrect. C'est la tension aux bornes de chaque enroulement qui est divisée par √3 en couplage étoile. Le courant de ligne, lui, chute davantage car il est proportionnel au carré de ce rapport." },
+        { "id": "b", "texte": "Il est divisé par 3.", "correcte": true, "feedback": "Correct. La tension par enroulement est divisée par √3, donc le courant par enroulement aussi ; en étoile, le courant de ligne est égal au courant d'enroulement, d'où un rapport global de 1/3." },
+        { "id": "c", "texte": "Il est divisé par 9.", "correcte": false, "feedback": "Incorrect. Le facteur 9 correspondrait à une division par 3 de la tension, ce qui n'est pas le cas du couplage étoile." },
+        { "id": "d", "texte": "Il reste identique, seul le couple est réduit.", "correcte": false, "feedback": "Incorrect. Courant et couple sont réduits ensemble, dans le même rapport de 1/3 — c'est précisément la limite du procédé." },
+        { "id": "z", "texte": "Aucune des réponses proposées.", "correcte": false, "feedback": "Incorrect. La proposition « divisé par 3 » est exacte." }
+      ],
+      "feedback_general": "En étoile-triangle, le courant de démarrage ET le couple de démarrage sont divisés par 3. C'est pourquoi ce démarreur ne convient qu'aux machines démarrant à vide ou à faible couple résistant (ventilateurs, pompes centrifuges vanne fermée) et non aux compresseurs à vis démarrant en charge.",
+      "source": "IEC 60947-4-1 ; Schneider Electric, Guide de l'Installation Électrique, chapitre « Démarrage des moteurs asynchrones ».",
+      "piege": "Confusion entre le rapport sur la tension (√3) et le rapport sur le courant de ligne (3)."
+    },
+    {
+      "id": "Q2",
+      "domaine": "Équipements tournants",
+      "niveau_bloom": "Application",
+      "difficulte": 2,
+      "type": "multiple",
+      "enonce": "Une pompe centrifuge aspirant du gasoil dans un bac de stockage d'un dépôt pétrolier présente un bruit de gravier et une chute de débit. Le diagnostic conclut à une cavitation : le NPSH disponible est devenu inférieur au NPSH requis. Quelles actions augmentent effectivement le NPSH disponible ?",
+      "options": [
+        { "id": "a", "texte": "Augmenter le diamètre de la conduite d'aspiration et supprimer des coudes.", "correcte": true, "feedback": "Correct. Les pertes de charge à l'aspiration se retranchent directement du NPSH disponible. Les réduire l'augmente." },
+        { "id": "b", "texte": "Abaisser la pompe pour augmenter la hauteur de charge statique à l'aspiration.", "correcte": true, "feedback": "Correct. Mettre la pompe « en charge » sous le niveau du liquide est la correction la plus efficace et la plus durable." },
+        { "id": "c", "texte": "Augmenter la vitesse de rotation de la pompe.", "correcte": false, "feedback": "Incorrect. Cela augmente le NPSH requis (approximativement au carré de la vitesse) et aggrave donc la cavitation." },
+        { "id": "d", "texte": "Abaisser la température du produit pompé.", "correcte": true, "feedback": "Correct. La tension de vapeur diminue avec la température ; le NPSH disponible augmente d'autant." },
+        { "id": "e", "texte": "Étrangler partiellement la vanne d'aspiration pour stabiliser le débit.", "correcte": false, "feedback": "Incorrect. Toute restriction à l'aspiration crée une perte de charge supplémentaire et détruit du NPSH disponible. Le réglage se fait toujours au refoulement." },
+        { "id": "z", "texte": "Aucune des réponses proposées.", "correcte": false, "feedback": "Incorrect. Trois propositions sont valides." }
+      ],
+      "feedback_general": "NPSHd = (P_réservoir − P_vapeur)/ρg + hauteur statique − pertes de charge aspiration. On agit donc sur quatre leviers seulement : pression du réservoir, température du produit, géométrie de l'aspiration, position de la pompe. Le NPSH requis, lui, est une caractéristique de la pompe : on ne le modifie qu'en changeant de machine ou de vitesse.",
+      "source": "API 610 (Centrifugal Pumps for Petroleum, Petrochemical and Natural Gas Industries) ; Hydraulic Institute Standards ANSI/HI 9.6.1.",
+      "piege": "L'option « étrangler l'aspiration » est intuitive pour un non-spécialiste et fausse pour un ingénieur."
+    },
+    {
+      "id": "Q3",
+      "domaine": "Réseaux HTA/BT & efficacité énergétique",
+      "niveau_bloom": "Application",
+      "difficulte": 2,
+      "type": "unique",
+      "enonce": "Une station de pompage absorbe une puissance active de 400 kW avec un facteur de puissance de 0,75. Le distributeur exige un facteur de puissance minimal de 0,95 sous peine de pénalités. Quelle puissance réactive de compensation faut-il installer ?",
+      "options": [
+        { "id": "a", "texte": "Environ 150 kvar.", "correcte": false, "feedback": "Incorrect. Cette valeur ne ramènerait le facteur de puissance qu'aux environs de 0,90." },
+        { "id": "b", "texte": "Environ 221 kvar.", "correcte": true, "feedback": "Correct. Q = P (tan φ₁ − tan φ₂) = 400 × (0,882 − 0,329) ≈ 221 kvar." },
+        { "id": "c", "texte": "Environ 320 kvar.", "correcte": false, "feedback": "Incorrect. Cette valeur correspondrait à une surcompensation, dangereuse car elle rend l'installation capacitive et peut provoquer des surtensions à faible charge." },
+        { "id": "d", "texte": "Environ 400 kvar.", "correcte": false, "feedback": "Incorrect. Confusion avec la puissance active. La compensation n'a pas à égaler P." },
+        { "id": "z", "texte": "Aucune des réponses proposées.", "correcte": false, "feedback": "Incorrect. La valeur de 221 kvar est exacte." }
+      ],
+      "feedback_general": "Formule à connaître par cœur le jour du concours : Q_c = P (tan φ₁ − tan φ₂). Avec cos φ = 0,75 → tan φ = 0,882 ; cos φ = 0,95 → tan φ = 0,329. Attention en pratique : ne jamais viser cos φ = 1 exactement, et prévoir des batteries à gradins si la charge est variable.",
+      "source": "Cahier Technique Schneider n° 194, « Compensation de l'énergie réactive » ; NF C 15-100.",
+      "piege": "Question de calcul rapide : le candidat pressé confond puissance apparente et réactive."
+    },
+    {
+      "id": "Q4",
+      "domaine": "Sécurité ATEX & spécificités pétrole/gaz",
+      "niveau_bloom": "Analyse",
+      "difficulte": 3,
+      "type": "multiple",
+      "enonce": "Vous rédigez le cahier des charges de l'instrumentation d'un nouveau dépôt d'hydrocarbures. Concernant le zonage ATEX en atmosphère gazeuse et les modes de protection admis, quelles affirmations sont exactes ?",
+      "options": [
+        { "id": "a", "texte": "La zone 0 correspond à une atmosphère explosive présente en permanence ou pendant de longues périodes, et exige du matériel de catégorie 1G.", "correcte": true, "feedback": "Correct. Intérieur des bacs et des cuves typiquement. Seuls Ex ia et Ex ma y sont couramment admis." },
+        { "id": "b", "texte": "En zone 1, un matériel à enveloppe antidéflagrante Ex d est acceptable.", "correcte": true, "feedback": "Correct. La zone 1 admet la catégorie 2G, qui inclut Ex d, Ex e, Ex ib, Ex p, Ex q." },
+        { "id": "c", "texte": "La zone 2 impose du matériel de catégorie 1G, comme la zone 0.", "correcte": false, "feedback": "Incorrect. La zone 2 (atmosphère explosive peu probable et de courte durée) n'exige que la catégorie 3G. Surspécifier coûte cher sans gain de sécurité." },
+        { "id": "d", "texte": "La sécurité intrinsèque Ex ia est le seul mode de protection admis en zone 1.", "correcte": false, "feedback": "Incorrect. Ex ia est exigé en zone 0 ; en zone 1 plusieurs modes coexistent. Confondre les deux conduit à des choix techniquement inutiles." },
+        { "id": "e", "texte": "Le classement en zone dépend uniquement de la nature du produit, pas de la ventilation du local.", "correcte": false, "feedback": "Incorrect. Le degré et la disponibilité de la ventilation sont des paramètres déterminants du classement : une bonne ventilation peut faire passer une zone 1 en zone 2." },
+        { "id": "z", "texte": "Aucune des réponses proposées.", "correcte": false, "feedback": "Incorrect. Deux propositions sont exactes." }
+      ],
+      "feedback_general": "À mémoriser sous forme de tableau : Zone 0 → catégorie 1G → Ex ia / ma ; Zone 1 → catégorie 2G → Ex d, e, ib, p, q ; Zone 2 → catégorie 3G → Ex nA, ic. Le zonage résulte de trois facteurs : source de dégagement, ventilation, et propriétés du produit (groupe de gaz IIA/IIB/IIC, classe de température T1 à T6).",
+      "source": "IEC 60079-10-1 (classement des emplacements) et IEC 60079-14 (conception des installations) ; Directive 2014/34/UE.",
+      "piege": "La surspécification (option c) paraît « prudente » et est comptée fausse — le concours teste le jugement technico-économique."
+    },
+    {
+      "id": "Q5",
+      "domaine": "Maintenance & fiabilité",
+      "niveau_bloom": "Diagnostic (mise en situation)",
+      "difficulte": 3,
+      "type": "unique",
+      "enonce": "Mise en situation.\n\nUn moteur asynchrone 400 V / 55 kW entraînant une pompe de transfert déclenche sur sa protection thermique après environ 25 minutes de fonctionnement continu, systématiquement, depuis trois semaines. Le local technique n'a pas été modifié.\n\nVos relevés :\n• Courants de ligne équilibrés, à 1,02 × In au régime établi.\n• Tensions équilibrées, déséquilibre mesuré à 0,6 %.\n• Résistance d'isolement > 200 MΩ, résistances des enroulements équilibrées.\n• Alignement laser accouplement pompe/moteur : contrôlé et conforme il y a 10 jours.\n• Analyse vibratoire : niveau global 2,1 mm/s eff., aucune composante notable à 1×N, 2×N, ni dans les bandes de défauts de roulements.\n• Débit et pression de refoulement conformes à la courbe constructeur.\n• Le déclenchement survient toujours après une montée lente et régulière de l'échauffement.\n\nQuelle est la cause la plus probable parmi les propositions suivantes ?",
+      "options": [
+        { "id": "a", "texte": "Un déséquilibre de tension du réseau provoquant un courant inverse échauffant le rotor.", "correcte": false, "feedback": "Incorrect. Le déséquilibre mesuré (0,6 %) est très inférieur au seuil de 2 % à partir duquel l'effet devient significatif. De plus, les courants de ligne sont équilibrés." },
+        { "id": "b", "texte": "Un défaut d'alignement de l'accouplement générant une surcharge mécanique.", "correcte": false, "feedback": "Incorrect. L'alignement a été vérifié au laser et un défaut d'alignement produirait une signature vibratoire nette à 2×N, absente ici." },
+        { "id": "c", "texte": "Une cavitation de la pompe augmentant le couple résistant.", "correcte": false, "feedback": "Incorrect. La cavitation dégrade débit et pression et génère un bruit large bande en vibration. Or les performances hydrauliques sont conformes et le niveau vibratoire est excellent." },
+        { "id": "d", "texte": "Une dégradation avancée d'un roulement du moteur.", "correcte": false, "feedback": "Incorrect. Les bandes de défauts de roulements sont propres et le niveau global de 2,1 mm/s eff. classe la machine en zone A (machine neuve) selon l'ISO 10816-3." },
+        { "id": "e", "texte": "Un court-circuit entre spires dans une phase du stator.", "correcte": false, "feedback": "Incorrect. Un défaut entre spires déséquilibre les courants de ligne et les résistances d'enroulement, ce qui n'est pas observé." },
+        { "id": "z", "texte": "Aucune des réponses proposées.", "correcte": true, "feedback": "Correct. Toutes les causes électriques et mécaniques classiques sont écartées par les mesures. Il reste la voie du refroidissement et du déclassement thermique." }
+      ],
+      "feedback_general": "Toutes les hypothèses proposées sont contredites par au moins une mesure. Le faisceau d'indices — courant très légèrement au-dessus de In, montée thermique lente et régulière, machine mécaniquement et électriquement saine — oriente vers un défaut d'ÉVACUATION de la chaleur, pas de production excessive de chaleur : capot de ventilation ou ailettes encrassés, ventilateur cassé ou monté à l'envers, ou température ambiante du local devenue trop élevée (saison chaude, climatisation en panne, obstruction des grilles). Un moteur dimensionné pour 40 °C ambiant doit être déclassé au-delà : à 55 °C ambiant, la puissance admissible tombe autour de 90 % de la puissance nominale, ce qui suffit à faire déclencher une protection réglée à In.\n\nMéthode d'examen : quand toutes les mesures écartent les causes proposées, « Aucune des réponses proposées » n'est pas un aveu d'ignorance — c'est la réponse experte.",
+      "source": "IEC 60034-1, § déclassement en fonction de la température ambiante et de l'altitude ; ISO 10816-3 pour les seuils vibratoires.",
+      "piege": "Question signature du concours : les cinq distracteurs sont tous des causes réelles et fréquentes, mais chacune est explicitement invalidée par une donnée de l'énoncé."
+    }
+  ]
+}

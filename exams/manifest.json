@@ -1,0 +1,14 @@
+{
+  "titre": "Concours — Ingénieur Électromécanique",
+  "sous_titre": "Ministère du Pétrole, des Mines et de l'Énergie",
+  "epreuves": [
+    {
+      "slug": "exam-A-calibration",
+      "fichier": "exams/exam-A-calibration.json",
+      "titre": "Échantillon de calibration",
+      "resume": "Cinq questions couvrant les trois niveaux de difficulté prévus. Sert à valider le format avant la production complète.",
+      "niveau": "Mixte",
+      "statut": "publie"
+    }
+  ]
+}

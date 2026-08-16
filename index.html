@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concours Ingénieur Électromécanique — Examens blancs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E1F27; --enamel:#164754; --enamel-soft:#2C6A78;
+  --panel:#E4E9EB; --paper:#F8FAFA; --rule:#BFCBD0;
+  --amber:#C97C10; --lamp-green:#1F6F4F; --lamp-red:#A8352C; --muted:#5C7078;
+  --disp:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;
+  --body:"IBM Plex Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--panel);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 18px 80px}
+
+.plaque{background:var(--enamel);color:#EAF2F3;border-bottom:4px solid var(--amber)}
+.plaque .wrap{padding-top:16px;padding-bottom:16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.plaque-txt{flex:1 1 260px;min-width:0}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8FBAC0;margin:0 0 2px}
+.plaque h1{font-family:var(--disp);font-weight:700;font-size:22px;line-height:1.15;margin:0}
+.readout{font-family:var(--mono);font-size:13px;background:#0B333D;border:1px solid #2C6A78;padding:7px 12px;color:#F0C475;white-space:nowrap}
+.readout.alerte{color:#FFC9C2;border-color:#A8352C;animation:pulse 1.1s steps(2,end) infinite}
+@keyframes pulse{50%{opacity:.45}}
+
+.carte{background:var(--paper);border:1px solid var(--rule);padding:22px;margin-top:20px}
+h2{font-family:var(--disp);font-weight:700;font-size:20px;margin:0 0 10px}
+h3{font-family:var(--disp);font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--enamel);margin:26px 0 10px}
+p{margin:0 0 12px}
+.note{color:var(--muted);font-size:14px}
+code{font-family:var(--mono);font-size:13px;background:var(--panel);padding:1px 5px}
+
+button{font-family:inherit;font-size:15px;cursor:pointer}
+.btn{background:var(--enamel);color:#fff;border:none;padding:12px 22px;font-family:var(--disp);font-weight:600;font-size:16px;letter-spacing:.04em;text-transform:uppercase}
+.btn:hover{background:var(--enamel-soft)}
+.btn.secondaire{background:transparent;color:var(--enamel);border:1px solid var(--rule)}
+.btn.secondaire:hover{background:var(--panel)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+
+/* catalogue */
+.epreuve{display:block;width:100%;text-align:left;background:#fff;border:1px solid var(--rule);padding:16px;margin-bottom:10px}
+.epreuve:hover{border-color:var(--enamel);background:#EEF4F5}
+.epreuve b{display:block;font-family:var(--disp);font-size:18px}
+.epreuve .tags{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.epreuve .res{font-size:14px;color:var(--muted);margin-top:6px}
+.epreuve[disabled]{opacity:.5;cursor:not-allowed}
+.badge{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:2px 7px;border:1px solid var(--amber);color:var(--amber);margin-left:8px;vertical-align:2px}
+
+.modes{display:grid;gap:10px;grid-template-columns:1fr 1fr;margin:6px 0 4px}
+@media(max-width:560px){.modes{grid-template-columns:1fr}}
+.mode{border:1px solid var(--rule);background:#fff;padding:14px;text-align:left;display:block;width:100%}
+.mode[aria-pressed="true"]{border-color:var(--enamel);border-width:2px;background:#EEF4F5;padding:13px}
+.mode b{display:block;font-family:var(--disp);font-size:16px}
+.mode span{font-size:13px;color:var(--muted)}
+
+.bornier{display:flex;gap:4px;overflow-x:auto;padding:10px 0 12px;margin-top:14px;border-bottom:1px solid var(--rule)}
+.borne{flex:0 0 auto;width:34px;height:34px;border:1px solid var(--rule);background:#fff;font-family:var(--mono);font-size:13px;color:var(--muted);padding:0}
+.borne[data-etat="repondu"]{background:var(--enamel);border-color:var(--enamel);color:#fff}
+.borne[data-etat="marque"]{background:var(--amber);border-color:var(--amber);color:#fff}
+.borne[aria-current="true"]{outline:3px solid var(--ink);outline-offset:-3px}
+
+.meta{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.enonce{font-size:17px;white-space:pre-wrap;margin-bottom:18px}
+.consigne{font-family:var(--mono);font-size:12px;color:var(--amber);letter-spacing:.05em;margin-bottom:12px;text-transform:uppercase}
+.opt{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--rule);background:#fff;padding:12px 14px;margin-bottom:8px;cursor:pointer}
+.opt:hover{border-color:var(--enamel-soft)}
+.opt input{margin:4px 0 0;flex:0 0 auto;width:18px;height:18px;accent-color:var(--enamel)}
+.opt.coche{background:#EEF4F5;border-color:var(--enamel)}
+.opt-txt{flex:1}
+.barre{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;align-items:center}
+.pousse{margin-left:auto}
+
+.score-bloc{background:var(--enamel);color:#fff;padding:24px;text-align:center;margin-top:20px}
+.score-bloc .gros{font-family:var(--mono);font-size:46px;font-weight:600;line-height:1;color:#F0C475}
+.score-bloc .sur{font-family:var(--mono);font-size:15px;color:#8FBAC0}
+.score-bloc .verdict{font-family:var(--disp);font-size:17px;letter-spacing:.04em;text-transform:uppercase;margin-top:10px}
+
+.jauge{margin-bottom:16px}
+.jauge-tete{display:flex;justify-content:space-between;gap:12px;font-size:14px;margin-bottom:5px}
+.jauge-tete .val{font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap}
+.piste{position:relative;height:14px;background:#fff;border:1px solid var(--rule)}
+.piste::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(to right,transparent 0 calc(10% - 1px),var(--rule) calc(10% - 1px) 10%)}
+.remplissage{height:100%;background:var(--enamel);width:0;transition:width .9s cubic-bezier(.2,.7,.3,1)}
+.remplissage.faible{background:var(--lamp-red)}
+.remplissage.moyen{background:var(--amber)}
+
+.revue{border:1px solid var(--rule);background:#fff;padding:18px;margin-bottom:14px}
+.revue.juste{border-left:5px solid var(--lamp-green)}
+.revue.partiel{border-left:5px solid var(--amber)}
+.revue.faux{border-left:5px solid var(--lamp-red)}
+.opt-rev{border:1px solid var(--rule);padding:10px 12px;margin-bottom:7px;font-size:14px}
+.opt-rev.bonne{border-color:var(--lamp-green);background:#F0F7F3}
+.opt-rev.mauvaise-cochee{border-color:var(--lamp-red);background:#FBF1F0}
+.lampe{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:3px}
+.lampe.g{color:var(--lamp-green)} .lampe.r{color:var(--lamp-red)} .lampe.n{color:var(--muted)}
+.fb{font-size:13.5px;color:var(--muted);margin-top:5px}
+.encart{background:var(--panel);border-left:3px solid var(--enamel);padding:12px 14px;margin-top:12px;font-size:14px;white-space:pre-wrap}
+.src{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:10px}
+.caché{display:none}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="plaque">
+  <div class="wrap">
+    <div class="plaque-txt">
+      <p class="eyebrow" id="eyebrow">Comité national des concours</p>
+      <h1 id="titre">Ingénieur Électromécanique</h1>
+    </div>
+    <div class="readout" id="readout">PRÊT</div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- CATALOGUE -->
+  <section id="catalogue">
+    <div class="carte">
+      <h2>Épreuves disponibles</h2>
+      <div id="liste-epreuves"><p class="note">Chargement du catalogue…</p></div>
+    </div>
+  </section>
+
+  <!-- BRIEFING -->
+  <section id="briefing" class="caché">
+    <div class="carte">
+      <h2 id="b-titre"></h2>
+      <p class="note" id="b-desc"></p>
+
+      <h3>Mode</h3>
+      <div class="modes">
+        <button class="mode" data-mode="examen" aria-pressed="true">
+          <b>Examen chronométré</b>
+          <span>Aucun retour avant la fin. Conditions du jour J.</span>
+        </button>
+        <button class="mode" data-mode="entrainement" aria-pressed="false">
+          <b>Entraînement</b>
+          <span>Correction et explication après chaque question, sans chrono.</span>
+        </button>
+      </div>
+
+      <h3>Barème appliqué</h3>
+      <p class="note">
+        1,00 point par question. Option correcte cochée : <b>+1/n</b>. Option fausse cochée : <b>−1/n</b>
+        (n = nombre de bonnes réponses). Plancher à 0 par question.
+        <b>Cocher au hasard fait perdre des points.</b>
+      </p>
+      <p class="note">« Aucune des réponses proposées » figure dans presque toutes les questions et est parfois la bonne réponse.</p>
+
+      <div class="barre">
+        <button class="btn" id="demarrer">Commencer</button>
+        <button class="btn secondaire" id="retour-catalogue">Retour</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXAMEN -->
+  <section id="examen" class="caché">
+    <div class="bornier" id="bornier" role="group" aria-label="Navigation entre les questions"></div>
+    <div class="carte">
+      <p class="meta" id="q-meta"></p>
+      <div class="enonce" id="q-enonce"></div>
+      <p class="consigne" id="q-consigne"></p>
+      <div id="q-options"></div>
+      <div id="q-correction"></div>
+      <div class="barre">
+        <button class="btn secondaire" id="precedent">Précédent</button>
+        <button class="btn secondaire" id="marquer">Marquer</button>
+        <button class="btn" id="suivant">Suivant</button>
+        <button class="btn secondaire pousse" id="terminer">Terminer</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTATS -->
+  <section id="resultats" class="caché">
+    <div class="score-bloc">
+      <p class="eyebrow" style="color:#8FBAC0">Note finale</p>
+      <div><span class="gros" id="r-note">0,00</span><span class="sur" id="r-sur"></span></div>
+      <div class="verdict" id="r-verdict"></div>
+    </div>
+    <div class="carte">
+      <h3 style="margin-top:0">Résultat par domaine</h3>
+      <div id="r-jauges"></div>
+      <h3>Ce qu'il faut retravailler</h3>
+      <p class="note" id="r-conseil"></p>
+      <div class="barre">
+        <button class="btn secondaire" id="rejouer">Refaire cette épreuve</button>
+        <button class="btn secondaire" id="autre">Choisir une autre épreuve</button>
+      </div>
+    </div>
+    <div class="carte">
+      <h2>Correction détaillée</h2>
+      <div id="r-revue"></div>
+    </div>
+  </section>
+</main>
+
+<script>
+const $ = s => document.querySelector(s);
+const el = (t,c) => { const n=document.createElement(t); if(c) n.className=c; return n; };
+const fmt = x => x.toFixed(2).replace(".", ",");
+const melanger = a => { const b=a.slice(); for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [b[i],b[j]]=[b[j],b[i]];} return b; };
+
+let manifeste = null, data = null, mode = "examen";
+let ordre = [], idx = 0, etat = [], ordreOptions = [], chrono = null, restant = 0;
+
+/* Barème du concours : +1/n par bonne cochée, −1/n par fausse cochée, plancher 0. */
+function noter(q, sel){
+  const bonnes = q.options.filter(o=>o.correcte).map(o=>o.id);
+  const n = bonnes.length || 1;
+  let s = 0;
+  sel.forEach(id => { s += bonnes.includes(id) ? 1/n : -1/n; });
+  return Math.max(0, Math.min(1, s));
+}
+
+function ecran(id){
+  ["catalogue","briefing","examen","resultats"].forEach(x =>
+    $("#"+x).classList.toggle("caché", x !== id));
+  window.scrollTo(0,0);
+}
+
+/* ----------------------------- Catalogue ----------------------------- */
+async function chargerManifeste(){
+  if(location.protocol === "file:"){
+    $("#liste-epreuves").innerHTML =
+      '<p class="note">Cette page doit être servie par un serveur web pour charger les épreuves. ' +
+      'Publiez-la sur GitHub Pages, ou lancez en local : <code>npx serve</code> puis ouvrez l\'adresse indiquée.</p>';
+    return;
+  }
+  try{
+    manifeste = await (await fetch("exams/manifest.json", {cache:"no-store"})).json();
+  }catch(e){
+    $("#liste-epreuves").innerHTML =
+      '<p class="note">Catalogue introuvable. Vérifiez que <code>exams/manifest.json</code> est bien présent dans le dépôt.</p>';
+    return;
+  }
+  $("#titre").textContent = manifeste.titre || "Examens blancs";
+  $("#eyebrow").textContent = manifeste.sous_titre || "";
+  document.title = (manifeste.titre || "Examens blancs") + " — Examens blancs";
+
+  const box = $("#liste-epreuves"); box.innerHTML = "";
+  const pub = (manifeste.epreuves || []);
+  if(!pub.length){ box.innerHTML = '<p class="note">Aucune épreuve publiée pour l\'instant.</p>'; return; }
+
+  pub.forEach(ep => {
+    const b = el("button","epreuve");
+    const brouillon = ep.statut === "brouillon";
+    const t = el("b"); t.textContent = ep.titre;
+    if(brouillon){ const bd = el("span","badge"); bd.textContent = "brouillon"; t.appendChild(bd); }
+    const tg = el("div","tags");
+    tg.textContent = [ep.niveau, ep.questions ? ep.questions + " questions" : null, ep.duree_min ? ep.duree_min + " min" : null]
+      .filter(Boolean).join("  ·  ");
+    const r = el("div","res"); r.textContent = ep.resume || "";
+    b.append(t, tg, r);
+    if(brouillon) b.disabled = true;
+    else b.onclick = () => ouvrir(ep);
+    box.appendChild(b);
+  });
+
+  const slug = new URLSearchParams(location.search).get("exam");
+  if(slug){ const ep = pub.find(e => e.slug === slug); if(ep && ep.statut !== "brouillon") ouvrir(ep); }
+}
+
+async function ouvrir(ep){
+  try{
+    data = await (await fetch(ep.fichier, {cache:"no-store"})).json();
+  }catch(e){
+    alert("Impossible de charger " + ep.fichier + ". Vérifiez le chemin dans le manifeste.");
+    return;
+  }
+  $("#b-titre").textContent = data.titre || ep.titre;
+  $("#b-desc").textContent =
+    `${data.questions.length} question(s) · ${data.version || ep.niveau || ""} · Réponse unique ou multiple selon les questions ; l'ordre des options change à chaque tentative.`;
+  history.replaceState(null, "", "?exam=" + ep.slug);
+  ecran("briefing");
+}
+
+/* ------------------------------ Épreuve ------------------------------ */
+function demarrer(){
+  ordre = melanger(data.questions.map((_,i)=>i));
+  etat = data.questions.map(()=>({sel:[], marque:false, valide:false}));
+  ordreOptions = data.questions.map(q => melanger(q.options.map((_,i)=>i)));
+  idx = 0;
+  ecran("examen");
+  clearInterval(chrono);
+  if(mode === "examen"){
+    restant = (data.duree_secondes_par_question || 144) * data.questions.length;
+    chrono = setInterval(tic, 1000);
+    tic();
+  } else {
+    $("#readout").textContent = "ENTRAÎNEMENT";
+    $("#readout").classList.remove("alerte");
+  }
+  rendre();
+}
+
+function tic(){
+  const r = $("#readout");
+  r.textContent = String(Math.floor(restant/60)).padStart(2,"0") + ":" + String(restant%60).padStart(2,"0");
+  r.classList.toggle("alerte", restant <= 300);
+  if(restant <= 0){ clearInterval(chrono); terminer(); return; }
+  restant--;
+}
+
+function rendreBornier(){
+  const b = $("#bornier"); b.innerHTML = "";
+  ordre.forEach((qi,pos)=>{
+    const t = el("button","borne");
+    t.textContent = pos+1;
+    t.setAttribute("aria-label","Question "+(pos+1));
+    if(etat[qi].marque) t.dataset.etat = "marque";
+    else if(etat[qi].sel.length) t.dataset.etat = "repondu";
+    if(pos === idx) t.setAttribute("aria-current","true");
+    t.onclick = ()=>{ idx = pos; rendre(); };
+    b.appendChild(t);
+  });
+}
+
+function rendre(){
+  rendreBornier();
+  const qi = ordre[idx], q = data.questions[qi], st = etat[qi];
+  const multi = q.type === "multiple";
+  const d = q.difficulte || 1;
+
+  $("#q-meta").textContent = `Question ${idx+1} / ${ordre.length}  ·  ${q.domaine}  ·  difficulté ${"■".repeat(d)}${"□".repeat(Math.max(0,3-d))}`;
+  $("#q-enonce").textContent = q.enonce;
+  $("#q-consigne").textContent = multi ? "Plusieurs réponses possibles" : "Une seule réponse";
+
+  const box = $("#q-options"); box.innerHTML = "";
+  const fige = mode === "entrainement" && st.valide;
+
+  ordreOptions[qi].forEach(oi=>{
+    const o = q.options[oi];
+    const lab = el("label","opt" + (st.sel.includes(o.id) ? " coche" : ""));
+    const inp = el("input");
+    inp.type = multi ? "checkbox" : "radio";
+    inp.name = "q"+qi;
+    inp.checked = st.sel.includes(o.id);
+    inp.disabled = fige;
+    inp.onchange = ()=>{
+      st.sel = multi
+        ? (inp.checked ? [...st.sel, o.id] : st.sel.filter(x=>x!==o.id))
+        : [o.id];
+      rendre();
+    };
+    const txt = el("div","opt-txt"); txt.textContent = o.texte;
+    lab.append(inp, txt);
+    box.appendChild(lab);
+  });
+
+  const cor = $("#q-correction"); cor.innerHTML = "";
+  if(fige) cor.appendChild(blocRevue(q, st.sel, true));
+
+  $("#marquer").textContent = st.marque ? "Retirer la marque" : "Marquer";
+  $("#precedent").disabled = idx === 0;
+  $("#suivant").textContent =
+    (mode === "entrainement" && !st.valide) ? "Valider"
+    : (idx === ordre.length-1 ? "Voir mes résultats" : "Suivant");
+}
+
+function suivant(){
+  const st = etat[ordre[idx]];
+  if(mode === "entrainement" && !st.valide && st.sel.length){ st.valide = true; rendre(); return; }
+  if(idx === ordre.length-1){ terminer(); return; }
+  idx++; rendre(); window.scrollTo(0,0);
+}
+
+function blocRevue(q, sel, compact){
+  const pts = noter(q, sel);
+  const d = el("div","revue " + (pts === 1 ? "juste" : pts > 0 ? "partiel" : "faux"));
+
+  const m = el("p","meta");
+  m.textContent = compact ? `Votre note : ${fmt(pts)} / 1,00`
+                          : `${q.id} · ${q.domaine} · ${fmt(pts)} / 1,00`;
+  d.appendChild(m);
+  if(!compact){ const e = el("div","enonce"); e.style.fontSize = "15px"; e.textContent = q.enonce; d.appendChild(e); }
+
+  q.options.forEach(o=>{
+    const choisi = sel.includes(o.id);
+    const ligne = el("div","opt-rev" + (o.correcte ? " bonne" : choisi ? " mauvaise-cochee" : ""));
+    const l = el("span","lampe " + (o.correcte ? "g" : choisi ? "r" : "n"));
+    l.textContent = o.correcte
+      ? (choisi ? "Bonne réponse — cochée" : "Bonne réponse — non cochée")
+      : (choisi ? "Cochée à tort  (−1/n)" : "À écarter");
+    const t = el("div"); t.textContent = o.texte;
+    ligne.append(l, t);
+    if(choisi || o.correcte){ const f = el("div","fb"); f.textContent = o.feedback; ligne.appendChild(f); }
+    d.appendChild(ligne);
+  });
+
+  if(q.feedback_general){ const g = el("div","encart"); g.textContent = q.feedback_general; d.appendChild(g); }
+  if(q.source){ const s = el("div","src"); s.textContent = "Source : " + q.source; d.appendChild(s); }
+  return d;
+}
+
+function terminer(){
+  clearInterval(chrono);
+  const total = data.questions.length;
+  let somme = 0; const parDom = {};
+  data.questions.forEach((q,i)=>{
+    const p = noter(q, etat[i].sel);
+    somme += p;
+    (parDom[q.domaine] ||= {p:0,n:0});
+    parDom[q.domaine].p += p; parDom[q.domaine].n += 1;
+  });
+
+  const pct = somme/total*100;
+  $("#r-note").textContent = fmt(somme);
+  $("#r-sur").textContent = ` / ${total},00   (${pct.toFixed(0)} %)`;
+  $("#r-verdict").textContent = pct >= 75 ? "Niveau admissible" : pct >= 50 ? "Passable — à consolider" : "Insuffisant — révision nécessaire";
+  $("#readout").textContent = "TERMINÉ";
+  $("#readout").classList.remove("alerte");
+
+  const j = $("#r-jauges"); j.innerHTML = "";
+  const faibles = [];
+  Object.entries(parDom).sort((a,b)=> a[1].p/a[1].n - b[1].p/b[1].n).forEach(([dom,v])=>{
+    const r = v.p/v.n;
+    if(r < 0.6) faibles.push(dom);
+    const w = el("div","jauge");
+    const tete = el("div","jauge-tete");
+    const nom = el("span"); nom.textContent = dom;
+    const val = el("span","val"); val.textContent = `${fmt(v.p)} / ${v.n},00`;
+    tete.append(nom,val);
+    const piste = el("div","piste");
+    const fill = el("div","remplissage" + (r < 0.5 ? " faible" : r < 0.75 ? " moyen" : ""));
+    piste.appendChild(fill);
+    w.append(tete,piste); j.appendChild(w);
+    requestAnimationFrame(()=>{ fill.style.width = (r*100)+"%"; });
+  });
+
+  $("#r-conseil").textContent = faibles.length
+    ? "Domaines sous 60 % : " + faibles.join(" · ") + ". Reprenez la correction détaillée ci-dessous avant de refaire l'épreuve."
+    : "Aucun domaine sous 60 %. Refaites l'épreuve en mode chronométré pour travailler la vitesse.";
+
+  const rev = $("#r-revue"); rev.innerHTML = "";
+  data.questions.forEach((q,i)=> rev.appendChild(blocRevue(q, etat[i].sel, false)));
+  ecran("resultats");
+}
+
+/* ---------------------------- Branchements ---------------------------- */
+document.querySelectorAll(".mode").forEach(b=>{
+  b.onclick = ()=>{
+    mode = b.dataset.mode;
+    document.querySelectorAll(".mode").forEach(x=> x.setAttribute("aria-pressed", String(x===b)));
+  };
+});
+$("#demarrer").onclick = demarrer;
+$("#suivant").onclick = suivant;
+$("#precedent").onclick = ()=>{ if(idx>0){ idx--; rendre(); window.scrollTo(0,0);} };
+$("#marquer").onclick = ()=>{ const st = etat[ordre[idx]]; st.marque = !st.marque; rendre(); };
+$("#terminer").onclick = ()=>{ if(confirm("Terminer l'épreuve et afficher la correction ?")) terminer(); };
+$("#rejouer").onclick = ()=>{ ecran("briefing"); $("#readout").textContent = "PRÊT"; };
+$("#retour-catalogue").onclick = () => { history.replaceState(null,"",location.pathname); ecran("catalogue"); };
+$("#autre").onclick = () => { history.replaceState(null,"",location.pathname); $("#readout").textContent="PRÊT"; ecran("catalogue"); };
+
+chargerManifeste();
+</script>
+</body>
+</html>
