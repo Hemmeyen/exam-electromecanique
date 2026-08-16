@@ -13,6 +13,16 @@
       "statut": "publie"
     },
     {
+      "slug": "exam-B",
+      "fichier": "exams/exam-B.json",
+      "titre": "Épreuve B — niveau confirmé",
+      "resume": "50 questions, mêmes domaines que l'épreuve A mais sujets entièrement différents et difficulté relevée. À passer après l'épreuve A.",
+      "niveau": "Confirmé",
+      "questions": 50,
+      "duree_min": 120,
+      "statut": "publie"
+    },
+    {
       "slug": "exam-A-calibration",
       "fichier": "exams/exam-A-calibration.json",
       "titre": "Échantillon de calibration",
