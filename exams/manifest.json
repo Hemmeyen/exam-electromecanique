@@ -3,6 +3,16 @@
   "sous_titre": "Ministère du Pétrole, des Mines et de l'Énergie",
   "epreuves": [
     {
+      "slug": "exam-A",
+      "fichier": "exams/exam-A.json",
+      "titre": "Épreuve A — examen blanc complet",
+      "resume": "50 questions couvrant les sept domaines du poste. Niveau d'entrée : à passer en premier pour situer son niveau par domaine.",
+      "niveau": "Débutant à confirmé",
+      "questions": 50,
+      "duree_min": 120,
+      "statut": "publie"
+    },
+    {
       "slug": "exam-A-calibration",
       "fichier": "exams/exam-A-calibration.json",
       "titre": "Échantillon de calibration",
