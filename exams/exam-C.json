@@ -1,0 +1,2389 @@
+{
+ "exam_id": "MPME-ELECTROMEC-2026-C",
+ "titre": "Épreuve C — Ingénieur Électromécanique",
+ "sous_titre": "Ministère du Pétrole, des Mines et de l'Énergie",
+ "version": "50 questions · même niveau que l'épreuve B, sujets entièrement nouveaux",
+ "duree_secondes_par_question": 144,
+ "bareme": {
+  "points_par_question": 1.0,
+  "credit_partiel": true,
+  "penalite_par_option_fausse": "1/nb_correctes",
+  "plancher_par_question": 0
+ },
+ "questions": [
+  {
+   "id": "Q1",
+   "domaine": "Électrotechnique & machines électriques",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Vous comparez un démarreur progressif électronique (soft starter) et un variateur de vitesse pour le démarrage d'une pompe. Quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Le démarreur progressif agit sur la tension appliquée au moteur pour limiter le courant et le couple pendant la phase de démarrage.",
+     "correcte": true,
+     "feedback": "Correct. Il module la tension par gradateur à thyristors, sans modifier la fréquence."
+    },
+    {
+     "id": "b",
+     "texte": "Une fois le démarrage achevé, le démarreur progressif ne permet plus aucun réglage de la vitesse.",
+     "correcte": true,
+     "feedback": "Correct. La machine tourne alors à sa vitesse nominale ; un contacteur de court-circuitage prend souvent le relais pour supprimer les pertes du gradateur."
+    },
+    {
+     "id": "c",
+     "texte": "Le variateur de vitesse permet en outre de piloter la vitesse en régime établi, ce qui ouvre un gisement d'économie d'énergie sur les charges centrifuges.",
+     "correcte": true,
+     "feedback": "Correct. C'est sa valeur principale : le démarrage n'est qu'un bénéfice secondaire."
+    },
+    {
+     "id": "d",
+     "texte": "En réduisant la tension, le démarreur progressif conserve le couple de démarrage nominal du moteur.",
+     "correcte": false,
+     "feedback": "Incorrect. Le couple varie avec le carré de la tension : le réduire pour limiter le courant réduit inévitablement le couple disponible."
+    },
+    {
+     "id": "e",
+     "texte": "Le démarreur progressif est adapté à une charge présentant un fort couple résistant dès l'arrêt, comme un convoyeur chargé.",
+     "correcte": false,
+     "feedback": "Incorrect. Comme l'étoile-triangle, il ne convient qu'aux charges démarrant à faible couple résistant. Une charge dure exige un variateur."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Trois propositions sont exactes."
+    }
+   ],
+   "feedback_general": "Grille de choix : démarrage direct pour les petites puissances sur réseau robuste ; étoile-triangle ou démarreur progressif pour limiter l'à-coup sur charge douce ; variateur dès qu'il faut du couple à l'arrêt, une vitesse variable, ou des économies d'énergie sur une charge centrifuge. Le démarreur progressif apporte en plus une décélération contrôlée, précieuse contre le coup de bélier sur une pompe.",
+   "source": "IEC 60947-4-2 (gradateurs et démarreurs à semi-conducteurs) ; IEC 61800-2."
+  },
+  {
+   "id": "Q2",
+   "domaine": "Électrotechnique & machines électriques",
+   "difficulte": 1,
+   "type": "unique",
+   "enonce": "Après le remplacement d'un moteur de pompe, le sens de rotation constaté est inverse de celui prescrit par le constructeur. Quelle est la correction appropriée ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Permuter deux des trois conducteurs de phase à l'alimentation du moteur.",
+     "correcte": true,
+     "feedback": "Correct. L'inversion de deux phases inverse l'ordre de succession et donc le sens du champ tournant."
+    },
+    {
+     "id": "b",
+     "texte": "Permuter les trois conducteurs de phase entre eux.",
+     "correcte": false,
+     "feedback": "Incorrect. Une permutation circulaire des trois phases conserve l'ordre de succession et donc le sens de rotation."
+    },
+    {
+     "id": "c",
+     "texte": "Inverser le conducteur de neutre et le conducteur de protection.",
+     "correcte": false,
+     "feedback": "Incorrect, et dangereux. Ces conducteurs n'interviennent pas dans le sens de rotation et leur inversion crée un risque grave pour les personnes."
+    },
+    {
+     "id": "d",
+     "texte": "Modifier le couplage de la plaque à bornes en passant d'étoile en triangle.",
+     "correcte": false,
+     "feedback": "Incorrect. Le couplage détermine la tension par enroulement, pas le sens de rotation, et un changement inapproprié détruirait la machine."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La première proposition est exacte."
+    }
+   ],
+   "feedback_general": "Réflexe de mise en service à ne jamais omettre : vérifier le sens de rotation moteur AVANT l'accouplement à la machine entraînée, par une impulsion brève à vide. Sur une pompe centrifuge, une rotation inverse ne se voit pas au bruit et la machine débite encore partiellement, ce qui rend l'erreur difficile à détecter ensuite. Sur une pompe volumétrique ou un compresseur à vis, la même erreur peut être destructrice en quelques secondes.",
+   "source": "IEC 60034-8 (marquage des bornes et sens de rotation) ; API 686."
+  },
+  {
+   "id": "Q3",
+   "domaine": "Électrotechnique & machines électriques",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "Lors d'un essai d'isolement au mégohmmètre sur un gros moteur, on relève une résistance de 900 MΩ après 1 minute et de 1800 MΩ après 10 minutes. Comment interpréter ce résultat ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "L'indice de polarisation vaut 2, ce qui traduit un isolant sain et sec.",
+     "correcte": true,
+     "feedback": "Correct. IP = R10min / R1min = 1800 / 900 = 2. Une valeur supérieure à 2 est généralement considérée comme satisfaisante pour les classes d'isolation modernes."
+    },
+    {
+     "id": "b",
+     "texte": "La résistance a doublé, ce qui signale un défaut évolutif de l'isolant.",
+     "correcte": false,
+     "feedback": "Incorrect. Une croissance de la résistance dans le temps est le comportement NORMAL et attendu d'un isolant sain."
+    },
+    {
+     "id": "c",
+     "texte": "L'indice de polarisation vaut 0,5, ce qui indique une humidité importante.",
+     "correcte": false,
+     "feedback": "Incorrect. Le rapport se calcule en divisant la valeur à 10 minutes par celle à 1 minute, et non l'inverse."
+    },
+    {
+     "id": "d",
+     "texte": "L'essai est invalide car la mesure doit se stabiliser après quelques secondes.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est précisément l'évolution lente de la mesure, liée aux phénomènes de polarisation diélectrique, que l'essai exploite."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La première proposition est exacte."
+    }
+   ],
+   "feedback_general": "Deux mesures se complètent : la résistance d'isolement absolue, à comparer à un minimum dépendant de la tension de la machine, et l'indice de polarisation, qui est un rapport et se trouve donc insensible à la température et à la taille de la machine. Un isolant humide ou encrassé conduit un courant de fuite qui ne décroît pas dans le temps : la résistance stagne et l'indice tombe vers 1. La mesure doit toujours être précédée d'une décharge de la machine et suivie d'une mise à la terre.",
+   "source": "IEEE 43 (Recommended Practice for Testing Insulation Resistance of Electric Machinery) ; IEC 60034-27-4."
+  },
+  {
+   "id": "Q4",
+   "domaine": "Électrotechnique & machines électriques",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "Un moteur de 55 kW tourne à sa vitesse nominale de 1480 tr/min. Quel est l'ordre de grandeur du couple nominal disponible sur son arbre ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 355 N·m.",
+     "correcte": true,
+     "feedback": "Correct. C ≈ 9550 × P(kW) / N(tr/min) = 9550 × 55 / 1480 ≈ 355 N·m."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 37 N·m.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur résulterait d'un calcul divisant simplement la puissance par la vitesse sans le coefficient de conversion."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 3550 N·m.",
+     "correcte": false,
+     "feedback": "Incorrect. Erreur d'un facteur dix dans l'application de la formule."
+    },
+    {
+     "id": "d",
+     "texte": "Le couple ne peut être calculé sans connaître le rendement du moteur.",
+     "correcte": false,
+     "feedback": "Incorrect. La puissance de plaque est déjà la puissance mécanique utile à l'arbre : le rendement est déjà pris en compte."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur d'environ 355 N·m est exacte."
+    }
+   ],
+   "feedback_general": "Formule à mémoriser : C(N·m) = 9550 × P(kW) / N(tr/min), où 9550 provient de 60 000 / 2π. Application immédiate : à puissance égale, une machine à 4 pôles délivre environ deux fois le couple d'une machine à 2 pôles. C'est le calcul de base pour vérifier la tenue d'un accouplement, d'un réducteur ou d'un arbre.",
+   "source": "Relation fondamentale entre puissance, couple et vitesse de rotation."
+  },
+  {
+   "id": "Q5",
+   "domaine": "Électrotechnique & machines électriques",
+   "difficulte": 3,
+   "type": "unique",
+   "enonce": "Mise en situation.\n\nUne pompe immergée de forage est entraînée par un moteur de 37 kW alimenté par un variateur de vitesse situé dans un local technique, via un câble de 150 mètres. Le bobinage du moteur a claqué deux fois en cinq mois. À l'expertise, les deux fois, la dégradation se situe sur les premières spires de l'entrée de bobine d'une phase, avec perforation de l'isolant entre spires voisines.\n\nVos vérifications :\n• Isolement du câble contrôlé sur toute sa longueur : conforme.\n• Courant absorbé mesuré : 0,85 × In, aucune surcharge.\n• Tension d'alimentation du variateur conforme, réseau sans perturbation notable.\n• Température du moteur relevée en service : très en dessous de sa classe d'isolation.\n• Le moteur est un modèle standard de catalogue, non spécifié pour alimentation par convertisseur.\n• La fréquence de découpage du variateur est réglée au maximum pour réduire le bruit acoustique.\n\nQuelle est la cause la plus probable parmi les propositions suivantes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Une surcharge mécanique du moteur due à un ensablement progressif de la pompe.",
+     "correcte": false,
+     "feedback": "Incorrect. Le courant mesuré est à 0,85 × In et la température de fonctionnement est basse : il n'y a aucune surcharge."
+    },
+    {
+     "id": "b",
+     "texte": "Un défaut d'isolement du câble d'alimentation dégradé par l'immersion.",
+     "correcte": false,
+     "feedback": "Incorrect. L'isolement du câble a été contrôlé sur toute sa longueur et déclaré conforme."
+    },
+    {
+     "id": "c",
+     "texte": "Un échauffement excessif du bobinage lié à un défaut de refroidissement.",
+     "correcte": false,
+     "feedback": "Incorrect. La température relevée est très inférieure à celle de la classe d'isolation, et un défaut thermique dégraderait la bobine dans son ensemble, non ses seules premières spires."
+    },
+    {
+     "id": "d",
+     "texte": "Une perturbation du réseau amont provoquant des surtensions transitoires.",
+     "correcte": false,
+     "feedback": "Incorrect. Le réseau est décrit comme sans perturbation notable, et une surtension réseau serait largement absorbée par le bus continu du variateur."
+    },
+    {
+     "id": "e",
+     "texte": "Un déséquilibre de tension entre phases sollicitant inégalement les bobines.",
+     "correcte": false,
+     "feedback": "Incorrect. Aucun déséquilibre n'est signalé, et ce phénomène provoque un échauffement rotorique, non une perforation localisée entre spires."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": true,
+     "feedback": "Correct. La localisation du défaut — les premières spires de l'entrée de bobine — associée à un câble long, un moteur standard et une fréquence de découpage élevée constitue une signature caractéristique."
+    }
+   ],
+   "feedback_general": "Il s'agit de surtensions par réflexion d'onde sur la liaison variateur-moteur. Les fronts de commutation très raides du variateur se propagent le long du câble comme dans une ligne de transmission. Lorsque la longueur de câble dépasse une valeur critique, l'onde se réfléchit à l'extrémité du fait de la désadaptation d'impédance entre le câble et le moteur, et la tension aux bornes de la machine peut atteindre le double, voire davantage, de la tension du bus continu.\n\nCette surtension ne se répartit pas uniformément : elle se concentre sur les premières spires de chaque bobine, en raison du temps de propagation dans le bobinage. D'où la localisation systématique du claquage à l'entrée de bobine. Une fréquence de découpage élevée aggrave le phénomène en multipliant le nombre d'impulsions par seconde, donc le nombre de sollicitations de l'isolant.\n\nRemèdes : spécifier un moteur à isolation renforcée pour alimentation par convertisseur, insérer un filtre dU/dt ou une self de sortie, réduire la fréquence de découpage, ou raccourcir la liaison. Le choix d'un moteur standard de catalogue pour une liaison de 150 mètres est ici l'erreur d'origine.\n\nMéthode d'examen : une dégradation localisée et répétitive au même endroit n'est jamais un hasard ; elle désigne un mécanisme physique précis, non une cause générale comme la surcharge ou l'échauffement.",
+   "source": "IEC 60034-25 (machines alimentées par convertisseur) ; IEC 60034-18-41 ; NEMA MG1 partie 31."
+  },
+  {
+   "id": "Q6",
+   "domaine": "Électrotechnique & machines électriques",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Vous envisagez de mettre en parallèle deux transformateurs pour accompagner l'extension d'un poste. Quelles conditions doivent être respectées ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Les rapports de transformation doivent être identiques.",
+     "correcte": true,
+     "feedback": "Correct. Un écart de rapport crée un courant de circulation permanent entre les deux appareils, même à vide."
+    },
+    {
+     "id": "b",
+     "texte": "Les indices horaires doivent être identiques.",
+     "correcte": true,
+     "feedback": "Correct. Un décalage de phase entre secondaires produit une différence de tension considérable et donc un courant de circulation destructeur."
+    },
+    {
+     "id": "c",
+     "texte": "Les tensions de court-circuit Ucc doivent être voisines, idéalement à moins de 10 % d'écart relatif.",
+     "correcte": true,
+     "feedback": "Correct. C'est l'impédance qui répartit la charge : à Ucc différentes, le transformateur le plus « raide » se charge davantage et peut saturer avant l'autre."
+    },
+    {
+     "id": "d",
+     "texte": "L'ordre de succession des phases doit être identique de part et d'autre.",
+     "correcte": true,
+     "feedback": "Correct. Une inversion provoque un court-circuit franc à la fermeture du couplage."
+    },
+    {
+     "id": "e",
+     "texte": "Les puissances nominales doivent être rigoureusement égales.",
+     "correcte": false,
+     "feedback": "Incorrect. Des puissances différentes sont admissibles ; on recommande toutefois de ne pas dépasser un rapport de l'ordre de deux, faute de quoi la répartition devient difficile à maîtriser."
+    },
+    {
+     "id": "g",
+     "texte": "Les deux transformateurs doivent provenir du même constructeur et de la même série de fabrication.",
+     "correcte": false,
+     "feedback": "Incorrect. Seules les caractéristiques électriques importent ; des appareils d'origines différentes se couplent parfaitement s'ils respectent les quatre conditions."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre conditions sont requises."
+    }
+   ],
+   "feedback_general": "La mise en parallèle apporte deux bénéfices : une capacité accrue et une continuité de service en cas d'indisponibilité d'un appareil. Elle a une contrepartie systématiquement sous-estimée : le courant de court-circuit au secondaire augmente, puisque les impédances se retrouvent en parallèle. Il faut donc vérifier que le pouvoir de coupure de l'appareillage aval reste suffisant dans la configuration à deux transformateurs.",
+   "source": "IEC 60076-1 ; Cahier Technique Schneider n° 192."
+  },
+  {
+   "id": "Q7",
+   "domaine": "Électrotechnique & machines électriques",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Un moteur doit être installé dans une station située à 2000 mètres d'altitude, dans un local où la température ambiante atteint régulièrement 50 °C. Quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Un moteur standard est défini pour une température ambiante de référence de 40 °C et une altitude n'excédant pas 1000 mètres.",
+     "correcte": true,
+     "feedback": "Correct. Ce sont les conditions normales de référence ; au-delà, un déclassement s'impose."
+    },
+    {
+     "id": "b",
+     "texte": "Au-delà de ces conditions de référence, la puissance utilisable doit être réduite par application de coefficients de déclassement.",
+     "correcte": true,
+     "feedback": "Correct. Les deux effets se cumulent : ils se multiplient et peuvent retirer 15 à 20 % de la puissance admissible."
+    },
+    {
+     "id": "c",
+     "texte": "L'altitude dégrade le refroidissement parce que la masse volumique de l'air diminue, ce qui réduit l'efficacité de la ventilation.",
+     "correcte": true,
+     "feedback": "Correct. Le même débit volumique d'air évacue moins de calories."
+    },
+    {
+     "id": "d",
+     "texte": "Une alternative au déclassement consiste à spécifier une classe d'isolation supérieure ou une machine de puissance supérieure.",
+     "correcte": true,
+     "feedback": "Correct. C'est le choix usuel lorsque le déclassement conduirait à un fonctionnement trop proche de la limite."
+    },
+    {
+     "id": "e",
+     "texte": "L'altitude n'a d'incidence que sur les machines refroidies à l'eau.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est l'inverse : les machines refroidies à l'eau sont peu sensibles à l'altitude, alors que les machines autoventilées le sont fortement."
+    },
+    {
+     "id": "g",
+     "texte": "Le déclassement en altitude ne s'applique qu'au-delà de 3000 mètres.",
+     "correcte": false,
+     "feedback": "Incorrect. Le seuil de référence est 1000 mètres ; au-delà, la correction s'applique progressivement."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont exactes."
+    }
+   ],
+   "feedback_general": "En climat chaud, le déclassement est la précaution la plus souvent oubliée, ce qui explique une part importante des défaillances prématurées attribuées à tort à la qualité du matériel. À 50 °C ambiant, la puissance admissible d'un moteur standard tombe déjà autour de 92 à 95 % de sa valeur nominale, avant même de considérer l'altitude.",
+   "source": "IEC 60034-1, tableaux de déclassement en fonction de la température ambiante et de l'altitude."
+  },
+  {
+   "id": "Q8",
+   "domaine": "Électrotechnique & machines électriques",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "Un contacteur destiné à commander un moteur asynchrone à cage doit être choisi selon une catégorie d'emploi. Laquelle correspond à cet usage ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "AC-3, qui correspond au démarrage des moteurs à cage et à leur coupure en marche établie.",
+     "correcte": true,
+     "feedback": "Correct. L'appareil doit établir un courant de plusieurs fois In au démarrage, tout en ne coupant qu'un courant proche de In en fonctionnement normal."
+    },
+    {
+     "id": "b",
+     "texte": "AC-1, qui correspond aux charges non inductives ou faiblement inductives.",
+     "correcte": false,
+     "feedback": "Incorrect. AC-1 vise les charges résistives comme le chauffage ; l'employer pour un moteur conduit à un sous-dimensionnement sévère."
+    },
+    {
+     "id": "c",
+     "texte": "AC-4, qui est la catégorie standard de tout démarrage moteur.",
+     "correcte": false,
+     "feedback": "Incorrect. AC-4 couvre les usages sévères : démarrages par à-coups, freinage à contre-courant, inversions de sens en pleine marche. Elle impose un contacteur nettement plus gros."
+    },
+    {
+     "id": "d",
+     "texte": "DC-1, applicable dès lors que la commande du contacteur est en courant continu.",
+     "correcte": false,
+     "feedback": "Incorrect. La catégorie d'emploi caractérise le circuit de PUISSANCE commuté, non la tension de la bobine de commande."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La première proposition est exacte."
+    }
+   ],
+   "feedback_general": "Un contacteur choisi en AC-1 pour piloter un moteur verra ses pôles se souder ou s'éroder rapidement, car il n'est pas dimensionné pour l'appel de courant de démarrage. Deux paramètres complètent le choix au-delà de la catégorie : la fréquence de manœuvre horaire et la durabilité électrique souhaitée. Sur un procédé qui démarre et arrête fréquemment un moteur, ces deux paramètres priment souvent sur le seul calibre.",
+   "source": "IEC 60947-4-1, catégories d'emploi des contacteurs et démarreurs."
+  },
+  {
+   "id": "Q9",
+   "domaine": "Électrotechnique & machines électriques",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Des moteurs doivent être installés en environnement désertique, exposés à la poussière fine, à de fortes amplitudes thermiques jour-nuit et à des arrêts prolongés. Quelles dispositions sont pertinentes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Prévoir des résistances de réchauffage anticondensation, alimentées à l'arrêt du moteur.",
+     "correcte": true,
+     "feedback": "Correct. Les fortes amplitudes thermiques provoquent de la condensation dans les carcasses pendant les arrêts, ce qui dégrade l'isolement."
+    },
+    {
+     "id": "b",
+     "texte": "Retenir un indice de protection élevé, de type IP65 ou IP66, plutôt qu'un IP55 standard.",
+     "correcte": true,
+     "feedback": "Correct. La poussière fine du désert pénètre les enceintes IP55 et finit par colmater les ailettes et encrasser les paliers."
+    },
+    {
+     "id": "c",
+     "texte": "Prévoir l'accessibilité des capots de ventilation pour permettre un nettoyage périodique des ailettes.",
+     "correcte": true,
+     "feedback": "Correct. Le colmatage progressif du refroidissement est la cause la plus fréquente de déclenchements thermiques en climat désertique."
+    },
+    {
+     "id": "d",
+     "texte": "Vérifier que les trous de drainage des condensats sont orientés vers le bas selon la position de montage.",
+     "correcte": true,
+     "feedback": "Correct. Un moteur monté en position verticale ou dans une orientation non prévue peut avoir ses drains vers le haut, ce qui les rend totalement inopérants."
+    },
+    {
+     "id": "e",
+     "texte": "Supprimer toute ventilation forcée, l'air chaud extérieur étant plus nuisible qu'utile au refroidissement.",
+     "correcte": false,
+     "feedback": "Incorrect. Tant que la température de l'air reste inférieure à celle des enroulements, la ventilation évacue de la chaleur. La supprimer aggraverait immédiatement la situation."
+    },
+    {
+     "id": "g",
+     "texte": "Il suffit d'appliquer une peinture claire sur la carcasse pour compenser l'exposition solaire et dispenser des autres précautions.",
+     "correcte": false,
+     "feedback": "Incorrect. La couleur réduit marginalement l'absorption du rayonnement, mais ne traite ni la poussière, ni la condensation, ni le colmatage de la ventilation."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont pertinentes."
+    }
+   ],
+   "feedback_general": "Les résistances de réchauffage sont un détail de spécification à faible coût dont l'oubli se paie cher : sur une machine de secours qui ne démarre que quelques heures par an, la condensation accumulée pendant les périodes d'arrêt provoque un claquage dès la sollicitation, précisément au moment où l'on comptait sur elle. Leur asservissement doit couper l'alimentation des résistances au démarrage du moteur.",
+   "source": "IEC 60034-5 (degrés de protection) ; IEC 60034-1 ; guides de spécification en environnement sévère."
+  },
+  {
+   "id": "Q10",
+   "domaine": "Réseaux HTA/BT & distribution",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Vous établissez le bilan de puissance d'une nouvelle station de pompage afin de dimensionner le transformateur. Quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Le facteur d'utilisation traduit le fait qu'un récepteur fonctionne rarement à sa puissance nominale maximale.",
+     "correcte": true,
+     "feedback": "Correct. Un moteur dimensionné avec marge n'absorbe couramment que 70 à 80 % de sa puissance nominale."
+    },
+    {
+     "id": "b",
+     "texte": "Le facteur de simultanéité, ou foisonnement, traduit le fait que tous les récepteurs ne fonctionnent pas en même temps.",
+     "correcte": true,
+     "feedback": "Correct. Il s'applique par niveau de l'arborescence de distribution, en remontant vers la source."
+    },
+    {
+     "id": "c",
+     "texte": "Une extension future prévisible doit être intégrée au bilan sous forme d'une réserve de puissance.",
+     "correcte": true,
+     "feedback": "Correct. Le coût marginal d'un transformateur de calibre supérieur à la construction est sans commune mesure avec celui d'un remplacement ultérieur."
+    },
+    {
+     "id": "d",
+     "texte": "Le transformateur doit être dimensionné sur la somme arithmétique des puissances nominales de tous les récepteurs installés.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette approche conduit à un surdimensionnement important, coûteux et pénalisant pour le rendement à charge partielle."
+    },
+    {
+     "id": "e",
+     "texte": "Le bilan peut ignorer la puissance réactive dès lors qu'une compensation est prévue.",
+     "correcte": false,
+     "feedback": "Incorrect. Le transformateur est dimensionné en kVA, donc en puissance apparente. Le réactif transitant en amont de la compensation doit être pris en compte."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Trois propositions sont exactes."
+    }
+   ],
+   "feedback_general": "Un transformateur très surdimensionné n'est pas neutre : ses pertes à vide, permanentes et indépendantes de la charge, deviennent proportionnellement lourdes, et son rendement à faible charge se dégrade. Le bon compromis se situe généralement autour de 70 à 80 % de charge au régime nominal prévu, réserve d'extension comprise.",
+   "source": "NF C 15-100, § 311 (détermination des puissances) ; Guide de l'Installation Électrique, Schneider Electric."
+  },
+  {
+   "id": "Q11",
+   "domaine": "Réseaux HTA/BT & distribution",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Vous spécifiez les câbles d'une installation industrielle. Quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Un isolant en polyéthylène réticulé (PR ou XLPE) admet une température d'âme en régime permanent supérieure à celle d'un isolant PVC.",
+     "correcte": true,
+     "feedback": "Correct. Environ 90 °C pour le PR contre 70 °C pour le PVC, d'où un courant admissible supérieur à section égale."
+    },
+    {
+     "id": "b",
+     "texte": "Une armure métallique protège le câble contre les agressions mécaniques et les rongeurs, notamment en pose enterrée.",
+     "correcte": true,
+     "feedback": "Correct. Elle doit être mise à la terre et sa continuité assurée aux extrémités."
+    },
+    {
+     "id": "c",
+     "texte": "Un câble armé ou blindé doit voir son écran raccordé à la terre selon les prescriptions du constructeur, faute de quoi il peut porter un potentiel dangereux.",
+     "correcte": true,
+     "feedback": "Correct. Un écran flottant est un danger, et il perd également toute fonction de protection contre les perturbations."
+    },
+    {
+     "id": "d",
+     "texte": "Un câble sans halogène à faible émission de fumées est recommandé dans les locaux recevant du public ou difficilement évacuables.",
+     "correcte": true,
+     "feedback": "Correct. En cas d'incendie, les fumées opaques et corrosives des isolants halogénés compromettent l'évacuation et les secours."
+    },
+    {
+     "id": "e",
+     "texte": "La température maximale de l'isolant en régime de court-circuit est la même que celle en régime permanent.",
+     "correcte": false,
+     "feedback": "Incorrect. La température admissible en court-circuit est bien supérieure — de l'ordre de 250 °C pour le PR — parce qu'elle n'est atteinte que pendant une fraction de seconde."
+    },
+    {
+     "id": "g",
+     "texte": "Un câble armé peut être utilisé comme conducteur de protection principal, son armure remplaçant le conducteur PE.",
+     "correcte": false,
+     "feedback": "Incorrect. L'armure est mise à la terre mais ne se substitue pas au conducteur de protection, sauf conception spécifique explicitement prévue et vérifiée."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont exactes."
+    }
+   ],
+   "feedback_general": "Trois vérifications sont indissociables lors du choix d'un câble : le courant admissible corrigé des conditions de pose, la chute de tension, et la tenue à la contrainte thermique de court-circuit, exprimée par la relation S² ≥ I²t / k². Cette troisième vérification est la plus souvent oubliée, alors qu'elle peut imposer une section supérieure sur les départs proches du transformateur, là où le courant de défaut est le plus élevé.",
+   "source": "IEC 60364-5-52 et 60364-4-43 ; NF C 32-321 (câbles U-1000 R2V)."
+  },
+  {
+   "id": "Q12",
+   "domaine": "Réseaux HTA/BT & distribution",
+   "difficulte": 3,
+   "type": "multiple",
+   "enonce": "Vous faites contrôler les prises de terre d'une nouvelle station. Quelles affirmations sur les mesures sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "La méthode des trois piquets, dite des 62 %, mesure la résistance de la prise de terre en injectant un courant entre la prise et un piquet éloigné, la tension étant relevée sur un piquet intermédiaire.",
+     "correcte": true,
+     "feedback": "Correct. Le piquet de potentiel est placé à environ 62 % de la distance vers le piquet de courant, dans la zone où le gradient de potentiel est le plus faible."
+    },
+    {
+     "id": "b",
+     "texte": "La prise doit être déconnectée de l'installation pendant la mesure, sauf emploi d'un appareil à pinces prévu à cet effet.",
+     "correcte": true,
+     "feedback": "Correct. Sans déconnexion, on mesure la résultante de toutes les terres interconnectées, ce qui donne une valeur optimiste et fausse."
+    },
+    {
+     "id": "c",
+     "texte": "La résistance mesurée varie sensiblement avec l'humidité du sol, ce qui impose de tenir compte de la saison de mesure.",
+     "correcte": true,
+     "feedback": "Correct. En climat aride, la valeur relevée après une pluie peut être plusieurs fois inférieure à celle de la saison sèche : c'est la valeur défavorable qui compte."
+    },
+    {
+     "id": "d",
+     "texte": "La continuité des conducteurs de protection se contrôle séparément, par une mesure à courant significatif entre la borne principale de terre et chaque masse.",
+     "correcte": true,
+     "feedback": "Correct. Une prise de terre excellente ne sert à rien si un conducteur de protection est interrompu ou mal serré en un point du parcours."
+    },
+    {
+     "id": "e",
+     "texte": "Une valeur de résistance de terre mesurée une fois à la réception reste valable pendant toute la durée de vie de l'installation.",
+     "correcte": false,
+     "feedback": "Incorrect. La corrosion des conducteurs enterrés et l'évolution du sol dégradent progressivement la prise ; un contrôle périodique s'impose."
+    },
+    {
+     "id": "g",
+     "texte": "Une prise de terre mesurée à faible valeur dispense de vérifier la section des conducteurs de protection.",
+     "correcte": false,
+     "feedback": "Incorrect. Les deux exigences sont indépendantes : une excellente prise de terre n'écoule rien si le conducteur qui y mène est sous-dimensionné ou interrompu."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont exactes."
+    }
+   ],
+   "feedback_general": "En sol sec et sableux, la résistivité est élevée et les prises de terre difficiles à obtenir. Les leviers sont l'augmentation de la longueur ou de la profondeur des piquets pour atteindre des couches plus humides, la multiplication des électrodes suffisamment espacées entre elles, le recours à une boucle à fond de fouille, et l'amélioration locale du sol. Multiplier des piquets trop rapprochés ne sert à rien : leurs zones d'influence se recouvrent.",
+   "source": "IEC 60364-6 (vérifications) ; IEC 62305-3 ; guides de mesure de résistance de terre."
+  },
+  {
+   "id": "Q13",
+   "domaine": "Réseaux HTA/BT & distribution",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Concernant l'appareillage d'un poste HTA, quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Un sectionneur assure une fonction de séparation mais n'a aucun pouvoir de coupure en charge.",
+     "correcte": true,
+     "feedback": "Correct. Il ne doit être manœuvré qu'à circuit ouvert ; sa manœuvre en charge provoque un arc destructeur."
+    },
+    {
+     "id": "b",
+     "texte": "Un interrupteur peut établir et couper le courant nominal, mais ne peut pas couper un courant de court-circuit.",
+     "correcte": true,
+     "feedback": "Correct. D'où son association habituelle à des fusibles pour la protection contre les courts-circuits."
+    },
+    {
+     "id": "c",
+     "texte": "Un disjoncteur peut établir et couper aussi bien le courant nominal que le courant de court-circuit.",
+     "correcte": true,
+     "feedback": "Correct. C'est ce qui justifie son coût et le rend nécessaire au-delà d'une certaine puissance de transformateur."
+    },
+    {
+     "id": "d",
+     "texte": "Les techniques de coupure les plus répandues en HTA sont la coupure dans le vide et la coupure dans le SF6.",
+     "correcte": true,
+     "feedback": "Correct. La coupure dans le vide domine en distribution ; le SF6 fait l'objet d'un remplacement progressif en raison de son fort pouvoir de réchauffement global."
+    },
+    {
+     "id": "e",
+     "texte": "Un sectionneur de terre se manœuvre indifféremment, l'installation étant sous tension ou non.",
+     "correcte": false,
+     "feedback": "Incorrect, et mortel. Sa fermeture sous tension crée un court-circuit franc à la terre. Des verrouillages mécaniques ou par clés interdisent normalement cette manœuvre."
+    },
+    {
+     "id": "g",
+     "texte": "Un fusible HTA associé à un interrupteur peut couper un courant de surcharge modérée aussi bien qu'un court-circuit.",
+     "correcte": false,
+     "feedback": "Incorrect. Le fusible HTA est conçu pour les forts courants de défaut ; sur une surcharge modérée il peut ne pas fondre, ou fondre sur une seule phase, ce qui crée une marche en monophasé."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont exactes."
+    }
+   ],
+   "feedback_general": "Trois fonctions à ne jamais confondre : séparer (sectionneur, coupure visible ou garantie), commuter en charge (interrupteur), et protéger contre les défauts (disjoncteur ou fusible). Beaucoup d'appareils cumulent plusieurs fonctions, mais un appareil ne remplit que celles pour lesquelles il est déclaré. Les verrouillages inter-appareils, souvent par système de clés prisonnières, imposent l'ordre correct des manœuvres et ne doivent jamais être contournés.",
+   "source": "IEC 62271-100 (disjoncteurs), 62271-102 (sectionneurs), 62271-103 (interrupteurs)."
+  },
+  {
+   "id": "Q14",
+   "domaine": "Réseaux HTA/BT & distribution",
+   "difficulte": 3,
+   "type": "unique",
+   "enonce": "Mise en situation.\n\nAprès l'installation d'un second transformateur 630 kVA dans un poste, le disjoncteur général HTA déclenche systématiquement, sur défaut magnétique instantané, au moment précis de la mise sous tension de l'appareil. En revanche, dès que l'enclenchement réussit — ce qui arrive environ une fois sur trois — l'installation fonctionne ensuite parfaitement, sans aucun incident, y compris en pleine charge.\n\nVos vérifications :\n• Isolement des enroulements primaire et secondaire : conforme, valeurs élevées.\n• Rapport de transformation et continuité des enroulements : conformes.\n• Aucun défaut à la terre détecté, ni côté HTA ni côté BT.\n• Le secondaire du transformateur est laissé ouvert lors des essais d'enclenchement : le déclenchement se produit quand même.\n• Analyse de l'huile du transformateur : conforme.\n• Le déclenchement est toujours instantané, jamais temporisé.\n\nQuelle est la cause la plus probable parmi les propositions suivantes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Un court-circuit entre spires dans l'enroulement primaire du transformateur.",
+     "correcte": false,
+     "feedback": "Incorrect. La continuité et le rapport de transformation sont conformes, et l'analyse d'huile ne révèle rien : un défaut interne se manifesterait autrement."
+    },
+    {
+     "id": "b",
+     "texte": "Une surcharge du transformateur au moment de la mise en service.",
+     "correcte": false,
+     "feedback": "Incorrect. Le secondaire est ouvert lors des essais : aucune charge n'est alimentée. Une surcharge déclencherait d'ailleurs le thermique, pas le magnétique instantané."
+    },
+    {
+     "id": "c",
+     "texte": "Un défaut d'isolement à la terre côté secondaire.",
+     "correcte": false,
+     "feedback": "Incorrect. Aucun défaut à la terre n'a été détecté, ni côté HTA ni côté BT."
+    },
+    {
+     "id": "d",
+     "texte": "Le disjoncteur est défectueux et déclenche de manière aléatoire.",
+     "correcte": false,
+     "feedback": "Incorrect. Le déclenchement est parfaitement corrélé à l'instant d'enclenchement, jamais en fonctionnement établi : un appareil défectueux n'aurait pas ce comportement sélectif."
+    },
+    {
+     "id": "e",
+     "texte": "Le pouvoir de coupure du disjoncteur est insuffisant pour la nouvelle configuration à deux transformateurs.",
+     "correcte": false,
+     "feedback": "Incorrect. Un pouvoir de coupure insuffisant ne provoque pas de déclenchement : il se manifesterait par la destruction de l'appareil lors d'un vrai court-circuit."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": true,
+     "feedback": "Correct. Le phénomène est strictement lié à l'instant d'enclenchement, disparaît ensuite complètement, et se produit même à secondaire ouvert. Aucune des causes proposées ne présente ces trois caractéristiques."
+    }
+   ],
+   "feedback_general": "Il s'agit du courant d'appel magnétisant à l'enclenchement, appelé courant d'inrush. Lorsqu'un transformateur est mis sous tension, le flux dans le circuit magnétique peut, selon l'instant d'enclenchement dans la période et selon le flux rémanent subsistant dans le noyau, atteindre une valeur qui sature profondément le fer. L'inductance magnétisante s'effondre alors et le transformateur appelle un courant transitoire pouvant atteindre 8 à 15 fois son courant nominal, avec une décroissance sur quelques dizaines à quelques centaines de millisecondes.\n\nCela explique le caractère aléatoire du phénomène : le résultat dépend de l'instant exact de fermeture des pôles du disjoncteur par rapport à l'onde de tension, ainsi que du flux rémanent laissé par la dernière mise hors tension. D'où la réussite d'un enclenchement sur trois.\n\nRemèdes : régler le seuil magnétique du disjoncteur HTA au-dessus de la pointe d'appel, employer une protection à retenue harmonique de rang 2 — le courant d'inrush est très riche en harmonique 2, ce qui permet de le distinguer d'un court-circuit — ou recourir à un enclenchement synchronisé sur les appareils importants.\n\nMéthode d'examen : un défaut qui n'existe qu'à l'instant de la manœuvre et jamais en régime établi est un phénomène transitoire, non un défaut d'isolement.",
+   "source": "IEC 60076-1 ; IEC 60255-187 pour les protections différentielles à retenue harmonique ; Cahier Technique Schneider n° 192."
+  },
+  {
+   "id": "Q15",
+   "domaine": "Réseaux HTA/BT & distribution",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "En présence de charges non linéaires importantes, on distingue le facteur de puissance du cos φ. Quelle est la différence ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Le cos φ ne caractérise que le déphasage du fondamental, alors que le facteur de puissance intègre en plus la distorsion harmonique et lui est donc inférieur ou égal.",
+     "correcte": true,
+     "feedback": "Correct. On écrit souvent FP = cos φ × facteur de distorsion, ce dernier valant 1 uniquement en l'absence d'harmoniques."
+    },
+    {
+     "id": "b",
+     "texte": "Ce sont deux expressions strictement équivalentes de la même grandeur.",
+     "correcte": false,
+     "feedback": "Incorrect. Elles ne coïncident qu'en régime purement sinusoïdal ; sur un réseau pollué, l'écart peut être considérable."
+    },
+    {
+     "id": "c",
+     "texte": "Le facteur de puissance ne caractérise que le déphasage, alors que le cos φ intègre la distorsion.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est exactement l'inverse."
+    },
+    {
+     "id": "d",
+     "texte": "Le facteur de puissance peut être supérieur à 1 en présence d'harmoniques.",
+     "correcte": false,
+     "feedback": "Incorrect. Le facteur de puissance est par définition compris entre 0 et 1."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La première proposition est exacte."
+    }
+   ],
+   "feedback_general": "Conséquence pratique très concrète : une installation équipée de nombreux variateurs peut afficher un cos φ excellent, proche de 1, tout en présentant un facteur de puissance médiocre, autour de 0,7, parce que le courant est fortement déformé. Ajouter des condensateurs ne corrigera rien, puisqu'ils n'agissent que sur le déphasage du fondamental, et risque même de créer une résonance. Le traitement passe par des filtres ou par le choix de convertisseurs à faible distorsion.",
+   "source": "IEC 61000-4-30 (mesure de la qualité de l'alimentation) ; IEEE 519."
+  },
+  {
+   "id": "Q16",
+   "domaine": "Réseaux HTA/BT & distribution",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Vous comparez un transformateur immergé dans l'huile minérale et un transformateur de type sec enrobé pour un poste intérieur. Quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Le transformateur immergé exige un dispositif de rétention de l'huile, dimensionné pour contenir la totalité du volume en cas de fuite.",
+     "correcte": true,
+     "feedback": "Correct. C'est une exigence à la fois environnementale et de sécurité incendie."
+    },
+    {
+     "id": "b",
+     "texte": "Le relais de protection dit DGPT2 surveille le dégagement gazeux, la pression et la température de l'huile.",
+     "correcte": true,
+     "feedback": "Correct. Il détecte les défauts internes naissants avant qu'ils ne dégénèrent, et distingue généralement une alarme d'un ordre de déclenchement."
+    },
+    {
+     "id": "c",
+     "texte": "Le transformateur sec présente une charge calorifique bien moindre et se prête mieux à une implantation en intérieur, au plus près des charges.",
+     "correcte": true,
+     "feedback": "Correct. Rapprocher le transformateur des charges réduit également les longueurs de câbles basse tension et les chutes de tension."
+    },
+    {
+     "id": "d",
+     "texte": "Le transformateur sec ne nécessite aucune surveillance ni maintenance.",
+     "correcte": false,
+     "feedback": "Incorrect. Il exige un dépoussiérage périodique des enroulements et un contrôle de la ventilation du local, faute de quoi il surchauffe."
+    },
+    {
+     "id": "e",
+     "texte": "L'analyse des gaz dissous s'applique indifféremment aux deux technologies.",
+     "correcte": false,
+     "feedback": "Incorrect. Elle repose sur l'analyse du diélectrique liquide et n'a aucun sens sur un transformateur sec."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Trois propositions sont exactes."
+    }
+   ],
+   "feedback_general": "L'analyse des gaz dissous dans l'huile est l'un des outils de maintenance prédictive les plus puissants sur un transformateur immergé : la nature et les proportions des gaz produits — hydrogène, méthane, acétylène, éthylène — signent le type de défaut naissant, arc électrique, échauffement local ou décharges partielles, souvent des mois avant la défaillance.",
+   "source": "IEC 60076-11 (transformateurs de type sec) ; IEC 60599 (interprétation de l'analyse des gaz dissous)."
+  },
+  {
+   "id": "Q17",
+   "domaine": "Réseaux HTA/BT & distribution",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Une station isolée est alimentée par une centrale hybride associant un générateur photovoltaïque, des groupes électrogènes diesel et un système de stockage par batteries. Quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Le stockage permet de lisser l'intermittence de la production solaire et d'éviter des démarrages et arrêts trop fréquents des groupes diesel.",
+     "correcte": true,
+     "feedback": "Correct. Les cycles courts sont particulièrement nuisibles aux moteurs diesel, et le stockage joue ici un rôle tampon décisif."
+    },
+    {
+     "id": "b",
+     "texte": "Un groupe diesel fonctionnant durablement à très faible charge s'encrasse et voit son rendement et sa fiabilité se dégrader.",
+     "correcte": true,
+     "feedback": "Correct. C'est le phénomène de glaçage des cylindres. On considère généralement qu'il faut maintenir une charge minimale de l'ordre de 30 à 40 %."
+    },
+    {
+     "id": "c",
+     "texte": "Le taux de pénétration instantané du solaire est limité par la nécessité de conserver une réserve tournante suffisante pour absorber les variations de charge et d'ensoleillement.",
+     "correcte": true,
+     "feedback": "Correct. Sans inertie ni réserve, un passage nuageux provoque un effondrement de fréquence et un délestage."
+    },
+    {
+     "id": "d",
+     "texte": "Les onduleurs photovoltaïques doivent être capables de se déconnecter en cas de défaut du réseau local, et de participer au maintien de la tension et de la fréquence lorsque cela est requis.",
+     "correcte": true,
+     "feedback": "Correct. Ce sont les fonctions dites de protection de découplage et de soutien au réseau, qui figurent dans les spécifications de raccordement."
+    },
+    {
+     "id": "e",
+     "texte": "L'ajout de photovoltaïque supprime la nécessité de dimensionner les groupes diesel pour la pointe de consommation.",
+     "correcte": false,
+     "feedback": "Incorrect. La pointe peut survenir de nuit ou par temps couvert : les groupes doivent rester capables d'assurer seuls la charge maximale."
+    },
+    {
+     "id": "g",
+     "texte": "Les batteries de stockage peuvent être dimensionnées uniquement sur l'énergie à restituer, sans considérer la puissance instantanée appelée.",
+     "correcte": false,
+     "feedback": "Incorrect. Énergie et puissance sont deux dimensionnements distincts : une batterie de grande capacité mais à faible puissance de décharge ne tiendra pas un appel de charge brutal."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont exactes."
+    }
+   ],
+   "feedback_general": "Sur un réseau isolé, le solaire réduit la consommation de carburant mais ne réduit pas la puissance installée en groupes, sauf à disposer d'un stockage dimensionné pour la pointe. Le pilotage de l'ensemble par un système de gestion d'énergie est ce qui détermine réellement l'économie obtenue : c'est lui qui arbitre entre charge des batteries, production solaire et démarrage des groupes.",
+   "source": "IEC 62257 (systèmes d'électrification rurale décentralisée) ; ISO 8528-5 ; IEC 61727."
+  },
+  {
+   "id": "Q18",
+   "domaine": "Équipements tournants",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "Une pompe centrifuge installée au-dessus du niveau du liquide dans une bâche ne redémarre pas après un arrêt prolongé, alors qu'elle fonctionnait normalement auparavant. Le moteur tourne, mais aucun débit n'est obtenu. Quelle est l'explication la plus probable ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "La pompe s'est désamorcée : la colonne d'aspiration s'est vidée, probablement par fuite du clapet de pied, et la pompe ne peut évacuer l'air seule.",
+     "correcte": true,
+     "feedback": "Correct. Une pompe centrifuge classique n'est pas auto-amorçante : elle ne peut créer une dépression suffisante dans un corps rempli d'air."
+    },
+    {
+     "id": "b",
+     "texte": "Le sens de rotation s'est inversé pendant l'arrêt.",
+     "correcte": false,
+     "feedback": "Incorrect. Un sens de rotation ne s'inverse pas spontanément ; cela supposerait une intervention sur le câblage."
+    },
+    {
+     "id": "c",
+     "texte": "La roue est bloquée, ce qui explique l'absence de débit.",
+     "correcte": false,
+     "feedback": "Incorrect. L'énoncé indique que le moteur tourne ; une roue bloquée provoquerait un blocage et une surintensité importante."
+    },
+    {
+     "id": "d",
+     "texte": "Le NPSH requis a augmenté pendant la période d'arrêt.",
+     "correcte": false,
+     "feedback": "Incorrect. Le NPSH requis est une caractéristique fixe de la pompe, qui n'évolue pas à l'arrêt."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La première proposition est exacte."
+    }
+   ],
+   "feedback_general": "Une pompe centrifuge doit être amorcée, c'est-à-dire que son corps et sa conduite d'aspiration doivent être remplis de liquide. Solutions durables : installation en charge sous le niveau du liquide, clapet de pied entretenu associé à un dispositif de remplissage, réservoir d'amorçage, pompe à vide auxiliaire, ou pompe auto-amorçante. Point de sécurité : faire tourner une pompe à sec, même brièvement, détruit la garniture mécanique par échauffement des faces.",
+   "source": "ANSI/HI 1.3 ; API 610."
+  },
+  {
+   "id": "Q19",
+   "domaine": "Équipements tournants",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Une conduite de refoulement longue subit des coups de bélier lors des arrêts de pompe. Quelles dispositions permettent de limiter ce phénomène ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Allonger le temps d'arrêt de la pompe, par exemple au moyen d'un volant d'inertie ou d'une décélération contrôlée par variateur ou démarreur progressif.",
+     "correcte": true,
+     "feedback": "Correct. Plus la décélération est lente, plus la variation de vitesse du fluide est douce et plus la surpression est faible."
+    },
+    {
+     "id": "b",
+     "texte": "Installer un réservoir anti-bélier à vessie, ou une cheminée d'équilibre selon la configuration.",
+     "correcte": true,
+     "feedback": "Correct. Ces dispositifs absorbent l'énergie de la colonne liquide et amortissent les oscillations de pression."
+    },
+    {
+     "id": "c",
+     "texte": "Prévoir des ventouses correctement dimensionnées aux points hauts pour éviter les poches d'air et permettre l'entrée d'air en dépression.",
+     "correcte": true,
+     "feedback": "Correct. Les poches d'air aggravent fortement les transitoires, et la dépression peut écraser une conduite."
+    },
+    {
+     "id": "d",
+     "texte": "Fermer les vannes de sectionnement le plus rapidement possible lors de l'arrêt.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est exactement le contraire : une fermeture rapide est la cause la plus classique de coup de bélier. Les vannes de gros diamètre sont motorisées avec un temps de manœuvre calculé."
+    },
+    {
+     "id": "e",
+     "texte": "Augmenter l'épaisseur de la conduite est la seule parade réellement efficace.",
+     "correcte": false,
+     "feedback": "Incorrect. Renforcer la conduite traite la conséquence à grands frais sans réduire le phénomène, et ne protège ni les vannes, ni les supports, ni la pompe elle-même."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Trois propositions sont exactes."
+    }
+   ],
+   "feedback_general": "Le coup de bélier est d'autant plus violent que la conduite est longue, que le fluide est rapide et que la variation de vitesse est brutale. L'arrêt le plus dangereux n'est pas l'arrêt commandé, mais la coupure d'alimentation électrique imprévue, où la pompe s'arrête en quelques secondes sans aucun contrôle. C'est ce scénario qui doit dimensionner les protections, et non l'arrêt normal.",
+   "source": "Analyse des régimes transitoires en conduite ; ANSI/HI 9.6.x ; recommandations de conception des stations de pompage."
+  },
+  {
+   "id": "Q20",
+   "domaine": "Équipements tournants",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "Une pompe fournit un débit de 50 m³/h sous une hauteur manométrique totale de 40 mètres, avec un rendement hydraulique de 72 %. Quelle est la puissance approximative absorbée à son arbre ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 5,5 kW.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est la puissance hydraulique utile, avant division par le rendement."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 7,6 kW.",
+     "correcte": true,
+     "feedback": "Correct. P = ρgQH / η = 1000 × 9,81 × (50/3600) × 40 / 0,72 ≈ 7570 W."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 3,9 kW.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur résulterait d'une multiplication par le rendement au lieu d'une division."
+    },
+    {
+     "id": "d",
+     "texte": "Environ 20 kW.",
+     "correcte": false,
+     "feedback": "Incorrect. Erreur probable de conversion du débit, exprimé en mètres cubes par heure et non par seconde."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur d'environ 7,6 kW est exacte."
+    }
+   ],
+   "feedback_general": "Formule à connaître : P(W) = ρ g Q H / η, avec Q en m³/s. Raccourci de terrain pour l'eau : P(kW) ≈ Q(m³/h) × H(m) / (367 × η). Vérification immédiate ici : 50 × 40 / (367 × 0,72) ≈ 7,6 kW. Le piège récurrent est l'oubli de la conversion du débit : diviser par 3600.",
+   "source": "ANSI/HI 1.1-1.2 ; relations fondamentales des pompes centrifuges."
+  },
+  {
+   "id": "Q21",
+   "domaine": "Équipements tournants",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Une pompe véhicule un liquide chargé en particules abrasives. Quelles dispositions limitent l'usure et prolongent la durée de vie de la machine ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Réduire la vitesse de rotation, l'usure par érosion croissant très rapidement avec la vitesse.",
+     "correcte": true,
+     "feedback": "Correct. L'érosion évolue approximativement avec le cube de la vitesse : réduire la vitesse et compenser par une roue de plus grand diamètre est une stratégie classique."
+    },
+    {
+     "id": "b",
+     "texte": "Retenir des matériaux adaptés pour la roue et le corps, par exemple fonte à fort taux de chrome ou revêtement dur.",
+     "correcte": true,
+     "feedback": "Correct. La dureté du matériau doit être supérieure à celle des particules véhiculées."
+    },
+    {
+     "id": "c",
+     "texte": "Prévoir un dessablage ou une filtration en amont lorsque la nature du procédé le permet.",
+     "correcte": true,
+     "feedback": "Correct. Retirer l'abrasif reste toujours plus efficace et moins coûteux que de résister à son action."
+    },
+    {
+     "id": "d",
+     "texte": "Adapter le plan de rinçage de la garniture mécanique pour la protéger des particules, par exemple par hydrocyclone ou injection externe.",
+     "correcte": true,
+     "feedback": "Correct. Un plan de rinçage prélevant du produit chargé enverrait les particules directement entre les faces de la garniture."
+    },
+    {
+     "id": "e",
+     "texte": "Augmenter la vitesse de rotation pour réduire le temps de contact entre les particules et les surfaces.",
+     "correcte": false,
+     "feedback": "Incorrect. L'énergie cinétique des particules et donc l'érosion augmentent fortement avec la vitesse ; c'est la pire décision possible."
+    },
+    {
+     "id": "g",
+     "texte": "Augmenter la pression de refoulement compense l'usure et rétablit les performances d'origine.",
+     "correcte": false,
+     "feedback": "Incorrect. Cela ne compense rien et accroît les efforts internes ; les performances se rétablissent par remplacement des pièces d'usure et des bagues."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont pertinentes."
+    }
+   ],
+   "feedback_general": "Sur produit abrasif, le raisonnement s'inverse par rapport au dimensionnement classique : au lieu de rechercher la machine la plus compacte tournant vite, on privilégie une machine plus grande tournant lentement, dont l'investissement initial est supérieur mais la durée de vie très largement accrue. C'est un cas typique où le raisonnement en coût global de possession s'impose face au prix d'achat.",
+   "source": "ANSI/HI 12.1-12.6 (pompes pour boues) ; API 610 pour les services sévères."
+  },
+  {
+   "id": "Q22",
+   "domaine": "Équipements tournants",
+   "difficulte": 3,
+   "type": "unique",
+   "enonce": "Mise en situation.\n\nÀ la suite d'une intervention électrique sur l'armoire de commande, un ventilateur centrifuge de ventilation de local voit son débit chuter d'environ 60 %. Le personnel se plaint d'une atmosphère confinée.\n\nVos vérifications :\n• La roue est propre, sans dépôt ni encrassement des aubes.\n• Les filtres d'entrée ont été remplacés, la perte de charge mesurée est faible et conforme.\n• Les registres d'admission et de refoulement sont en position pleine ouverture, vérifiée visuellement.\n• Aucune obstruction ni fuite dans les gaines, contrôlées sur tout le parcours.\n• La vitesse de rotation mesurée au tachymètre est identique à la valeur d'origine.\n• Le courant absorbé par le moteur est nettement INFÉRIEUR à sa valeur habituelle.\n• Le ventilateur produit un souffle, mais le débit reste très insuffisant.\n\nQuelle est la cause la plus probable parmi les propositions suivantes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Un encrassement de la roue réduisant la section de passage entre les aubes.",
+     "correcte": false,
+     "feedback": "Incorrect. La roue a été inspectée et déclarée propre."
+    },
+    {
+     "id": "b",
+     "texte": "Un colmatage des filtres d'entrée créant une perte de charge excessive.",
+     "correcte": false,
+     "feedback": "Incorrect. Les filtres sont neufs et la perte de charge mesurée est faible et conforme."
+    },
+    {
+     "id": "c",
+     "texte": "Une fermeture partielle d'un registre restée inaperçue.",
+     "correcte": false,
+     "feedback": "Incorrect. Les registres ont été vérifiés visuellement en position pleine ouverture."
+    },
+    {
+     "id": "d",
+     "texte": "Un glissement de la transmission par courroie réduisant la vitesse effective de la roue.",
+     "correcte": false,
+     "feedback": "Incorrect. La vitesse de rotation a été mesurée au tachymètre et correspond à la valeur d'origine."
+    },
+    {
+     "id": "e",
+     "texte": "Une fuite importante dans les gaines de distribution.",
+     "correcte": false,
+     "feedback": "Incorrect. Les gaines ont été contrôlées sur tout leur parcours, sans fuite ni obstruction."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": true,
+     "feedback": "Correct. Deux indices convergent et aucune des causes proposées ne les explique : le problème est apparu juste après une intervention électrique, et le courant absorbé a DIMINUÉ au lieu d'augmenter."
+    }
+   ],
+   "feedback_general": "Le ventilateur tourne à l'envers. Lors de l'intervention sur l'armoire, deux phases ont été permutées, ce qui a inversé le sens de rotation.\n\nLa subtilité, et la raison pour laquelle ce défaut passe si souvent inaperçu : un ventilateur centrifuge tournant à l'envers continue de débiter dans le bon sens, mais avec un rendement très dégradé, typiquement de l'ordre de 30 à 50 % du débit nominal. Il y a donc du souffle, ce qui rassure l'observateur, et le bruit reste comparable. Un ventilateur à l'arrêt complet aurait alerté immédiatement ; un ventilateur médiocre ne se remarque qu'à la mesure.\n\nLe second indice est décisif : le courant absorbé a diminué. En rotation inverse, la machine transfère beaucoup moins d'énergie au fluide, donc absorbe moins de puissance. Tout défaut d'obstruction ou d'encrassement aurait au contraire modifié le courant dans l'autre sens ou l'aurait laissé stable.\n\nMéthode d'examen : la corrélation temporelle avec une intervention est une donnée de diagnostic à part entière. Lorsqu'un dysfonctionnement apparaît immédiatement après un travail sur une installation, la première hypothèse à examiner est ce qui a été touché. Et sur toute machine tournante, le contrôle du sens de rotation doit figurer en tête de la check-list de remise en service.",
+   "source": "ANSI/AMCA 201 (Fans and Systems) ; API 686 ; bonnes pratiques de remise en service après intervention électrique."
+  },
+  {
+   "id": "Q23",
+   "domaine": "Équipements tournants",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Une transmission par courroies trapézoïdales entraîne un ventilateur. Quelles pratiques de maintenance sont correctes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Contrôler la tension des courroies par mesure de la flèche sous effort défini, ou à l'aide d'un tensiomètre.",
+     "correcte": true,
+     "feedback": "Correct. Une tension insuffisante fait patiner et échauffe, une tension excessive détruit les paliers ; l'appréciation « au pouce » est inadaptée."
+    },
+    {
+     "id": "b",
+     "texte": "Vérifier l'alignement des poulies dans les trois composantes : parallélisme des arbres, alignement axial des gorges et coplanarité.",
+     "correcte": true,
+     "feedback": "Correct. Un défaut d'alignement provoque une usure rapide des flancs et une émission de poussière de caoutchouc caractéristique."
+    },
+    {
+     "id": "c",
+     "texte": "Remplacer l'ensemble des courroies d'une transmission multiple simultanément, par un jeu apparié.",
+     "correcte": true,
+     "feedback": "Correct. Mélanger courroies neuves et usagées répartit inégalement la charge : les neuves, plus courtes, prennent tout l'effort et cassent prématurément."
+    },
+    {
+     "id": "d",
+     "texte": "Contrôler l'usure des gorges de poulie, une gorge creusée ne permettant plus un appui correct sur les flancs.",
+     "correcte": true,
+     "feedback": "Correct. Monter des courroies neuves sur des poulies usées est un gaspillage : la courroie descend au fond de la gorge et perd son adhérence."
+    },
+    {
+     "id": "e",
+     "texte": "Appliquer un produit adhérent sur les courroies pour supprimer tout patinage.",
+     "correcte": false,
+     "feedback": "Incorrect. Ces produits encrassent les gorges, dégradent le caoutchouc et masquent le véritable problème de tension ou d'alignement."
+    },
+    {
+     "id": "g",
+     "texte": "Une courroie qui émet un sifflement au démarrage doit simplement être retendue au maximum pour supprimer le bruit.",
+     "correcte": false,
+     "feedback": "Incorrect. Une tension excessive détruit les paliers du moteur et du ventilateur. Le sifflement s'analyse : tension, alignement, état des gorges, ou surcharge au démarrage."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont correctes."
+    }
+   ],
+   "feedback_general": "Une transmission par courroies bien entretenue atteint un rendement supérieur à 95 % ; mal tendue et désalignée, elle tombe sous 90 % et la perte se dissipe en chaleur et en usure. Point de sécurité à ne jamais négliger : le carter de protection doit être remis en place après chaque contrôle, et le contrôle de tension ne se fait jamais machine en marche.",
+   "source": "ISO 5292 (calcul des transmissions par courroies) ; recommandations des constructeurs de transmissions."
+  },
+  {
+   "id": "Q24",
+   "domaine": "Équipements tournants",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "Une pompe de procédé est équipée d'un presse-étoupe à tresse plutôt que d'une garniture mécanique. Quelle affirmation caractérise correctement ce choix ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Le presse-étoupe admet et nécessite une fuite goutte à goutte contrôlée, qui assure la lubrification et le refroidissement de la tresse.",
+     "correcte": true,
+     "feedback": "Correct. Serrer un presse-étoupe jusqu'à supprimer toute fuite conduit à l'échauffement, à la carbonisation de la tresse et au marquage de l'arbre ou de la chemise."
+    },
+    {
+     "id": "b",
+     "texte": "Le presse-étoupe assure une étanchéité parfaite, sans aucune fuite en fonctionnement normal.",
+     "correcte": false,
+     "feedback": "Incorrect. L'absence totale de fuite est le signe d'un serrage excessif, non d'un bon réglage."
+    },
+    {
+     "id": "c",
+     "texte": "Le presse-étoupe est le choix privilégié pour les produits toxiques ou inflammables.",
+     "correcte": false,
+     "feedback": "Incorrect. Sa fuite intrinsèque le rend inadapté à ces produits, pour lesquels on retient une garniture mécanique, simple ou double selon le niveau d'exigence."
+    },
+    {
+     "id": "d",
+     "texte": "Le presse-étoupe ne nécessite aucun réglage ni maintenance après montage.",
+     "correcte": false,
+     "feedback": "Incorrect. Il exige un rattrapage périodique du serrage et un remplacement régulier de la tresse."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La première proposition est exacte."
+    }
+   ],
+   "feedback_general": "Comparaison à retenir : le presse-étoupe est peu coûteux, réparable sur place, tolérant aux produits chargés, mais il fuit par conception et use l'arbre. La garniture mécanique n'a pratiquement pas de fuite visible, ne marque pas l'arbre, mais coûte davantage, exige un montage soigné et ne pardonne pas la marche à sec. Sur produit dangereux ou en zone classée, le presse-étoupe est en pratique exclu.",
+   "source": "API 682 ; ANSI/HI 1.4 (installation et exploitation des pompes centrifuges)."
+  },
+  {
+   "id": "Q25",
+   "domaine": "Équipements tournants",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "Un accouplement à denture (à dents bombées) est utilisé entre un moteur et une machine entraînée de forte puissance. Quelle est sa particularité principale par rapport à un accouplement élastique ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Il transmet des couples élevés en tolérant un désalignement limité, mais exige une lubrification et un contrôle périodique de celle-ci.",
+     "correcte": true,
+     "feedback": "Correct. Le contact denté doit rester lubrifié en permanence ; la perte de graisse est la cause première de sa dégradation."
+    },
+    {
+     "id": "b",
+     "texte": "Il amortit les à-coups de couple grâce à des éléments élastomères.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est la caractéristique des accouplements élastiques ; l'accouplement à denture est rigide en torsion."
+    },
+    {
+     "id": "c",
+     "texte": "Il ne nécessite aucun alignement, sa denture compensant tout défaut.",
+     "correcte": false,
+     "feedback": "Incorrect. Il tolère un désalignement faible et spécifié ; le dépasser use rapidement la denture et transmet des efforts aux paliers."
+    },
+    {
+     "id": "d",
+     "texte": "Il permet de faire varier le rapport de vitesse entre les deux arbres.",
+     "correcte": false,
+     "feedback": "Incorrect. Un accouplement transmet le mouvement à rapport strictement unitaire ; la variation de rapport relève d'un réducteur."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La première proposition est exacte."
+    }
+   ],
+   "feedback_general": "Trois familles à distinguer : l'accouplement élastique, qui amortit les à-coups et tolère un désalignement modéré, sans lubrification ; l'accouplement à denture, qui transmet de très forts couples mais exige une lubrification ; et l'accouplement à disques ou à membranes, sans entretien et très précis, mais moins tolérant au désalignement. Aucun ne dispense d'un alignement soigné : ils encaissent un désalignement résiduel, ils ne le corrigent pas.",
+   "source": "API 671 (Special Purpose Couplings) ; ISO 14691."
+  },
+  {
+   "id": "Q26",
+   "domaine": "Automatisme, instrumentation & régulation",
+   "difficulte": 1,
+   "type": "unique",
+   "enonce": "Un transmetteur de pression indique 3 bar. On vous précise qu'il s'agit d'une mesure relative (gauge). Quelle est la pression absolue correspondante, au niveau de la mer ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 4 bar absolus.",
+     "correcte": true,
+     "feedback": "Correct. Pression absolue = pression relative + pression atmosphérique, soit environ 3 + 1,013 ≈ 4 bar."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 2 bar absolus.",
+     "correcte": false,
+     "feedback": "Incorrect. La pression atmosphérique s'ajoute à la pression relative, elle ne s'en retranche pas."
+    },
+    {
+     "id": "c",
+     "texte": "Exactement 3 bar absolus, les deux échelles étant équivalentes.",
+     "correcte": false,
+     "feedback": "Incorrect. Elles diffèrent précisément de la pression atmosphérique ; la confusion est une source classique d'erreurs de calcul."
+    },
+    {
+     "id": "d",
+     "texte": "On ne peut pas conclure sans connaître la température du fluide.",
+     "correcte": false,
+     "feedback": "Incorrect. La conversion entre les deux échelles ne dépend que de la pression atmosphérique."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur d'environ 4 bar absolus est exacte."
+    }
+   ],
+   "feedback_general": "Trois références à distinguer rigoureusement : absolue (par rapport au vide), relative ou effective (par rapport à l'atmosphère), et différentielle (entre deux points). L'écart devient critique dans les calculs de NPSH, de compression et de vaporisation, où seule la pression absolue a un sens physique. En altitude, la pression atmosphérique baisse sensiblement, ce qui modifie la conversion et réduit d'autant le NPSH disponible d'une installation.",
+   "source": "ISO 80000-4 ; bonnes pratiques d'instrumentation de procédé."
+  },
+  {
+   "id": "Q27",
+   "domaine": "Automatisme, instrumentation & régulation",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Concernant les capteurs et circuits tout-ou-rien d'une installation automatisée, quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Un détecteur inductif ne détecte que les objets métalliques, alors qu'un détecteur capacitif détecte également les matériaux non métalliques.",
+     "correcte": true,
+     "feedback": "Correct. Le capacitif est utilisé notamment pour la détection de niveau à travers une paroi non métallique."
+    },
+    {
+     "id": "b",
+     "texte": "Un circuit d'arrêt d'urgence doit être réalisé avec des contacts à ouverture (normalement fermés), afin qu'une rupture de fil provoque l'arrêt.",
+     "correcte": true,
+     "feedback": "Correct. C'est le principe de sécurité positive : la défaillance doit conduire à l'état sûr, jamais à une inhibition silencieuse de la fonction."
+    },
+    {
+     "id": "c",
+     "texte": "Un détecteur de type PNP délivre un potentiel positif sur sa sortie à l'état actif, et doit être associé à une entrée automate compatible.",
+     "correcte": true,
+     "feedback": "Correct. Mélanger PNP et NPN sur un même automate est une source classique de dysfonctionnements au démarrage d'une installation."
+    },
+    {
+     "id": "d",
+     "texte": "Un contact à fermeture (normalement ouvert) convient parfaitement à une fonction d'arrêt d'urgence, à condition que le câblage soit soigné.",
+     "correcte": false,
+     "feedback": "Incorrect. Avec un contact à fermeture, une rupture de fil rend l'arrêt d'urgence inopérant sans que personne ne le sache : c'est une défaillance dangereuse silencieuse."
+    },
+    {
+     "id": "e",
+     "texte": "Les contacts d'un arrêt d'urgence peuvent transiter par le programme de l'automate standard, sans câblage direct ni relais de sécurité.",
+     "correcte": false,
+     "feedback": "Incorrect. La fonction d'arrêt d'urgence doit s'appuyer sur une architecture de sécurité indépendante du programme applicatif, par relais de sécurité ou automate de sécurité."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Trois propositions sont exactes."
+    }
+   ],
+   "feedback_general": "Le principe de sécurité positive gouverne l'ensemble des circuits de sécurité : perte d'alimentation, rupture de conducteur, défaillance d'un composant, toutes doivent conduire à l'état sûr. C'est la même logique que le zéro vif à 4 mA en instrumentation analogique : on conçoit pour que la panne se manifeste, jamais pour qu'elle se dissimule.",
+   "source": "ISO 13850 (arrêt d'urgence) ; ISO 13849-1 ; IEC 60947-5-1."
+  },
+  {
+   "id": "Q28",
+   "domaine": "Automatisme, instrumentation & régulation",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "Dans un régulateur PID, quel est l'effet propre de l'action dérivée et quelle est sa principale limite ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Elle anticipe l'évolution de l'erreur en réagissant à sa pente, ce qui améliore la stabilité, mais elle amplifie le bruit de mesure et exige donc un filtrage.",
+     "correcte": true,
+     "feedback": "Correct. C'est pourquoi elle est souvent laissée à zéro sur les boucles de débit et de pression, très bruitées, et réservée aux boucles lentes comme la température."
+    },
+    {
+     "id": "b",
+     "texte": "Elle annule l'erreur statique résiduelle en régime permanent.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est le rôle de l'action intégrale."
+    },
+    {
+     "id": "c",
+     "texte": "Elle augmente le gain de la boucle proportionnellement à l'amplitude de l'erreur.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est la description de l'action proportionnelle."
+    },
+    {
+     "id": "d",
+     "texte": "Elle filtre le bruit de mesure et lisse le signal du capteur.",
+     "correcte": false,
+     "feedback": "Incorrect. Elle produit exactement l'effet inverse : en dérivant, elle amplifie fortement les composantes rapides du signal, donc le bruit."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La première proposition est exacte."
+    }
+   ],
+   "feedback_general": "Résumé des trois actions : le proportionnel réagit au présent, l'intégral au passé accumulé, le dérivé à la tendance future. En pratique industrielle, la majorité des boucles fonctionnent en PI seul. Un réglage utile à connaître : appliquer l'action dérivée sur la mesure plutôt que sur l'écart évite l'à-coup violent provoqué par un changement brusque de consigne.",
+   "source": "Bonnes pratiques de réglage des boucles de régulation industrielle ; documentation ISA."
+  },
+  {
+   "id": "Q29",
+   "domaine": "Automatisme, instrumentation & régulation",
+   "difficulte": 3,
+   "type": "multiple",
+   "enonce": "Vous mettez en service la supervision d'une station de pompage. Concernant la gestion des alarmes, quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Chaque alarme doit correspondre à une situation exigeant une action de l'opérateur, dans un délai déterminé.",
+     "correcte": true,
+     "feedback": "Correct. C'est le critère de définition d'une alarme. Une information qui n'appelle aucune action est un événement à historiser, pas une alarme."
+    },
+    {
+     "id": "b",
+     "texte": "Les alarmes doivent être hiérarchisées par priorité, selon la gravité des conséquences et l'urgence de la réaction.",
+     "correcte": true,
+     "feedback": "Correct. Sans hiérarchisation, l'opérateur ne peut pas arbitrer lorsque plusieurs alarmes surviennent simultanément."
+    },
+    {
+     "id": "c",
+     "texte": "Une avalanche d'alarmes lors d'un incident dégrade fortement la capacité de l'opérateur à diagnostiquer et à réagir.",
+     "correcte": true,
+     "feedback": "Correct. Ce phénomène est reconnu comme facteur aggravant dans de nombreux accidents industriels majeurs."
+    },
+    {
+     "id": "d",
+     "texte": "Les alarmes fugitives et répétitives, qui apparaissent et disparaissent sans action, doivent être traitées par une bande morte ou une temporisation.",
+     "correcte": true,
+     "feedback": "Correct. Ces alarmes bavardes désensibilisent l'opérateur, qui finit par ignorer l'ensemble du système d'alarme."
+    },
+    {
+     "id": "e",
+     "texte": "Il est préférable de configurer le maximum d'alarmes possible, afin de ne rien manquer.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est l'erreur la plus courante en mise en service. Un système saturé d'alarmes est fonctionnellement équivalent à un système sans alarme."
+    },
+    {
+     "id": "g",
+     "texte": "Une alarme désactivée temporairement pour travaux peut le rester tant que l'équipement fonctionne normalement.",
+     "correcte": false,
+     "feedback": "Incorrect. Toute inhibition d'alarme doit être tracée, limitée dans le temps et faire l'objet d'une levée formelle. Les inhibitions oubliées figurent parmi les causes récurrentes d'accidents."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont exactes."
+    }
+   ],
+   "feedback_general": "Les référentiels de gestion des alarmes fixent des repères quantitatifs : un ordre de grandeur souvent cité est d'une alarme toutes les dix minutes en régime normal, et pas plus de dix alarmes dans les dix minutes suivant un incident. Au-delà, l'opérateur décroche. La démarche consiste à rationaliser le système existant : recenser, justifier chaque alarme, supprimer celles qui n'appellent aucune action, et documenter la réponse attendue pour chacune de celles qui restent.",
+   "source": "ISA-18.2 (Management of Alarm Systems for the Process Industries) ; IEC 62682 ; EEMUA 191."
+  },
+  {
+   "id": "Q30",
+   "domaine": "Automatisme, instrumentation & régulation",
+   "difficulte": 3,
+   "type": "unique",
+   "enonce": "Mise en situation.\n\nUn débitmètre à diaphragme est installé sur une conduite de transfert. Depuis sa mise en service, il indique systématiquement un débit inférieur d'environ 15 % à celui mesuré par un compteur volumétrique de référence installé en aval, et cet écart est stable et reproductible quel que soit le débit.\n\nVos vérifications :\n• Le transmetteur de pression différentielle a été étalonné au banc : conforme.\n• Les lignes d'impulsion ont été purgées, aucun bouchon ni poche d'air.\n• Le calcul de dimensionnement du diaphragme a été revérifié : diamètres, rapport β et paramètres du fluide sont corrects.\n• L'extraction de racine carrée est bien active et correctement paramétrée dans la chaîne.\n• Le compteur volumétrique de référence a été vérifié et est étalonné.\n• La masse volumique et la température du fluide correspondent aux valeurs de calcul.\n\nQuelle est la cause la plus probable parmi les propositions suivantes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Le transmetteur de pression différentielle est déréglé et sous-estime la mesure.",
+     "correcte": false,
+     "feedback": "Incorrect. Il a été étalonné au banc et déclaré conforme."
+    },
+    {
+     "id": "b",
+     "texte": "Une poche d'air subsiste dans une ligne d'impulsion et fausse la différence de pression.",
+     "correcte": false,
+     "feedback": "Incorrect. Les lignes ont été purgées et contrôlées ; par ailleurs, un tel défaut produirait un écart instable, non un biais constant."
+    },
+    {
+     "id": "c",
+     "texte": "L'extraction de racine carrée n'a pas été activée dans la chaîne de mesure.",
+     "correcte": false,
+     "feedback": "Incorrect. L'énoncé précise qu'elle est active et correctement paramétrée ; son absence produirait d'ailleurs un écart variant fortement avec le débit, non un biais constant de 15 %."
+    },
+    {
+     "id": "d",
+     "texte": "La masse volumique réelle du fluide diffère de celle utilisée dans le calcul.",
+     "correcte": false,
+     "feedback": "Incorrect. Masse volumique et température ont été vérifiées et correspondent aux valeurs de calcul."
+    },
+    {
+     "id": "e",
+     "texte": "Le diaphragme est sous-dimensionné et sature la plage de mesure du transmetteur.",
+     "correcte": false,
+     "feedback": "Incorrect. Le dimensionnement a été revérifié, et une saturation se manifesterait dans le haut de l'échelle uniquement, non sur toute la plage."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": true,
+     "feedback": "Correct. Toute la chaîne électronique et le calcul sont validés. L'anomalie porte donc sur l'installation mécanique du primaire de mesure, seul élément non vérifié."
+    }
+   ],
+   "feedback_general": "Deux causes d'installation expliquent un biais stable et reproductible sur toute la plage.\n\nLa première, la plus fréquente et la plus spectaculaire : le diaphragme monté à l'envers. Un diaphragme à orifice concentrique comporte un chanfrein qui doit impérativement se trouver du côté AVAL. Monté à l'envers, il modifie profondément le coefficient de décharge et introduit un biais systématique de l'ordre de 10 à 20 %. La plaque porte normalement un repère « inlet » ou une languette d'identification à respecter.\n\nLa seconde : des longueurs droites amont et aval insuffisantes. Un coude, une vanne ou un té trop proche déforme le profil des vitesses et fausse la mesure. La norme fixe des longueurs minimales, en diamètres de conduite, qui dépendent du rapport β et de la nature de la singularité amont. Un redresseur de veine peut réduire ces exigences lorsque la place manque.\n\nMéthode d'examen : lorsque l'ensemble de la chaîne électronique est validé et que l'erreur est un biais stable, il faut regarder l'élément primaire et son installation mécanique — le composant que personne ne va démonter parce qu'il n'a pas de voyant.",
+   "source": "ISO 5167-1 et ISO 5167-2 (organes déprimogènes — diaphragmes) ; API MPMS chapitre 14."
+  },
+  {
+   "id": "Q31",
+   "domaine": "Automatisme, instrumentation & régulation",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Vous établissez le plan de vérification métrologique de l'instrumentation d'une station. Quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "L'étalonnage consiste à comparer l'instrument à un étalon de référence raccordé aux étalons nationaux, et à consigner l'écart constaté.",
+     "correcte": true,
+     "feedback": "Correct. L'étalonnage constate ; il n'implique pas nécessairement un ajustage de l'instrument."
+    },
+    {
+     "id": "b",
+     "texte": "La vérification consiste à confirmer que l'instrument respecte l'erreur maximale tolérée définie pour son usage.",
+     "correcte": true,
+     "feedback": "Correct. Elle débouche sur une décision : conforme, ajusté, ou déclassé."
+    },
+    {
+     "id": "c",
+     "texte": "La périodicité de vérification doit être adaptée à la criticité de la mesure et à la dérive observée historiquement sur l'instrument.",
+     "correcte": true,
+     "feedback": "Correct. Un instrument stable peut voir sa périodicité allongée ; un instrument qui dérive doit être suivi de plus près ou remplacé."
+    },
+    {
+     "id": "d",
+     "texte": "Un instrument utilisé pour un comptage transactionnel ou une fonction de sécurité relève d'exigences métrologiques renforcées.",
+     "correcte": true,
+     "feedback": "Correct. Les enjeux commerciaux et de sécurité justifient une traçabilité et une périodicité plus strictes que pour une simple indication de conduite."
+    },
+    {
+     "id": "e",
+     "texte": "Un instrument neuf, sorti d'usine avec un certificat, n'a pas besoin d'être vérifié avant sa première utilisation.",
+     "correcte": false,
+     "feedback": "Incorrect. Le transport, le stockage et surtout les conditions d'installation peuvent modifier son comportement. Le relevé initial constitue en outre la référence de suivi de dérive."
+    },
+    {
+     "id": "g",
+     "texte": "L'ajustage d'un instrument dispense d'enregistrer les valeurs relevées avant correction.",
+     "correcte": false,
+     "feedback": "Incorrect. Le relevé avant ajustage est essentiel : c'est lui qui documente la dérive et permet d'apprécier la validité des mesures réalisées depuis la vérification précédente."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont exactes."
+    }
+   ],
+   "feedback_general": "Trois termes à ne pas confondre : l'étalonnage constate un écart, l'ajustage corrige l'instrument, la vérification prononce la conformité à une exigence. Une règle usuelle veut que l'incertitude de l'étalon soit au moins trois à quatre fois meilleure que l'erreur tolérée sur l'instrument vérifié, faute de quoi la vérification n'a pas de sens.",
+   "source": "ISO/IEC 17025 ; vocabulaire international de métrologie (VIM) ; ISO 10012."
+  },
+  {
+   "id": "Q32",
+   "domaine": "Automatisme, instrumentation & régulation",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "Un équipement doit être arrêté en sécurité lors d'un appui sur le bouton d'arrêt d'urgence. La machine comporte un mouvement à forte inertie dont l'arrêt libre serait très long et dangereux. Quelle catégorie d'arrêt est appropriée ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Un arrêt de catégorie 1 : arrêt contrôlé, l'énergie étant maintenue le temps du freinage puis coupée une fois l'arrêt obtenu.",
+     "correcte": true,
+     "feedback": "Correct. C'est la solution adaptée quand la coupure immédiate de l'énergie rendrait l'arrêt plus dangereux que le freinage contrôlé."
+    },
+    {
+     "id": "b",
+     "texte": "Un arrêt de catégorie 0 : coupure immédiate de l'énergie vers les actionneurs.",
+     "correcte": false,
+     "feedback": "Incorrect ici. La catégorie 0 est le principe de base, mais sur une charge très inertielle, elle laisse la machine tourner longuement en roue libre, sans aucun contrôle."
+    },
+    {
+     "id": "c",
+     "texte": "Un arrêt de catégorie 2 : arrêt contrôlé avec maintien de l'énergie à l'issue de l'arrêt.",
+     "correcte": false,
+     "feedback": "Incorrect. La catégorie 2 n'est pas admise pour une fonction d'arrêt d'urgence, puisque l'énergie reste présente sur les actionneurs après l'arrêt."
+    },
+    {
+     "id": "d",
+     "texte": "Aucune catégorie normalisée ne s'applique, le choix relevant de la préférence de l'exploitant.",
+     "correcte": false,
+     "feedback": "Incorrect. Les catégories d'arrêt sont normalisées et le choix résulte de l'appréciation du risque, non d'une préférence."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La première proposition est exacte."
+    }
+   ],
+   "feedback_general": "Trois catégories d'arrêt : 0, coupure immédiate de l'énergie ; 1, arrêt contrôlé puis coupure de l'énergie ; 2, arrêt contrôlé avec énergie maintenue. Seules les catégories 0 et 1 conviennent à un arrêt d'urgence. Sur une machine pilotée par variateur, la catégorie 1 s'appuie sur une rampe de décélération surveillée, associée à une coupure sûre du couple à l'issue d'un temps garanti par un dispositif de sécurité indépendant.",
+   "source": "IEC 60204-1 (équipement électrique des machines) ; ISO 13850."
+  },
+  {
+   "id": "Q33",
+   "domaine": "Maintenance & fiabilité",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "Sur une période d'observation, un équipement a cumulé 2000 heures de fonctionnement, interrompues par 5 pannes ayant représenté au total 20 heures d'immobilisation. Quels sont son MTBF et son MTTR ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "MTBF de 400 heures et MTTR de 4 heures.",
+     "correcte": true,
+     "feedback": "Correct. MTBF = 2000 / 5 = 400 h ; MTTR = 20 / 5 = 4 h."
+    },
+    {
+     "id": "b",
+     "texte": "MTBF de 404 heures et MTTR de 20 heures.",
+     "correcte": false,
+     "feedback": "Incorrect. Le MTTR est une moyenne par intervention, et non le temps d'arrêt cumulé sur la période."
+    },
+    {
+     "id": "c",
+     "texte": "MTBF de 100 heures et MTTR de 4 heures.",
+     "correcte": false,
+     "feedback": "Incorrect. Le MTBF se calcule sur le temps de bon fonctionnement rapporté au nombre de défaillances."
+    },
+    {
+     "id": "d",
+     "texte": "MTBF de 2000 heures et MTTR de 20 heures.",
+     "correcte": false,
+     "feedback": "Incorrect. Il manque la division par le nombre de défaillances dans les deux cas."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La première proposition est exacte."
+    }
+   ],
+   "feedback_general": "Attention aux définitions exactes : le MTBF se rapporte au temps de BON FONCTIONNEMENT, non au temps calendaire. Le MTTR, quant à lui, englobe l'ensemble du temps d'indisponibilité pour maintenance corrective : détection, diagnostic, attente de pièces, intervention et remise en service. C'est souvent l'attente de pièces qui pèse le plus lourd, ce qui ramène au dimensionnement du stock de rechange.",
+   "source": "NF EN 13306 ; IEC 60050-192."
+  },
+  {
+   "id": "Q34",
+   "domaine": "Maintenance & fiabilité",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Vous mettez en place une GMAO sur une station nouvellement exploitée. Quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Une codification hiérarchique et stable des équipements est le préalable indispensable à toute exploitation ultérieure des données.",
+     "correcte": true,
+     "feedback": "Correct. Sans arborescence cohérente, les historiques deviennent inexploitables et les analyses de fiabilité impossibles."
+    },
+    {
+     "id": "b",
+     "texte": "Chaque intervention doit générer un compte rendu précisant le symptôme, la cause identifiée et l'action réalisée.",
+     "correcte": true,
+     "feedback": "Correct. Un compte rendu réduit à « réparé » détruit toute possibilité d'analyse ultérieure."
+    },
+    {
+     "id": "c",
+     "texte": "La GMAO permet de calculer des indicateurs de pilotage tels que la part de préventif, le taux de respect du planning ou la répartition des coûts par équipement.",
+     "correcte": true,
+     "feedback": "Correct. Ces indicateurs orientent l'allocation des moyens, à condition que la saisie soit rigoureuse."
+    },
+    {
+     "id": "d",
+     "texte": "La qualité des indicateurs dépend directement de la rigueur de saisie par les intervenants sur le terrain.",
+     "correcte": true,
+     "feedback": "Correct. C'est le point faible de tout déploiement : un outil parfait alimenté par des saisies négligées produit des indicateurs trompeurs, pires que pas d'indicateurs du tout."
+    },
+    {
+     "id": "e",
+     "texte": "L'installation d'une GMAO améliore par elle-même la disponibilité des équipements.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est un outil de gestion de l'information. La disponibilité s'améliore par les décisions prises à partir de cette information, jamais par le logiciel lui-même."
+    },
+    {
+     "id": "g",
+     "texte": "La codification des équipements peut être modifiée librement en cours d'exploitation pour l'adapter aux besoins du moment.",
+     "correcte": false,
+     "feedback": "Incorrect. Une codification instable rompt la continuité des historiques et rend toute analyse de fiabilité impossible a posteriori."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont exactes."
+    }
+   ],
+   "feedback_general": "L'échec le plus fréquent d'un déploiement de GMAO tient à un démarrage trop ambitieux : arborescence trop détaillée, champs de saisie trop nombreux, formulaires décourageants. Les équipes se lassent, la saisie se dégrade et les données deviennent inutilisables. Commencer par les équipements critiques, avec un jeu de champs réduit et réellement exploité, produit de bien meilleurs résultats.",
+   "source": "NF EN 13306 ; ISO 55001 ; ISO 14224 pour la codification et le recueil de données de fiabilité dans l'industrie pétrolière."
+  },
+  {
+   "id": "Q35",
+   "domaine": "Maintenance & fiabilité",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Vous organisez la préparation des interventions de maintenance de la station. Quelles pratiques sont pertinentes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Rédiger des gammes d'intervention détaillant les opérations, les outillages, les pièces et les temps alloués.",
+     "correcte": true,
+     "feedback": "Correct. La préparation transforme une intervention improvisée en opération reproductible et chiffrable."
+    },
+    {
+     "id": "b",
+     "texte": "Constituer des kits de pièces préparés à l'avance pour les interventions récurrentes.",
+     "correcte": true,
+     "feedback": "Correct. Cela supprime une part importante du temps d'immobilisation, souvent passé à chercher des pièces."
+    },
+    {
+     "id": "c",
+     "texte": "Intégrer dans la gamme les mesures de sécurité applicables : consignation, permis requis, équipements de protection.",
+     "correcte": true,
+     "feedback": "Correct. La sécurité intégrée à la gamme est appliquée ; la sécurité renvoyée à un document séparé est oubliée."
+    },
+    {
+     "id": "d",
+     "texte": "Confier les tâches simples de surveillance quotidienne — contrôle de niveaux, écoute, relevés, propreté — aux opérateurs de conduite.",
+     "correcte": true,
+     "feedback": "Correct. C'est la maintenance de premier niveau, ou automaintenance : l'opérateur détecte les dérives bien avant la ronde de maintenance."
+    },
+    {
+     "id": "e",
+     "texte": "Réserver la préparation aux seules interventions lourdes, les interventions courantes n'en tirant aucun bénéfice.",
+     "correcte": false,
+     "feedback": "Incorrect. Ce sont précisément les interventions répétitives qui offrent le meilleur retour sur l'effort de préparation, par effet de volume."
+    },
+    {
+     "id": "g",
+     "texte": "Les temps alloués aux interventions doivent être fixés au plus juste, sans marge, afin de maximiser la productivité.",
+     "correcte": false,
+     "feedback": "Incorrect. Des temps irréalistes ne sont jamais tenus, décrédibilisent la planification et incitent à contourner les étapes de sécurité."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont pertinentes."
+    }
+   ],
+   "feedback_general": "Une préparation soignée fait généralement passer le temps réellement productif d'un intervenant de l'ordre de 30 % à plus de 60 % de sa journée, le reste étant consommé par les déplacements, les recherches de pièces et les attentes d'autorisation. C'est le gisement de productivité le plus important d'un service de maintenance, avant même toute question de compétence technique.",
+   "source": "NF EN 13460 (documents pour la maintenance) ; référentiels TPM."
+  },
+  {
+   "id": "Q36",
+   "domaine": "Maintenance & fiabilité",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "Lors du contrôle périodique d'une pompe, vous mesurez au comparateur le jeu axial de l'arbre et constatez qu'il a nettement augmenté depuis la mise en service. Comment interpréter cette évolution ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Elle signale l'usure du roulement de butée ou de son logement, et annonce une dégradation de la position axiale du rotor.",
+     "correcte": true,
+     "feedback": "Correct. Sur une pompe, un jeu axial croissant peut conduire au contact entre la roue et le corps, ainsi qu'à une sollicitation anormale de la garniture mécanique."
+    },
+    {
+     "id": "b",
+     "texte": "Elle est normale et traduit simplement la dilatation thermique de l'arbre.",
+     "correcte": false,
+     "feedback": "Incorrect. Le contrôle s'effectue machine froide et à l'arrêt ; la dilatation n'intervient pas dans la mesure."
+    },
+    {
+     "id": "c",
+     "texte": "Elle indique un défaut d'alignement de l'accouplement.",
+     "correcte": false,
+     "feedback": "Incorrect. Un désalignement se caractérise par une signature vibratoire, non par une augmentation du jeu axial mesuré à l'arrêt."
+    },
+    {
+     "id": "d",
+     "texte": "Elle est sans conséquence tant que la machine ne vibre pas.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est précisément l'intérêt de cette mesure : détecter une dégradation avant qu'elle ne devienne perceptible en vibration."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La première proposition est exacte."
+    }
+   ],
+   "feedback_general": "Les mesures dimensionnelles simples et régulières — jeu axial, jeu radial, entrefer, épaisseur — constituent une forme de maintenance conditionnelle peu coûteuse et très efficace, souvent négligée au profit des seules technologies instrumentées. Leur valeur repose entièrement sur deux conditions : disposer d'une mesure de référence prise à la mise en service, et refaire la mesure toujours au même endroit et dans les mêmes conditions.",
+   "source": "API 610 pour les tolérances ; NF EN 13306 ; guides de maintenance conditionnelle."
+  },
+  {
+   "id": "Q37",
+   "domaine": "Maintenance & fiabilité",
+   "difficulte": 3,
+   "type": "unique",
+   "enonce": "Mise en situation.\n\nDans l'armoire d'automatisme d'une station, des cartes d'entrées tout-ou-rien de l'automate tombent en panne de manière répétée : cinq cartes remplacées en un an, toujours sur les mêmes emplacements, avec destruction constatée des optocoupleurs d'entrée.\n\nVos vérifications :\n• Alimentation 24 V continu contrôlée : tension stable et conforme, ondulation faible.\n• Mise à la terre de l'armoire et des masses métalliques : continuité vérifiée, valeurs conformes.\n• Températures dans l'armoire relevées en continu : très en dessous des limites du constructeur.\n• Les cartes de sortie et l'unité centrale, situées dans le même rack, ne présentent aucune défaillance.\n• Les entrées concernées reçoivent des contacts auxiliaires de contacteurs de puissance et de relais, dont les bobines sont alimentées en 230 V alternatif.\n• Aucune de ces bobines n'est équipée de circuit d'antiparasitage.\n\nQuelle est la cause la plus probable parmi les propositions suivantes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Une alimentation 24 V défectueuse délivrant des surtensions intermittentes.",
+     "correcte": false,
+     "feedback": "Incorrect. La tension a été contrôlée comme stable et conforme, avec une faible ondulation. De plus, une alimentation défaillante affecterait aussi les autres cartes du rack."
+    },
+    {
+     "id": "b",
+     "texte": "Un défaut de mise à la terre de l'armoire.",
+     "correcte": false,
+     "feedback": "Incorrect. La continuité et les valeurs de terre ont été vérifiées et sont conformes."
+    },
+    {
+     "id": "c",
+     "texte": "Une température excessive à l'intérieur de l'armoire.",
+     "correcte": false,
+     "feedback": "Incorrect. Les températures relevées sont très inférieures aux limites, et un problème thermique frapperait indistinctement toutes les cartes du rack."
+    },
+    {
+     "id": "d",
+     "texte": "Des cartes défectueuses provenant d'un lot de fabrication non conforme.",
+     "correcte": false,
+     "feedback": "Incorrect. Cinq défaillances successives, sur les mêmes emplacements et avec le même mode de destruction, désignent une contrainte locale, non un défaut de fabrication aléatoire."
+    },
+    {
+     "id": "e",
+     "texte": "Un sous-dimensionnement du calibre de protection de l'alimentation de l'automate.",
+     "correcte": false,
+     "feedback": "Incorrect. Une protection sous-calibrée provoquerait des coupures, non la destruction d'optocoupleurs sur des voies d'entrée précises."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": true,
+     "feedback": "Correct. La localisation constante sur les mêmes emplacements, l'épargne des autres cartes et la nature des signaux raccordés convergent vers une cause que les propositions ignorent."
+    }
+   ],
+   "feedback_general": "Il s'agit de surtensions transitoires générées par la coupure des bobines de contacteurs et de relais. À l'ouverture d'un circuit inductif, l'énergie stockée dans la bobine provoque une surtension pouvant atteindre plusieurs centaines, voire plusieurs milliers de volts, avec un arc entre les contacts. Ces transitoires se propagent par couplage capacitif et par conduction le long des câbles de commande cheminant à proximité, et détruisent progressivement les optocoupleurs d'entrée.\n\nLe caractère sélectif de la panne s'explique naturellement : seules les voies raccordées à ces contacts sont exposées, ce qui épargne l'unité centrale et les cartes de sortie situées dans le même rack.\n\nRemèdes : équiper systématiquement les bobines de circuits d'antiparasitage — circuit RC ou varistance pour les bobines alternatives, diode de roue libre pour les bobines continues — séparer physiquement les câbles de commande et de puissance dans les chemins de câbles, et utiliser des câbles blindés pour les liaisons sensibles.\n\nMéthode d'examen : une défaillance électronique répétitive et localisée, dans un environnement par ailleurs sain, oriente vers les perturbations électromagnétiques conduites. C'est une famille de causes que les vérifications classiques — tension, terre, température — ne révèlent jamais.",
+   "source": "IEC 61000-5-2 et IEC 61000-6-2 (immunité en environnement industriel) ; IEC 60947-5-1 ; guides CEM d'installation des automates."
+  },
+  {
+   "id": "Q38",
+   "domaine": "Sécurité ATEX & pétrole-gaz",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "Deux liquides sont stockés dans un dépôt : de l'essence, dont le point d'éclair est très inférieur à la température ambiante, et du gasoil, dont le point d'éclair est supérieur à 55 °C. Comment cela influence-t-il le risque ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "L'essence dégage en permanence des vapeurs inflammables à température ambiante, alors que le gasoil doit être chauffé au-delà de son point d'éclair pour former une atmosphère inflammable.",
+     "correcte": true,
+     "feedback": "Correct. C'est la raison pour laquelle l'essence relève d'un zonage et de précautions bien plus étendus que le gasoil."
+    },
+    {
+     "id": "b",
+     "texte": "Le point d'éclair désigne la température à laquelle le liquide s'enflamme spontanément, sans source d'inflammation.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est la définition de la température d'auto-inflammation, qui est une grandeur distincte et bien plus élevée."
+    },
+    {
+     "id": "c",
+     "texte": "Un point d'éclair élevé signifie que le produit est plus dangereux, car il libère davantage d'énergie en brûlant.",
+     "correcte": false,
+     "feedback": "Incorrect. Le point d'éclair caractérise la facilité à former une atmosphère inflammable, non l'énergie de combustion."
+    },
+    {
+     "id": "d",
+     "texte": "Le gasoil ne présente aucun risque d'incendie, quelles que soient les conditions.",
+     "correcte": false,
+     "feedback": "Incorrect, et dangereux. Chauffé, pulvérisé en fines gouttelettes ou absorbé par un matériau poreux comme un chiffon ou un calorifuge, le gasoil s'enflamme parfaitement."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La première proposition est exacte."
+    }
+   ],
+   "feedback_general": "Trois températures à distinguer rigoureusement : le point d'éclair, température à laquelle le liquide émet assez de vapeurs pour former un mélange inflammable au contact d'une source d'inflammation ; le point d'inflammation, légèrement supérieur, à partir duquel la combustion s'entretient ; et la température d'auto-inflammation, bien plus élevée, à laquelle l'inflammation se produit sans source extérieure. Cette dernière détermine la classe de température T1 à T6 exigée du matériel électrique installé en zone.",
+   "source": "NFPA 30 ; IEC 60079-20-1 ; ISO 2719 (détermination du point d'éclair)."
+  },
+  {
+   "id": "Q39",
+   "domaine": "Sécurité ATEX & pétrole-gaz",
+   "difficulte": 3,
+   "type": "multiple",
+   "enonce": "Vous participez à l'étude de classement des zones ATEX d'une nouvelle installation. Quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Une source de dégagement de degré continu conduit typiquement à une zone 0 à son voisinage immédiat.",
+     "correcte": true,
+     "feedback": "Correct. Le degré de dégagement — continu, premier degré, second degré — se traduit respectivement par les zones 0, 1 et 2, sous réserve de l'effet de la ventilation."
+    },
+    {
+     "id": "b",
+     "texte": "L'étendue de la zone dépend du débit de dégagement, des propriétés du produit et de l'efficacité de la ventilation.",
+     "correcte": true,
+     "feedback": "Correct. Ces paramètres alimentent le calcul de la distance dangereuse autour de la source."
+    },
+    {
+     "id": "c",
+     "texte": "Une ventilation efficace et disponible en permanence peut réduire l'étendue d'une zone, voire abaisser son classement.",
+     "correcte": true,
+     "feedback": "Correct. Mais la ventilation doit alors être fiable et surveillée : sa perte modifie immédiatement le classement des zones concernées."
+    },
+    {
+     "id": "d",
+     "texte": "Le classement doit être documenté par un plan de zonage tenu à jour et réexaminé lors de toute modification de l'installation.",
+     "correcte": true,
+     "feedback": "Correct. Un plan de zonage figé devient rapidement faux, et donc dangereux, à mesure que l'installation évolue."
+    },
+    {
+     "id": "e",
+     "texte": "Un raccord à brides correctement monté sur une tuyauterie constitue une source de dégagement de degré continu.",
+     "correcte": false,
+     "feedback": "Incorrect. Un raccord fixe et correctement monté n'est pas considéré comme une source de dégagement en fonctionnement normal ; les sources sont les évents, les points de purge, les garnitures de pompes et les postes de chargement."
+    },
+    {
+     "id": "g",
+     "texte": "Un emplacement situé à l'extérieur, en plein air, ne peut jamais faire l'objet d'un classement en zone.",
+     "correcte": false,
+     "feedback": "Incorrect. La ventilation naturelle réduit l'étendue des zones mais ne les supprime pas : le voisinage immédiat d'un évent ou d'un poste de chargement extérieur reste classé."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont exactes."
+    }
+   ],
+   "feedback_general": "L'erreur de conception la plus fréquente consiste à classer trop large « par prudence », ce qui engendre un surcoût considérable en matériel certifié sans gain de sécurité. L'erreur symétrique, plus grave, consiste à ne jamais réviser le plan de zonage après modification : ajouter un évent, déplacer une pompe ou modifier une ventilation change le classement, et le matériel en place cesse alors d'être conforme sans que personne ne s'en aperçoive.",
+   "source": "IEC 60079-10-1 (classement des emplacements — atmosphères explosives gazeuses) ; API RP 505."
+  },
+  {
+   "id": "Q40",
+   "domaine": "Sécurité ATEX & pétrole-gaz",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Concernant les moyens de lutte contre l'incendie d'un dépôt d'hydrocarbures, quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "L'extinction d'un feu de nappe d'hydrocarbures repose principalement sur l'application de mousse, qui forme un tapis isolant le combustible de l'air.",
+     "correcte": true,
+     "feedback": "Correct. L'eau seule est inefficace, voire dangereuse, sur un feu de liquide inflammable non miscible."
+    },
+    {
+     "id": "b",
+     "texte": "Le refroidissement des bacs voisins d'un bac en feu par arrosage est essentiel pour éviter la propagation.",
+     "correcte": true,
+     "feedback": "Correct. Le rayonnement thermique peut porter la robe d'un bac voisin à une température critique et provoquer une extension du sinistre."
+    },
+    {
+     "id": "c",
+     "texte": "Le réseau d'eau incendie doit garantir un débit et une pression déterminés par le scénario dimensionnant, avec une autonomie définie.",
+     "correcte": true,
+     "feedback": "Correct. La ressource en eau et l'autonomie des pompes incendie sont souvent le facteur limitant réel du dispositif."
+    },
+    {
+     "id": "d",
+     "texte": "La mousse doit être appliquée de façon à s'étaler doucement sur la surface, sans plonger dans le liquide en le brassant.",
+     "correcte": true,
+     "feedback": "Correct. Une application brutale détruit le tapis de mousse et projette du produit enflammé."
+    },
+    {
+     "id": "e",
+     "texte": "Un feu de bac d'hydrocarbures s'éteint efficacement par jet d'eau direct sur la surface en flammes.",
+     "correcte": false,
+     "feedback": "Incorrect, et très dangereux. L'eau, plus dense, passe sous l'hydrocarbure, se vaporise brutalement et peut provoquer un débordement enflammé du produit."
+    },
+    {
+     "id": "g",
+     "texte": "Un extincteur à poudre de forte capacité suffit à traiter un feu de bac déclaré.",
+     "correcte": false,
+     "feedback": "Incorrect. Un extincteur portatif ne traite qu'un début d'incendie très localisé. Un feu de bac déclaré relève du réseau mousse et du refroidissement, pas d'un moyen de premier secours."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont exactes."
+    }
+   ],
+   "feedback_general": "Un point d'exploitation critique et souvent négligé : la date de péremption et la qualité de l'émulseur stocké. Un émulseur dégradé par un stockage prolongé ou par des conditions inadaptées produit une mousse instable qui ne tient pas sur la nappe. Les contrôles périodiques de l'émulseur et les essais de mise en œuvre du réseau font partie intégrante du dispositif de sécurité, au même titre que le matériel lui-même.",
+   "source": "NFPA 11 (Low-, Medium- and High-Expansion Foam) ; NFPA 30 ; API 2021."
+  },
+  {
+   "id": "Q41",
+   "domaine": "Maintenance & fiabilité",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Vous préparez l'arrêt technique programmé annuel de la station, fenêtre unique pendant laquelle les interventions lourdes sont possibles. Quelles pratiques sont pertinentes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Figer la liste des travaux à une date limite, au-delà de laquelle tout ajout doit faire l'objet d'un arbitrage formel.",
+     "correcte": true,
+     "feedback": "Correct. L'ajout continu de travaux de dernière minute est la première cause de dépassement de la durée d'arrêt."
+    },
+    {
+     "id": "b",
+     "texte": "Approvisionner et vérifier physiquement l'ensemble des pièces et consommables avant le début de l'arrêt.",
+     "correcte": true,
+     "feedback": "Correct. Découvrir une pièce manquante ou non conforme une fois la machine ouverte immobilise toute la séquence."
+    },
+    {
+     "id": "c",
+     "texte": "Établir un planning détaillé identifiant le chemin critique et les tâches pouvant être menées en parallèle.",
+     "correcte": true,
+     "feedback": "Correct. La durée d'un arrêt se joue sur quelques opérations critiques, souvent les épreuves, les séchages et les remontages en série."
+    },
+    {
+     "id": "d",
+     "texte": "Prévoir les inspections d'ouverture pouvant révéler des travaux imprévus, et provisionner une marge de durée à ce titre.",
+     "correcte": true,
+     "feedback": "Correct. On ne connaît l'état réel d'une capacité ou d'une machine qu'une fois ouverte : cette découverte doit être anticipée, pas subie."
+    },
+    {
+     "id": "e",
+     "texte": "Profiter de l'arrêt pour reporter les contrôles réglementaires à la campagne suivante, afin de réduire la durée d'immobilisation.",
+     "correcte": false,
+     "feedback": "Incorrect. Les contrôles réglementaires conditionnent l'exploitation de l'installation ; les reporter expose à une interdiction d'exploiter, bien plus coûteuse que quelques jours d'arrêt."
+    },
+    {
+     "id": "g",
+     "texte": "Les entreprises extérieures intervenant pendant l'arrêt peuvent être mobilisées au dernier moment, leur intervention étant de courte durée.",
+     "correcte": false,
+     "feedback": "Incorrect. Leur accueil sécurité, leurs autorisations et le plan de prévention se préparent en amont ; les mobiliser tardivement crée un goulot d'étranglement administratif au pire moment."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont pertinentes."
+    }
+   ],
+   "feedback_general": "Un arrêt technique se prépare plusieurs mois à l'avance, et la qualité de cette préparation détermine l'essentiel du résultat. Trois causes dominent les dépassements : les travaux ajoutés tardivement, les pièces non approvisionnées ou non conformes, et les découvertes à l'ouverture non provisionnées. Le retour d'expérience formalisé en fin d'arrêt est ce qui permet à la campagne suivante de ne pas répéter les mêmes écarts.",
+   "source": "ISO 55001 ; NF EN 13306 ; pratiques de gestion des arrêts programmés (turnarounds) dans l'industrie de procédé."
+  },
+  {
+   "id": "Q42",
+   "domaine": "Sécurité ATEX & pétrole-gaz",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Des interventions sont prévues dans une zone où la présence d'hydrogène sulfuré (H2S) est possible. Quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "L'H2S est plus lourd que l'air et s'accumule dans les points bas, les fosses et les caniveaux.",
+     "correcte": true,
+     "feedback": "Correct. C'est la raison pour laquelle les points bas sont les emplacements les plus dangereux, et où la détection doit être positionnée."
+    },
+    {
+     "id": "b",
+     "texte": "L'odeur d'œuf pourri caractéristique disparaît à concentration élevée, en raison de la paralysie de l'odorat.",
+     "correcte": true,
+     "feedback": "Correct. C'est ce qui rend ce gaz particulièrement traître : l'absence d'odeur peut signifier une concentration mortelle, non l'absence de danger. L'odorat n'est jamais un moyen de détection."
+    },
+    {
+     "id": "c",
+     "texte": "Le port d'un détecteur personnel de gaz est indispensable dans les zones concernées.",
+     "correcte": true,
+     "feedback": "Correct. Il alarme bien avant les concentrations dangereuses, à condition d'être testé au gaz étalon selon la périodicité prescrite."
+    },
+    {
+     "id": "d",
+     "texte": "L'H2S est également un gaz inflammable, en plus d'être toxique.",
+     "correcte": true,
+     "feedback": "Correct. Le double risque, toxique et explosif, doit être pris en compte dans l'analyse."
+    },
+    {
+     "id": "e",
+     "texte": "Un masque à cartouche filtrante offre une protection suffisante en atmosphère à forte concentration.",
+     "correcte": false,
+     "feedback": "Incorrect, et mortel. En atmosphère à forte concentration ou pauvre en oxygène, seul un appareil respiratoire isolant, autonome ou à adduction d'air, convient. Une cartouche filtrante sature très rapidement."
+    },
+    {
+     "id": "g",
+     "texte": "Une bonne ventilation naturelle du site suffit à écarter le risque, l'H2S se dispersant rapidement dans l'atmosphère.",
+     "correcte": false,
+     "feedback": "Incorrect. Plus lourd que l'air, l'H2S stagne dans les points bas même lorsque le site est globalement bien ventilé."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont exactes."
+    }
+   ],
+   "feedback_general": "L'H2S est l'un des risques les plus meurtriers du secteur pétrolier, et la majorité des victimes graves sont des intervenants venus porter secours sans protection. La règle absolue : ne jamais entrer pour secourir sans appareil respiratoire isolant, donner l'alerte, et laisser intervenir une équipe équipée. Les valeurs limites d'exposition se comptent en quelques parties par million ; quelques centaines de ppm suffisent à provoquer une perte de connaissance immédiate.",
+   "source": "NACE MR0175 / ISO 15156 pour les matériaux en service H2S ; fiches toxicologiques et recommandations OIT ; API RP 49."
+  },
+  {
+   "id": "Q43",
+   "domaine": "Sécurité ATEX & pétrole-gaz",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "Une armoire d'automatisme contenant du matériel électrique standard doit être installée dans une zone classée. On retient le mode de protection Ex p. En quoi consiste-t-il ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Maintenir l'intérieur de l'enveloppe en surpression avec un gaz propre, afin d'empêcher l'atmosphère explosive d'y pénétrer.",
+     "correcte": true,
+     "feedback": "Correct. C'est la protection par surpression interne, ou pressurisation. Elle permet d'utiliser du matériel standard à l'intérieur de l'enveloppe."
+    },
+    {
+     "id": "b",
+     "texte": "Enfermer le matériel dans une enveloppe capable de résister à une explosion interne sans la transmettre à l'extérieur.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est le mode Ex d, à enveloppe antidéflagrante."
+    },
+    {
+     "id": "c",
+     "texte": "Noyer les composants dans une résine isolante empêchant tout contact avec l'atmosphère.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est le mode Ex m, par encapsulage."
+    },
+    {
+     "id": "d",
+     "texte": "Limiter l'énergie électrique disponible dans le circuit en dessous du seuil d'inflammation.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est le mode Ex i, la sécurité intrinsèque."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La première proposition est exacte."
+    }
+   ],
+   "feedback_general": "L'Ex p impose une séquence stricte à connaître : balayage préalable d'un volume défini de gaz propre avant toute mise sous tension, puis maintien permanent de la surpression, avec surveillance asservie. En cas de perte de surpression, le système doit couper l'alimentation ou déclencher une alarme, selon le classement de la zone. La contrepartie est une dépendance à une source d'air ou d'azote propre et fiable, dont l'indisponibilité met l'armoire hors service.",
+   "source": "IEC 60079-2 (protection du matériel par enveloppe à surpression interne) ; IEC 60079-0."
+  },
+  {
+   "id": "Q44",
+   "domaine": "Sécurité ATEX & pétrole-gaz",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Concernant la protection des bacs de stockage contre les effets de la foudre et de l'électricité statique, quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "La robe métallique du bac, correctement mise à la terre, constitue en elle-même une protection efficace contre l'impact direct.",
+     "correcte": true,
+     "feedback": "Correct. Une capacité métallique d'épaisseur suffisante et bien reliée à la terre agit comme une cage : le courant s'écoule par l'enveloppe."
+    },
+    {
+     "id": "b",
+     "texte": "Sur un bac à toit flottant, des shunts conducteurs doivent assurer la continuité électrique entre le toit et la robe.",
+     "correcte": true,
+     "feedback": "Correct. Sans eux, le toit est isolé par le joint périphérique et peut accumuler une charge, avec risque d'étincelle précisément à l'endroit où subsistent des vapeurs."
+    },
+    {
+     "id": "c",
+     "texte": "L'état et le nombre de ces shunts doivent faire l'objet d'un contrôle périodique documenté.",
+     "correcte": true,
+     "feedback": "Correct. Les shunts s'usent, se corrodent et se rompent par le mouvement répété du toit ; leur défaillance est silencieuse."
+    },
+    {
+     "id": "d",
+     "texte": "Les brides et raccords des tuyauteries doivent présenter une continuité électrique, assurée si nécessaire par des tresses de liaison.",
+     "correcte": true,
+     "feedback": "Correct. Les joints d'étanchéité peuvent être isolants et interrompre la continuité, sauf en cas de joint isolant volontaire dans le cadre de la protection cathodique."
+    },
+    {
+     "id": "e",
+     "texte": "Un paratonnerre implanté sur le toit du bac constitue la solution recommandée en première intention.",
+     "correcte": false,
+     "feedback": "Incorrect. Implanter un dispositif de capture sur un réservoir contenant des vapeurs inflammables est contraire aux bonnes pratiques : la protection recherchée repose sur la continuité et la mise à la terre de la structure elle-même."
+    },
+    {
+     "id": "g",
+     "texte": "La mise à la terre du bac étant assurée par ses fondations en béton armé, aucun conducteur de terre spécifique n'est nécessaire.",
+     "correcte": false,
+     "feedback": "Incorrect. Les fondations ne garantissent ni une résistance de terre maîtrisée ni une continuité pérenne. Des conducteurs de terre dédiés et contrôlables sont requis."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont exactes."
+    }
+   ],
+   "feedback_general": "Le point faible d'un bac à toit flottant est le joint périphérique : c'est à la fois l'endroit où subsistent des vapeurs et celui où une discontinuité électrique peut apparaître. La grande majorité des incendies de bacs à toit flottant s'amorcent à cet endroit, souvent lors d'un orage. D'où l'importance du contrôle périodique des shunts, opération simple mais fréquemment omise faute d'accès facile.",
+   "source": "API 545 (Lightning Protection of Aboveground Storage Tanks) ; API 2003 ; IEC 62305-3."
+  },
+  {
+   "id": "Q45",
+   "domaine": "Sécurité ATEX & pétrole-gaz",
+   "difficulte": 3,
+   "type": "multiple",
+   "enonce": "Une modification est envisagée sur une installation existante : remplacement d'une pompe par un modèle de débit supérieur et déplacement d'un évent. Concernant la gestion des modifications, quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Toute modification, même apparemment mineure, doit faire l'objet d'une analyse de risque préalable avant réalisation.",
+     "correcte": true,
+     "feedback": "Correct. De nombreux accidents majeurs trouvent leur origine dans une modification jugée anodine et réalisée sans analyse."
+    },
+    {
+     "id": "b",
+     "texte": "L'analyse doit examiner les effets sur le zonage ATEX, le dimensionnement des protections contre la surpression et les capacités des équipements en aval.",
+     "correcte": true,
+     "feedback": "Correct. Augmenter un débit modifie les pertes de charge, le scénario de décharge des soupapes et parfois le classement des zones ; déplacer un évent déplace une source de dégagement."
+    },
+    {
+     "id": "c",
+     "texte": "La documentation — schémas de procédé et d'instrumentation, plans de zonage, schémas électriques — doit être mise à jour et diffusée après réalisation.",
+     "correcte": true,
+     "feedback": "Correct. Une documentation périmée transforme la modification en piège pour les intervenants suivants, parfois des années plus tard."
+    },
+    {
+     "id": "d",
+     "texte": "Les personnels d'exploitation et de maintenance doivent être informés et, si nécessaire, formés aux évolutions apportées.",
+     "correcte": true,
+     "feedback": "Correct. Une modification technique non accompagnée d'une mise à jour des consignes et des compétences produit des écarts d'exploitation."
+    },
+    {
+     "id": "e",
+     "texte": "Un remplacement à l'identique en apparence, par un matériel de marque différente, n'entre pas dans le champ de la gestion des modifications.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est un piège classique : un matériel « équivalent » peut différer sur un paramètre critique — certification ATEX, position de sécurité, courbe caractéristique, matériaux. Il faut vérifier l'équivalence, ce qui relève déjà de la démarche."
+    },
+    {
+     "id": "g",
+     "texte": "Une modification réalisée en urgence pour rétablir la production peut être régularisée après coup sans analyse préalable.",
+     "correcte": false,
+     "feedback": "Incorrect. L'urgence peut justifier une procédure allégée et accélérée, jamais l'absence d'analyse : c'est précisément dans l'urgence que les erreurs de conception se produisent."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont exactes."
+    }
+   ],
+   "feedback_general": "La gestion des modifications répond à une question simple : ce qui a été analysé lors de la conception ne l'est plus dès que l'installation change. Le point le plus délicat en pratique est de définir le seuil de déclenchement de la démarche, et de résister à la tentation de qualifier une modification de « remplacement à l'identique » pour éviter la procédure. Les modifications temporaires — flexible provisoire, shunt de sécurité, consigne dérogatoire — doivent faire l'objet d'une vigilance particulière, car elles deviennent souvent définitives.",
+   "source": "IEC 61511 ; référentiels de maîtrise des risques accidentels dans les installations de procédé (Management of Change)."
+  },
+  {
+   "id": "Q46",
+   "domaine": "HSE, réglementation & gestion de projet",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Des travaux sont confiés à une entreprise extérieure sur le site de la station, en présence des équipes d'exploitation. Quelles dispositions relèvent des obligations du donneur d'ordre ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Réaliser une inspection commune préalable des lieux avec l'entreprise intervenante.",
+     "correcte": true,
+     "feedback": "Correct. Elle permet d'identifier concrètement les risques d'interférence entre les activités des deux entreprises."
+    },
+    {
+     "id": "b",
+     "texte": "Établir un plan de prévention formalisant les risques d'interférence et les mesures retenues.",
+     "correcte": true,
+     "feedback": "Correct. Il précise notamment les autorisations requises, les zones interdites et les modalités d'alerte."
+    },
+    {
+     "id": "c",
+     "texte": "Assurer un accueil sécurité des intervenants, portant sur les risques du site, les consignes et les moyens d'alerte.",
+     "correcte": true,
+     "feedback": "Correct. Un intervenant extérieur ignore tout des spécificités du site : c'est cette méconnaissance qui le rend vulnérable."
+    },
+    {
+     "id": "d",
+     "texte": "Coordonner les interventions dans le temps et l'espace afin de limiter la coactivité.",
+     "correcte": true,
+     "feedback": "Correct. La coactivité — travaux en hauteur au-dessus d'une autre équipe, point chaud à proximité d'une purge — est la source de risque la plus caractéristique de ces situations."
+    },
+    {
+     "id": "e",
+     "texte": "La responsabilité de la sécurité incombant intégralement à l'entreprise intervenante, le donneur d'ordre n'a pas à intervenir dans son organisation interne.",
+     "correcte": false,
+     "feedback": "Incorrect. Chaque employeur reste responsable de ses propres salariés, mais le donneur d'ordre porte une obligation de coordination et d'information sur les risques du site."
+    },
+    {
+     "id": "g",
+     "texte": "Le plan de prévention rédigé lors d'une première intervention reste valable pour toutes les interventions ultérieures de la même entreprise.",
+     "correcte": false,
+     "feedback": "Incorrect. Il est établi pour une opération donnée, dans un contexte donné. Une nouvelle intervention appelle une nouvelle analyse des risques d'interférence."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont exactes."
+    }
+   ],
+   "feedback_general": "La statistique est constante d'un pays à l'autre : les intervenants d'entreprises extérieures sont surexposés aux accidents graves sur les sites industriels, précisément parce qu'ils ne connaissent ni les installations ni les habitudes locales. Le plan de prévention n'est pas une formalité administrative : c'est le document qui matérialise le transfert de connaissance du site vers l'intervenant.",
+   "source": "ISO 45001, § relatif aux achats et à la sous-traitance ; directive 89/391/CEE ; réglementations nationales sur les interventions d'entreprises extérieures."
+  },
+  {
+   "id": "Q47",
+   "domaine": "HSE, réglementation & gestion de projet",
+   "difficulte": 1,
+   "type": "unique",
+   "enonce": "Le responsable HSE du site souhaite renforcer la remontée des presqu'accidents, c'est-à-dire des événements sans conséquence mais qui auraient pu en avoir. Quel est l'intérêt principal de cette démarche ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Les presqu'accidents sont bien plus nombreux que les accidents et révèlent les mêmes causes, ce qui permet d'agir avant qu'un dommage ne survienne.",
+     "correcte": true,
+     "feedback": "Correct. C'est le principe de la pyramide des événements : agir sur la base large permet de réduire le sommet."
+    },
+    {
+     "id": "b",
+     "texte": "Ils permettent d'identifier les salariés les moins vigilants afin de cibler les rappels à l'ordre.",
+     "correcte": false,
+     "feedback": "Incorrect. Toute utilisation punitive des déclarations tarit immédiatement la remontée d'information et détruit la démarche."
+    },
+    {
+     "id": "c",
+     "texte": "Ils servent principalement à améliorer les statistiques officielles du site.",
+     "correcte": false,
+     "feedback": "Incorrect. Ils n'entrent pas dans les indicateurs d'accidents avec arrêt ; leur intérêt est préventif, non statistique."
+    },
+    {
+     "id": "d",
+     "texte": "Ils remplacent avantageusement l'analyse des accidents réels, plus difficile à conduire.",
+     "correcte": false,
+     "feedback": "Incorrect. Les deux démarches sont complémentaires ; un accident réel doit toujours faire l'objet d'une analyse approfondie."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La première proposition est exacte."
+    }
+   ],
+   "feedback_general": "Condition de réussite absolue : la démarche doit être explicitement non punitive. Dès qu'une déclaration peut se retourner contre son auteur, les remontées cessent, et l'absence de déclaration est alors interprétée à tort comme un bon résultat. Un site qui déclare beaucoup de presqu'accidents n'est pas un site dangereux : c'est un site où l'on parle.",
+   "source": "ISO 45001 ; méthodes d'analyse des événements et retour d'expérience HSE."
+  },
+  {
+   "id": "Q48",
+   "domaine": "HSE, réglementation & gestion de projet",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Vous rédigez le cahier des charges technique d'un appel d'offres pour la fourniture d'un ensemble de pompage. Quelles pratiques sont pertinentes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Exprimer autant que possible le besoin en termes de performances à atteindre plutôt qu'en solutions techniques imposées.",
+     "correcte": true,
+     "feedback": "Correct. La spécification fonctionnelle laisse aux candidats la liberté de proposer la solution la plus efficace et évite d'exclure involontairement de bonnes offres."
+    },
+    {
+     "id": "b",
+     "texte": "Préciser les conditions d'exploitation réelles : température ambiante, altitude, qualité du réseau électrique, nature et température du fluide.",
+     "correcte": true,
+     "feedback": "Correct. Ces données conditionnent les déclassements et les choix de matériaux ; les omettre conduit à recevoir du matériel inadapté et conforme au cahier des charges."
+    },
+    {
+     "id": "c",
+     "texte": "Définir les critères d'évaluation des offres et leur pondération, en intégrant le coût global de possession et non le seul prix d'acquisition.",
+     "correcte": true,
+     "feedback": "Correct. Des critères annoncés et pondérés rendent le choix défendable et orientent les candidats vers ce qui compte réellement."
+    },
+    {
+     "id": "d",
+     "texte": "Spécifier les livrables attendus : documentation, essais, formation, pièces de première dotation, garanties.",
+     "correcte": true,
+     "feedback": "Correct. Ce qui n'est pas exigé au cahier des charges devient un avenant coûteux ; c'est particulièrement vrai pour la documentation et la formation."
+    },
+    {
+     "id": "e",
+     "texte": "Reprendre la référence exacte d'un modèle de constructeur afin d'éviter toute ambiguïté technique.",
+     "correcte": false,
+     "feedback": "Incorrect. Une spécification par référence commerciale restreint la concurrence, est généralement irrégulière en marché public, et enferme dans une dépendance à un fournisseur unique."
+    },
+    {
+     "id": "g",
+     "texte": "Les critères d'évaluation peuvent être définis après réception des offres, afin de les adapter aux propositions reçues.",
+     "correcte": false,
+     "feedback": "Incorrect. Les critères et leur pondération doivent être annoncés dès la consultation ; les définir ensuite est irrégulier et rend le choix indéfendable."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont pertinentes."
+    }
+   ],
+   "feedback_general": "Le défaut le plus fréquent des cahiers des charges techniques n'est pas l'excès d'exigence mais l'omission du contexte d'exploitation. Un matériel parfaitement conforme aux spécifications écrites peut se révéler inadapté au site s'il a été conçu pour 40 °C ambiant et une alimentation stable. La règle : décrire les conditions réelles, exiger des performances, et laisser au fournisseur la responsabilité des moyens.",
+   "source": "ISO 21500 ; principes généraux de la commande publique ; pratiques de spécification d'équipements industriels."
+  },
+  {
+   "id": "Q49",
+   "domaine": "HSE, réglementation & gestion de projet",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "À mi-parcours d'un projet de réhabilitation, le suivi montre que 65 % du budget a été dépensé alors que l'avancement physique constaté sur le terrain est de 45 %. Quelle interprétation s'impose ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Le projet consomme ses ressources plus vite qu'il ne produit de valeur : il faut analyser l'écart et réviser la prévision de coût à l'achèvement.",
+     "correcte": true,
+     "feedback": "Correct. C'est un indice de performance de coût défavorable, qui appelle une analyse des causes et une nouvelle estimation à terminaison."
+    },
+    {
+     "id": "b",
+     "texte": "Le projet est en avance, puisque les dépenses engagées témoignent d'une forte activité.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est précisément l'illusion que la méthode de la valeur acquise permet d'éviter : dépenser n'est pas avancer."
+    },
+    {
+     "id": "c",
+     "texte": "L'écart est normal en milieu de projet et se résorbera mécaniquement en fin de chantier.",
+     "correcte": false,
+     "feedback": "Incorrect. Rien ne permet d'espérer un rattrapage spontané ; l'expérience montre au contraire que les écarts de coût tendent à s'aggraver."
+    },
+    {
+     "id": "d",
+     "texte": "Il faut attendre la fin du projet pour disposer de chiffres fiables et se prononcer.",
+     "correcte": false,
+     "feedback": "Incorrect. Attendre supprime toute possibilité d'action corrective : l'intérêt du suivi périodique est précisément d'alerter tôt."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La première proposition est exacte."
+    }
+   ],
+   "feedback_general": "Le suivi d'un projet exige toujours de confronter trois grandeurs : les dépenses engagées, l'avancement physique réellement constaté, et l'avancement planifié. La comparaison des seules dépenses au budget est l'erreur de pilotage la plus répandue. La mesure de l'avancement physique doit reposer sur des jalons objectifs et vérifiables sur le terrain, et non sur une appréciation déclarative des équipes.",
+   "source": "Corpus PMBOK, gestion de la valeur acquise ; ISO 21500."
+  },
+  {
+   "id": "Q50",
+   "domaine": "HSE, réglementation & gestion de projet",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "Le ministère demande à la station de réduire sa consommation énergétique. Vous êtes chargé d'engager la démarche. Quelles étapes sont pertinentes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Réaliser un audit énergétique établissant la répartition réelle des consommations par usage et par équipement.",
+     "correcte": true,
+     "feedback": "Correct. Sans mesure préalable, les actions se fondent sur des intuitions souvent démenties par les chiffres."
+    },
+    {
+     "id": "b",
+     "texte": "Définir des indicateurs de performance énergétique rapportant la consommation à l'activité, par exemple en kilowattheures par mètre cube pompé.",
+     "correcte": true,
+     "feedback": "Correct. Une consommation absolue ne dit rien : elle varie avec l'activité. Seul le ratio permet de constater un progrès réel."
+    },
+    {
+     "id": "c",
+     "texte": "Hiérarchiser les actions selon leur gain estimé, leur coût et leur temps de retour, avant d'engager les investissements.",
+     "correcte": true,
+     "feedback": "Correct. Les actions d'exploitation à coût nul ou faible — réglages, arrêt des équipements inutiles, correction de fuites — offrent souvent le meilleur retour et doivent précéder les investissements lourds."
+    },
+    {
+     "id": "d",
+     "texte": "Instrumenter les départs principaux par des compteurs afin de suivre l'effet des actions engagées.",
+     "correcte": true,
+     "feedback": "Correct. Sans sous-comptage, il est impossible d'attribuer un gain à une action, ni de détecter une dérive."
+    },
+    {
+     "id": "e",
+     "texte": "Commencer par remplacer l'ensemble des moteurs par des modèles à haut rendement, cette action offrant systématiquement le meilleur retour.",
+     "correcte": false,
+     "feedback": "Incorrect. Le gisement principal se situe généralement en amont : machines surdimensionnées, absence de variation de vitesse, régime de fonctionnement inadapté. Remplacer un moteur qui entraîne une pompe surdimensionnée revient à améliorer le rendement d'un gaspillage."
+    },
+    {
+     "id": "g",
+     "texte": "Une baisse de la consommation totale mesurée d'une année sur l'autre suffit à démontrer l'efficacité des actions engagées.",
+     "correcte": false,
+     "feedback": "Incorrect. La consommation absolue dépend de l'activité : une baisse peut simplement traduire une année de pompage plus faible. Seul l'indicateur rapporté à l'activité fait foi."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Quatre propositions sont pertinentes."
+    }
+   ],
+   "feedback_general": "L'ordre de la démarche est déterminant : mesurer, puis analyser, puis agir, puis vérifier. Sur une station de pompage, la hiérarchie usuelle des gisements est la suivante : d'abord supprimer les besoins inutiles et corriger les régimes de fonctionnement, ensuite adapter les machines à leur point de fonctionnement réel par variation de vitesse ou rognage, et seulement en dernier lieu améliorer le rendement des composants eux-mêmes.",
+   "source": "ISO 50001 (systèmes de management de l'énergie) ; ISO 50002 (audits énergétiques) ; ISO 50006 pour les indicateurs de performance énergétique."
+  }
+ ]
+}

@@ -23,6 +23,16 @@
       "statut": "publie"
     },
     {
+      "slug": "exam-C",
+      "fichier": "exams/exam-C.json",
+      "titre": "Épreuve C — troisième examen blanc",
+      "resume": "50 questions, même niveau que l'épreuve B, sujets entièrement nouveaux dans les sept domaines. À passer en dernier.",
+      "niveau": "Confirmé",
+      "questions": 50,
+      "duree_min": 120,
+      "statut": "publie"
+    },
+    {
       "slug": "exam-A-calibration",
       "fichier": "exams/exam-A-calibration.json",
       "titre": "Échantillon de calibration",
