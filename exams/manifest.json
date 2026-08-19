@@ -33,6 +33,16 @@
       "statut": "publie"
     },
     {
+      "slug": "exam-D",
+      "fichier": "exams/exam-D.json",
+      "titre": "Épreuve D — quatrième examen blanc",
+      "resume": "50 questions, même niveau que les épreuves B et C. Sujets entièrement nouveaux : essais, mesure, surveillance des machines, cybersécurité industrielle, levage, déchets.",
+      "niveau": "Confirmé",
+      "questions": 50,
+      "duree_min": 120,
+      "statut": "publie"
+    },
+    {
       "slug": "exam-A-calibration",
       "fichier": "exams/exam-A-calibration.json",
       "titre": "Échantillon de calibration",
