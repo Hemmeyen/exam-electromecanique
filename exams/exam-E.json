@@ -1,0 +1,1287 @@
+{
+ "exam_id": "MPME-ELECTROMEC-2026-E",
+ "titre": "Épreuve E — calcul mental, sans calculatrice",
+ "sous_titre": "Ministère du Pétrole, des Mines et de l'Énergie",
+ "version": "30 questions · calculatrice interdite · raccourcis de calcul de l'ingénieur",
+ "duree_secondes_par_question": 150,
+ "bareme": {
+  "points_par_question": 1.0,
+  "credit_partiel": true,
+  "penalite_par_option_fausse": "1/nb_correctes",
+  "plancher_par_question": 0
+ },
+ "questions": [
+  {
+   "id": "Q1",
+   "domaine": "Électrotechnique & machines électriques",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUn départ triphasé 400 V alimente une charge qui absorbe 100 A. Quelle est la puissance apparente appelée ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 40 kVA.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur résulte de l'oubli du facteur √3."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 69 kVA.",
+     "correcte": true,
+     "feedback": "Correct. S = √3 × U × I = 1,73 × 400 × 100 ≈ 69 000 VA."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 120 kVA.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur correspondrait à une multiplication par 3 au lieu de √3."
+    },
+    {
+     "id": "d",
+     "texte": "Environ 55 kVA.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur correspondrait à une division par √3, donc à l'application du facteur dans le mauvais sens."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur d'environ 69 kVA est exacte."
+    }
+   ],
+   "feedback_general": "Raccourci mental à mémoriser pour tout le concours : en 400 V triphasé, √3 × 400 ≈ 692, soit environ 0,69 kVA par ampère. Donc S(kVA) ≈ 0,69 × I(A), et réciproquement I(A) ≈ 1,44 × S(kVA). Ces deux coefficients, 0,69 et 1,44, permettent de passer instantanément du courant à la puissance et inversement, sans jamais poser d'opération.",
+   "source": "Relations fondamentales en régime triphasé équilibré."
+  },
+  {
+   "id": "Q2",
+   "domaine": "Électrotechnique & machines électriques",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUn moteur de 30 kW tourne à une vitesse nominale voisine de 1500 tr/min. Quel est l'ordre de grandeur de son couple nominal ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 20 N·m.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur résulterait d'une division de la puissance par la vitesse sans coefficient de conversion."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 190 N·m.",
+     "correcte": true,
+     "feedback": "Correct. C = 9550 × 30 / 1500 = 6,4 × 30 ≈ 190 N·m."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 380 N·m.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est l'ordre de grandeur du couple d'un moteur de 30 kW tournant à 750 tr/min, ou d'un 60 kW à 1500 tr/min."
+    },
+    {
+     "id": "d",
+     "texte": "Environ 950 N·m.",
+     "correcte": false,
+     "feedback": "Incorrect. Erreur d'un facteur cinq dans l'application de la formule."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur d'environ 190 N·m est exacte."
+    }
+   ],
+   "feedback_general": "Formule : C(N·m) = 9550 × P(kW) / N(tr/min). Pour éviter toute division mentale, mémoriser les coefficients aux vitesses normalisées à 50 Hz : à 3000 tr/min, C ≈ 3,2 × P(kW) ; à 1500 tr/min, C ≈ 6,4 × P ; à 1000 tr/min, C ≈ 9,6 × P ; à 750 tr/min, C ≈ 12,7 × P. Le couple double chaque fois que la vitesse est divisée par deux, à puissance égale.",
+   "source": "Relation fondamentale entre puissance, couple et vitesse."
+  },
+  {
+   "id": "Q3",
+   "domaine": "Électrotechnique & machines électriques",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "SANS CALCULATRICE.\n\nVous vérifiez la vraisemblance des données d'une note de calcul concernant un moteur asynchrone de 50 kW. Quels ordres de grandeur sont plausibles ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Un courant de démarrage en direct compris entre six et huit fois le courant nominal.",
+     "correcte": true,
+     "feedback": "Correct. C'est la plage usuelle des moteurs à cage standard, et c'est elle qui impose le dimensionnement des protections et du réseau amont."
+    },
+    {
+     "id": "b",
+     "texte": "Un rendement nominal supérieur à 90 %.",
+     "correcte": true,
+     "feedback": "Correct. À cette puissance, les rendements se situent typiquement entre 92 et 95 % selon la classe IE."
+    },
+    {
+     "id": "c",
+     "texte": "Un glissement nominal de l'ordre de 2 à 4 %.",
+     "correcte": true,
+     "feedback": "Correct. Le glissement nominal décroît avec la puissance : quelques pour cent sur une machine de plusieurs dizaines de kilowatts."
+    },
+    {
+     "id": "d",
+     "texte": "Un facteur de puissance à vide voisin de 0,85, comme en charge nominale.",
+     "correcte": false,
+     "feedback": "Incorrect. À vide, le courant est presque entièrement magnétisant : le facteur de puissance s'effondre, typiquement entre 0,1 et 0,3."
+    },
+    {
+     "id": "e",
+     "texte": "Un courant de démarrage inférieur à deux fois le courant nominal en démarrage direct.",
+     "correcte": false,
+     "feedback": "Incorrect. Un tel rapport ne s'obtient qu'avec un variateur de vitesse, jamais en démarrage direct."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Trois propositions sont plausibles."
+    }
+   ],
+   "feedback_general": "Le contrôle de vraisemblance par ordres de grandeur est la compétence la plus utile sans calculatrice : elle permet de détecter une erreur de note de calcul en quelques secondes. Repères moteur à mémoriser : Id/In entre 6 et 8 en direct, rendement de 88 % à 96 % selon la puissance et la classe, cos φ nominal entre 0,80 et 0,88, glissement nominal de 1 à 5 %, et en 400 V un courant absorbé d'environ 1,8 A par kilowatt utile.",
+   "source": "IEC 60034-1 et IEC 60034-30-1 ; données constructeurs usuelles."
+  },
+  {
+   "id": "Q4",
+   "domaine": "Électrotechnique & machines électriques",
+   "difficulte": 3,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUn transformateur de 400 kVA, 20 kV / 400 V, présente une tension de court-circuit Ucc de 4 %. Quel est l'ordre de grandeur du courant de court-circuit triphasé à ses bornes secondaires, en négligeant l'impédance du réseau amont ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 10 kA.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur correspondrait à un transformateur d'environ 280 kVA avec la même Ucc."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 12 kA.",
+     "correcte": false,
+     "feedback": "Incorrect. Valeur trop faible : le calcul donne un résultat sensiblement supérieur."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 20 kA.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur correspondrait à un transformateur d'environ 550 kVA avec la même Ucc."
+    },
+    {
+     "id": "d",
+     "texte": "Environ 25 kA.",
+     "correcte": false,
+     "feedback": "Incorrect. Valeur nettement surestimée."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": true,
+     "feedback": "Correct. Le calcul donne environ 14,4 kA, valeur qui ne figure dans aucune des propositions."
+    }
+   ],
+   "feedback_general": "Enchaînement mental en deux étapes. D'abord le courant nominal secondaire : I ≈ 1,44 × S(kVA) = 1,44 × 400 ≈ 577 A. Ensuite le courant de court-circuit : Icc = In / Ucc = 577 / 0,04, autrement dit 577 × 25 ≈ 14 400 A.\n\nAstuce décisive : diviser par 4 % revient à MULTIPLIER PAR 25. De même, diviser par 5 % revient à multiplier par 20, et par 6 % à multiplier par environ 16,7. Retenir ces trois facteurs évite toute division mentale sur les Ucc courantes.\n\nRepère de vraisemblance encore plus rapide : un transformateur de 400 kVA à 4 % donne un Icc de l'ordre de 15 kA, un 630 kVA environ 23 kA, un 1000 kVA environ 36 kA. Cela permet de vérifier instantanément qu'un appareillage de 25 kA de pouvoir de coupure convient dans le premier cas et pas dans le dernier.",
+   "source": "IEC 60909 ; IEC 60076-1."
+  },
+  {
+   "id": "Q5",
+   "domaine": "Électrotechnique & machines électriques",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUn atelier alimenté en 400 V triphasé appelle 250 A avec un facteur de puissance de 0,80. Quelle est la puissance active consommée ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 100 kW.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur résulterait de l'oubli du facteur √3."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 138 kW.",
+     "correcte": true,
+     "feedback": "Correct. S = 0,69 × 250 ≈ 173 kVA, puis P = 173 × 0,80 ≈ 138 kW."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 173 kW.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est la puissance APPARENTE en kVA, avant application du facteur de puissance."
+    },
+    {
+     "id": "d",
+     "texte": "Environ 216 kW.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur résulterait d'une division par le facteur de puissance au lieu d'une multiplication."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur d'environ 138 kW est exacte."
+    }
+   ],
+   "feedback_general": "Méthode en deux temps, toujours la même : passer d'abord du courant à la puissance apparente en multipliant par 0,69 en 400 V, puis de l'apparente à l'active en multipliant par le cos φ. Le sens de la multiplication se contrôle par le bon sens : la puissance active est toujours INFÉRIEURE à la puissance apparente. Si votre résultat en kW dépasse le résultat en kVA, l'opération a été faite à l'envers.",
+   "source": "Relations fondamentales en régime triphasé équilibré."
+  },
+  {
+   "id": "Q6",
+   "domaine": "Réseaux HTA/BT & distribution",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUne installation absorbe 100 kW avec un facteur de puissance de 0,80, à relever à 0,95. On donne : tan φ = 0,75 pour cos φ = 0,80, et tan φ = 0,33 pour cos φ = 0,95. Quelle puissance réactive de compensation faut-il installer ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 42 kvar.",
+     "correcte": true,
+     "feedback": "Correct. Q = P × (tan φ₁ − tan φ₂) = 100 × (0,75 − 0,33) = 100 × 0,42 = 42 kvar."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 75 kvar.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est la puissance réactive TOTALE consommée avant compensation, non la puissance à compenser."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 33 kvar.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est la puissance réactive qui subsistera APRÈS compensation."
+    },
+    {
+     "id": "d",
+     "texte": "Environ 108 kvar.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur résulterait d'une addition des deux tangentes au lieu d'une soustraction."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur de 42 kvar est exacte."
+    }
+   ],
+   "feedback_general": "Formule à connaître par cœur : Q = P × (tan φ₁ − tan φ₂). Le calcul devient immédiat dès lors que les tangentes sont fournies ou mémorisées. Quelques valeurs utiles : cos φ = 0,7 → tan ≈ 1,02 ; 0,8 → 0,75 ; 0,85 → 0,62 ; 0,9 → 0,48 ; 0,95 → 0,33. Contrôle de vraisemblance : relever un cos φ de 0,80 à 0,95 demande toujours une compensation d'environ 40 % de la puissance active, quelle que soit l'installation.",
+   "source": "Cahier Technique Schneider n° 194 ; NF C 15-100."
+  },
+  {
+   "id": "Q7",
+   "domaine": "Réseaux HTA/BT & distribution",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUn câble cuivre de 35 mm² alimente une charge triphasée de 60 A sous 400 V, sur 100 mètres. On prend une résistivité de 0,023 Ω·mm²/m et on néglige la réactance. Quelle est approximativement la chute de tension ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 7 V, soit moins de 2 %.",
+     "correcte": true,
+     "feedback": "Correct. ΔU = √3 × 0,023 × 100 × 60 / 35 ≈ 0,04 × 100 × 60 / 35 = 240 / 35 ≈ 7 V, soit 1,7 % de 400 V."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 4 V, soit 1 %.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur résulterait de l'oubli du facteur √3."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 20 V, soit 5 %.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur correspondrait à une section trois fois plus faible, ou à une longueur trois fois supérieure."
+    },
+    {
+     "id": "d",
+     "texte": "Environ 240 V.",
+     "correcte": false,
+     "feedback": "Incorrect. La division par la section a été omise."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur d'environ 7 V est exacte."
+    }
+   ],
+   "feedback_general": "Astuce de calcul mental : le produit √3 × 0,023 vaut environ 0,04 pour le cuivre. La formule triphasée se réduit donc à ΔU ≈ 0,04 × L × I / S, avec L en mètres et S en mm². Pour l'aluminium, dont la résistivité avoisine 0,037, le coefficient devient 0,064. Contrôle de vraisemblance : la limite admissible étant de 3 à 5 %, soit 12 à 20 V en 400 V, une chute de 7 V est confortable.",
+   "source": "NF C 15-100, § 525 ; IEC 60364-5-52."
+  },
+  {
+   "id": "Q8",
+   "domaine": "Réseaux HTA/BT & distribution",
+   "difficulte": 3,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUn conducteur doit supporter un courant de court-circuit de 10 kA éliminé en 0,2 seconde. Le coefficient k du conducteur vaut 115. On donne √0,2 ≈ 0,45. Quelle section minimale la contrainte thermique impose-t-elle, et quelle section normalisée retenir ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 39 mm², donc une section normalisée de 50 mm².",
+     "correcte": true,
+     "feedback": "Correct. S ≥ I √t / k = 10 000 × 0,45 / 115 = 4500 / 115 ≈ 39 mm², arrondi à la section normalisée supérieure."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 17 mm², donc une section normalisée de 25 mm².",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur résulterait de l'oubli de la racine carrée du temps, ou d'une erreur de facteur."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 87 mm², donc une section normalisée de 95 mm².",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur correspondrait à un temps d'élimination d'environ 1 seconde."
+    },
+    {
+     "id": "d",
+     "texte": "Environ 4,5 mm², donc une section normalisée de 6 mm².",
+     "correcte": false,
+     "feedback": "Incorrect. La division par k a été omise, ou une erreur d'un facteur dix s'est glissée dans le calcul."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur d'environ 39 mm² est exacte."
+    }
+   ],
+   "feedback_general": "Formule : S ≥ I √t / k. Les racines à mémoriser pour le calcul mental : √0,1 ≈ 0,32 ; √0,2 ≈ 0,45 ; √0,5 ≈ 0,71 ; √1 = 1. Valeurs usuelles de k : environ 115 pour le cuivre isolé PVC, 143 pour le cuivre PR, 76 pour l'aluminium PVC, 94 pour l'aluminium PR.\n\nEnseignement pratique : la section requise est proportionnelle au courant de défaut et à la RACINE du temps. Diviser par quatre le temps d'élimination ne divise la section requise que par deux — cela reste néanmoins le levier le plus accessible, en abaissant le seuil de la protection amont.",
+   "source": "IEC 60364-4-43 ; NF C 15-100, § 434 et 543."
+  },
+  {
+   "id": "Q9",
+   "domaine": "Réseaux HTA/BT & distribution",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "SANS CALCULATRICE.\n\nVous relisez le dossier électrique d'une station. Quels ordres de grandeur sont plausibles ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Une tension de court-circuit Ucc comprise entre 4 et 6 % pour un transformateur de distribution.",
+     "correcte": true,
+     "feedback": "Correct. C'est la plage normalisée usuelle : 4 % jusqu'à environ 630 kVA, 6 % au-delà."
+    },
+    {
+     "id": "b",
+     "texte": "Un courant nominal secondaire d'environ 1440 A pour un transformateur de 1000 kVA en 400 V.",
+     "correcte": true,
+     "feedback": "Correct. Application directe du coefficient de 1,44 A par kVA en 400 V."
+    },
+    {
+     "id": "c",
+     "texte": "Une résistance de prise de terre admissible pouvant dépasser 1000 Ω en schéma TT protégé par un différentiel 30 mA, pour une tension limite de 50 V.",
+     "correcte": true,
+     "feedback": "Correct. RA ≤ 50 / 0,03 ≈ 1667 Ω. C'est la haute sensibilité qui rend cette tolérance possible."
+    },
+    {
+     "id": "d",
+     "texte": "Un courant de court-circuit de 200 kA aux bornes secondaires d'un transformateur de 630 kVA.",
+     "correcte": false,
+     "feedback": "Incorrect. L'ordre de grandeur réel est d'environ 23 kA. Une valeur de 200 kA n'a aucun sens en distribution basse tension."
+    },
+    {
+     "id": "e",
+     "texte": "Un facteur de simultanéité supérieur à 1 sur un tableau divisionnaire alimentant plusieurs départs.",
+     "correcte": false,
+     "feedback": "Incorrect. Un facteur de simultanéité est par définition inférieur ou égal à 1 : il traduit le fait que les récepteurs ne fonctionnent pas tous ensemble."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Trois propositions sont plausibles."
+    }
+   ],
+   "feedback_general": "Table de repères à mémoriser pour la relecture rapide d'un dossier en 400 V : 1,44 A par kVA ; Icc secondaire d'environ 15 kA pour 400 kVA, 23 kA pour 630 kVA et 36 kA pour 1000 kVA à 4 % de Ucc ; chute de tension admissible de 3 à 5 % ; RA × IΔn ≤ 50 V en schéma TT. Ces quelques nombres permettent de valider ou d'invalider la plupart des notes de calcul sans rien recalculer.",
+   "source": "IEC 60076-1 ; IEC 60909 ; NF C 15-100."
+  },
+  {
+   "id": "Q10",
+   "domaine": "Réseaux HTA/BT & distribution",
+   "difficulte": 3,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUne station comporte trois moteurs de 30, 45 et 75 kW. On retient un facteur d'utilisation de 0,8, un facteur de simultanéité de 0,7 et un facteur de puissance moyen de 0,85. Quelle puissance de transformateur normalisée retenir parmi les calibres 100, 160, 250 et 400 kVA ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "100 kVA.",
+     "correcte": false,
+     "feedback": "Incorrect. Le besoin calculé avoisine 99 kVA : retenir ce calibre placerait le transformateur à près de 100 % de charge, sans aucune réserve."
+    },
+    {
+     "id": "b",
+     "texte": "160 kVA.",
+     "correcte": true,
+     "feedback": "Correct. Puissance totale 150 kW, puis 150 × 0,8 × 0,7 = 84 kW, et 84 / 0,85 ≈ 99 kVA. Le calibre 160 kVA place la charge autour de 62 %, avec une réserve d'extension raisonnable."
+    },
+    {
+     "id": "c",
+     "texte": "250 kVA.",
+     "correcte": false,
+     "feedback": "Incorrect. Ce calibre conduirait à une charge d'environ 40 %, avec des pertes à vide proportionnellement lourdes et un surcoût injustifié."
+    },
+    {
+     "id": "d",
+     "texte": "400 kVA.",
+     "correcte": false,
+     "feedback": "Incorrect. Surdimensionnement très important, sans justification à partir des données fournies."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Le calibre 160 kVA est le choix pertinent."
+    }
+   ],
+   "feedback_general": "Enchaînement mental : sommer les puissances (150 kW), appliquer le produit des facteurs — ici 0,8 × 0,7 = 0,56, soit 150 × 0,56 = 84 kW — puis diviser par le cos φ pour obtenir des kVA. Diviser par 0,85 revient à multiplier par environ 1,18, ce qui donne près de 99 kVA.\n\nRègle de choix : viser une charge nominale de 70 à 80 % du calibre retenu. Trop juste, il n'y a aucune réserve et le transformateur travaille en permanence à sa limite ; trop large, les pertes à vide, permanentes, pèsent lourd et le rendement se dégrade.",
+   "source": "NF C 15-100, § 311 ; Guide de l'Installation Électrique, Schneider Electric."
+  },
+  {
+   "id": "Q11",
+   "domaine": "Équipements tournants",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUne pompe fournit 90 m³/h sous une hauteur manométrique de 30 mètres, avec un rendement de 0,75. On utilisera la formule pratique P(kW) ≈ Q(m³/h) × H(m) / (367 × η). Quelle est la puissance absorbée à l'arbre ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 7,4 kW.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est la puissance hydraulique utile, avant division par le rendement."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 10 kW.",
+     "correcte": true,
+     "feedback": "Correct. 367 × 0,75 ≈ 275, et 90 × 30 = 2700, donc 2700 / 275 ≈ 9,8 kW."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 5,5 kW.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur résulterait d'une multiplication par le rendement au lieu d'une division."
+    },
+    {
+     "id": "d",
+     "texte": "Environ 27 kW.",
+     "correcte": false,
+     "feedback": "Incorrect. Erreur d'un facteur proche de trois, probablement dans la division par 367."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur d'environ 10 kW est exacte."
+    }
+   ],
+   "feedback_general": "Formule pratique à mémoriser pour l'eau : P(kW) ≈ Q(m³/h) × H(m) / (367 × η). Le nombre 367 provient de la conversion des unités. Astuce de calcul mental : arrondir 367 à environ 360, soit 36 × 10, ce qui simplifie considérablement les divisions. Contrôle de vraisemblance immédiat : une pompe de 100 m³/h sous 30 m avec un rendement correct absorbe une dizaine de kilowatts. Un écart d'un facteur dix avec cet ordre de grandeur signale une erreur de conversion.",
+   "source": "ANSI/HI 1.1-1.2 ; relations fondamentales des pompes centrifuges."
+  },
+  {
+   "id": "Q12",
+   "domaine": "Équipements tournants",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUne pompe centrifuge voit sa vitesse de rotation réduite à 80 % de sa valeur initiale. Quelle est approximativement l'économie de puissance absorbée ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 20 %.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est la réduction du DÉBIT, qui varie proportionnellement à la vitesse."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 36 %.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est la réduction de la HAUTEUR manométrique, qui varie avec le carré de la vitesse (0,8² = 0,64)."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 50 %.",
+     "correcte": true,
+     "feedback": "Correct. La puissance varie avec le cube : 0,8³ = 0,512, soit une puissance réduite à environ 51 %, donc une économie voisine de 49 %."
+    },
+    {
+     "id": "d",
+     "texte": "Environ 80 %.",
+     "correcte": false,
+     "feedback": "Incorrect. Cela supposerait une puissance résiduelle de 20 %, ce qui correspondrait à une réduction de vitesse bien plus importante."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. L'économie d'environ 50 % est la valeur exacte."
+    }
+   ],
+   "feedback_general": "Lois de similitude : Q ∝ N, H ∝ N², P ∝ N³. Le cube se calcule mentalement en deux multiplications : 0,8 × 0,8 = 0,64, puis 0,64 × 0,8 ≈ 0,51. Autres valeurs utiles à mémoriser : 0,9³ ≈ 0,73 ; 0,7³ ≈ 0,34 ; 0,5³ = 0,125.\n\nMessage à retenir : réduire la vitesse de 20 % divise la puissance par deux. C'est l'argument économique central de la variation de vitesse sur pompes et ventilateurs. Réserve importante : ces lois supposent un réseau purement dynamique ; en présence d'une hauteur géométrique importante, le gain réel est nettement plus faible.",
+   "source": "ANSI/HI 1.1-1.2 ; API 610."
+  },
+  {
+   "id": "Q13",
+   "domaine": "Équipements tournants",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUne pompe est installée EN CHARGE, son axe se situant 2 mètres sous le niveau libre d'une bâche ouverte à l'atmosphère. Les pertes de charge à l'aspiration valent 0,8 mètre. On prend une pression atmosphérique équivalente à 10,3 mètres et une tension de vapeur de l'eau équivalente à 0,2 mètre. Quel est le NPSH disponible ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 7,5 mètres.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur correspondrait à une pompe située AU-DESSUS du niveau libre, la hauteur étant alors retranchée."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 11,3 mètres.",
+     "correcte": true,
+     "feedback": "Correct. NPSHd = 10,3 − 0,2 + 2 − 0,8 = 11,3 m. La pompe étant en charge, la hauteur statique s'ajoute."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 13,1 mètres.",
+     "correcte": false,
+     "feedback": "Incorrect. Les pertes de charge à l'aspiration ont été omises, ou ajoutées au lieu d'être retranchées."
+    },
+    {
+     "id": "d",
+     "texte": "Environ 2,0 mètres.",
+     "correcte": false,
+     "feedback": "Incorrect. Confusion entre la hauteur géométrique d'aspiration et le NPSH disponible."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur d'environ 11,3 mètres est exacte."
+    }
+   ],
+   "feedback_general": "NPSHd = (Patm − Pvap)/ρg ± hauteur statique − pertes de charge à l'aspiration. Le signe de la hauteur est le piège principal : elle s'AJOUTE si la pompe est en charge, sous le niveau libre, et se RETRANCHE si elle est en aspiration, au-dessus du niveau.\n\nRepères à mémoriser : la pression atmosphérique au niveau de la mer équivaut à environ 10,3 mètres de colonne d'eau ; la tension de vapeur de l'eau vaut environ 0,24 m à 20 °C, 0,75 m à 40 °C et 10,3 m à 100 °C — à l'ébullition, le NPSH disponible atmosphérique s'annule entièrement, ce qui explique la difficulté de pomper un liquide proche de son point d'ébullition.",
+   "source": "ANSI/HI 9.6.1 ; API 610."
+  },
+  {
+   "id": "Q14",
+   "domaine": "Équipements tournants",
+   "difficulte": 3,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nLa vitesse de rotation d'un ventilateur est portée de 1500 à 1800 tr/min. Par quel facteur la puissance absorbée à l'arbre est-elle multipliée ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Par 1,2 environ.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est le facteur d'augmentation du DÉBIT, proportionnel à la vitesse."
+    },
+    {
+     "id": "b",
+     "texte": "Par 1,44 environ.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est le facteur d'augmentation de la PRESSION, qui varie avec le carré de la vitesse."
+    },
+    {
+     "id": "c",
+     "texte": "Par 2 environ.",
+     "correcte": false,
+     "feedback": "Incorrect. Valeur surestimée : le calcul exact donne un résultat inférieur."
+    },
+    {
+     "id": "d",
+     "texte": "Par 3 environ.",
+     "correcte": false,
+     "feedback": "Incorrect. Valeur très surestimée."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": true,
+     "feedback": "Correct. Le rapport de vitesse vaut 1800/1500 = 1,2, et la puissance varie au cube : 1,2³ ≈ 1,73. Aucune proposition ne correspond."
+    }
+   ],
+   "feedback_general": "Calcul mental : 1,2 × 1,2 = 1,44, puis 1,44 × 1,2 ≈ 1,73. Une hausse de vitesse de seulement 20 % accroît donc la puissance absorbée de plus de 70 %.\n\nConséquence d'exploitation majeure : changer une poulie pour « gagner un peu de débit » sur un ventilateur peut mettre le moteur en surcharge. C'est l'erreur classique lorsqu'un local est jugé mal ventilé. Avant toute modification de vitesse, il faut vérifier que le moteur accepte la puissance résultante — un rapport 1,2 sur la vitesse suffit à faire passer un moteur correctement dimensionné en surcharge de 73 %.",
+   "source": "ANSI/AMCA 201 ; lois de similitude des turbomachines."
+  },
+  {
+   "id": "Q15",
+   "domaine": "Équipements tournants",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "SANS CALCULATRICE.\n\nVous relisez un rapport d'intervention sur des machines tournantes. Quels ordres de grandeur sont plausibles ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Un niveau vibratoire global inférieur à 2,3 mm/s efficace pour une machine neuve de puissance moyenne sur support rigide.",
+     "correcte": true,
+     "feedback": "Correct. C'est l'ordre de grandeur de la limite haute de la zone A de l'ISO 10816-3 pour cette classe de machines."
+    },
+    {
+     "id": "b",
+     "texte": "Un rendement hydraulique compris entre 70 et 85 % pour une pompe centrifuge de puissance moyenne à son meilleur point.",
+     "correcte": true,
+     "feedback": "Correct. Les très petites pompes descendent nettement plus bas, les grosses machines montent au-delà de 85 %."
+    },
+    {
+     "id": "c",
+     "texte": "Une température de graisse ou de palier de roulement dépassant durablement 100 °C sans conséquence.",
+     "correcte": false,
+     "feedback": "Incorrect. Au-delà d'environ 70 à 80 °C, la durée de vie de la graisse chute très rapidement et l'intervalle de regraissage doit être fortement réduit."
+    },
+    {
+     "id": "d",
+     "texte": "Un remplissage de graisse d'environ un tiers à la moitié du volume libre du palier.",
+     "correcte": true,
+     "feedback": "Correct. Le remplissage complet provoque un barattage et un échauffement, contrairement à l'intuition."
+    },
+    {
+     "id": "e",
+     "texte": "Un NPSH requis de 30 mètres pour une pompe centrifuge de transfert courante.",
+     "correcte": false,
+     "feedback": "Incorrect. Un NPSH requis se situe typiquement entre 1 et 6 mètres. Une valeur de 30 mètres serait irréalisable avec une aspiration atmosphérique."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Trois propositions sont plausibles."
+    }
+   ],
+   "feedback_general": "Repères à mémoriser pour la relecture rapide d'un rapport machines : niveau vibratoire de 2 à 3 mm/s pour une machine saine et au-delà de 7 mm/s pour une machine à traiter ; rendement de pompe de 70 à 85 % ; NPSH requis de 1 à 6 mètres ; température de palier inférieure à 70 à 80 °C ; remplissage de graisse au tiers ou à la moitié. Une valeur qui sort nettement de ces plages doit déclencher une vérification, non une acceptation.",
+   "source": "ISO 10816-3 ; ANSI/HI 9.6.1 ; ISO 15243."
+  },
+  {
+   "id": "Q16",
+   "domaine": "Automatisme, instrumentation & régulation",
+   "difficulte": 1,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUn transmetteur de pression est étalonné sur une plage de 0 à 10 bar en signal 4-20 mA. Le courant mesuré dans la boucle est de 12 mA. Quelle pression cela représente-t-il ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "5 bar.",
+     "correcte": true,
+     "feedback": "Correct. (12 − 4) / (20 − 4) = 8 / 16 = 0,5, soit 50 % de la plage, donc 5 bar."
+    },
+    {
+     "id": "b",
+     "texte": "6 bar.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur résulterait d'un calcul en 0-20 mA, c'est-à-dire en oubliant le zéro vif à 4 mA."
+    },
+    {
+     "id": "c",
+     "texte": "12 bar.",
+     "correcte": false,
+     "feedback": "Incorrect. Confusion entre la valeur du courant et la grandeur mesurée, qui sort d'ailleurs de la plage d'étalonnage."
+    },
+    {
+     "id": "d",
+     "texte": "8 bar.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur 8 correspond à l'écart 12 − 4 en milliampères, non à la pression."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur de 5 bar est exacte."
+    }
+   ],
+   "feedback_general": "Méthode systématique : calculer d'abord le pourcentage de l'échelle, soit (I − 4) / 16, puis l'appliquer à l'étendue de mesure. Repères de conversion à mémoriser, valables sur toute plage : 4 mA = 0 %, 8 mA = 25 %, 12 mA = 50 %, 16 mA = 75 %, 20 mA = 100 %. Chaque milliampère représente 6,25 % de l'échelle. Ces cinq points permettent de convertir de tête n'importe quelle mesure d'une boucle de courant.",
+   "source": "IEC 60381-1 ; NAMUR NE 43."
+  },
+  {
+   "id": "Q17",
+   "domaine": "Automatisme, instrumentation & régulation",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUn transmetteur de température est étalonné de 50 à 150 °C en 4-20 mA. Quel courant délivre-t-il pour une température mesurée de 90 °C ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 9,6 mA.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur correspondrait à 85 °C environ, ou à une erreur dans le calcul du pourcentage."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 10,4 mA.",
+     "correcte": true,
+     "feedback": "Correct. (90 − 50) / (150 − 50) = 40 / 100 = 40 % de l'échelle, donc I = 4 + 0,40 × 16 = 4 + 6,4 = 10,4 mA."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 12 mA.",
+     "correcte": false,
+     "feedback": "Incorrect. 12 mA correspond à 50 % de l'échelle, soit une température de 100 °C."
+    },
+    {
+     "id": "d",
+     "texte": "Environ 14,4 mA.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur résulterait de l'oubli du décalage de zéro à 50 °C, en calculant 90/150."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur d'environ 10,4 mA est exacte."
+    }
+   ],
+   "feedback_general": "Le piège de cette question est le zéro décalé : l'échelle ne commence pas à 0 °C mais à 50 °C. Il faut donc systématiquement retrancher la borne basse au numérateur comme au dénominateur. Vérification de bon sens : 90 °C se situe un peu en dessous du milieu de la plage 50-150, donc le courant doit se situer un peu en dessous de 12 mA. Ce contrôle par le raisonnement élimine immédiatement les options 12 et 14,4 mA.",
+   "source": "IEC 60381-1 ; bonnes pratiques d'étalonnage des transmetteurs."
+  },
+  {
+   "id": "Q18",
+   "domaine": "Automatisme, instrumentation & régulation",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUne sonde Pt100 présente une résistance de 100 Ω à 0 °C et une sensibilité d'environ 0,385 Ω par degré. Un mesureur affiche 138,5 Ω. Quelle est la température ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 38 °C.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur résulterait d'une soustraction de 100 sans division par la sensibilité."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 100 °C.",
+     "correcte": true,
+     "feedback": "Correct. 138,5 − 100 = 38,5 Ω, puis 38,5 / 0,385 = 100 °C."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 138 °C.",
+     "correcte": false,
+     "feedback": "Incorrect. Confusion directe entre la valeur de la résistance et celle de la température."
+    },
+    {
+     "id": "d",
+     "texte": "Environ 385 °C.",
+     "correcte": false,
+     "feedback": "Incorrect. Erreur dans le sens de l'opération : il faut diviser par la sensibilité, non multiplier."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur d'environ 100 °C est exacte."
+    }
+   ],
+   "feedback_general": "Repères Pt100 à mémoriser, très utiles pour un contrôle rapide sans table : 100 Ω à 0 °C, environ 119 Ω à 50 °C, 138,5 Ω à 100 °C, 175 Ω à 200 °C. Règle mentale approchée : ajouter environ 4 Ω correspond à environ 10 °C. Application immédiate en atelier : une sonde qui mesure 110 Ω environ indique quelque 25 °C, ce qui permet de vérifier sa cohérence avec la température ambiante avant montage.",
+   "source": "IEC 60751 (sondes à résistance de platine)."
+  },
+  {
+   "id": "Q19",
+   "domaine": "Automatisme, instrumentation & régulation",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "SANS CALCULATRICE.\n\nVous relisez la spécification d'instrumentation d'une station. Quels ordres de grandeur sont plausibles ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Une précision de mesure de 0,1 à 0,5 % de l'étendue pour un transmetteur de pression industriel courant.",
+     "correcte": true,
+     "feedback": "Correct. Les transmetteurs de comptage transactionnel visent mieux, les indicateurs simples restent moins précis."
+    },
+    {
+     "id": "b",
+     "texte": "Un temps de cycle d'automate compris entre quelques millisecondes et quelques dizaines de millisecondes.",
+     "correcte": true,
+     "feedback": "Correct. Cet ordre de grandeur convient à la quasi-totalité des procédés fluides, mais pas aux applications de commande rapide."
+    },
+    {
+     "id": "c",
+     "texte": "Une résolution d'environ 4000 points pour une entrée analogique codée sur 12 bits.",
+     "correcte": true,
+     "feedback": "Correct. 2¹² = 4096. Sur une plage de 0 à 10 bar, cela représente une résolution théorique de l'ordre de 0,0025 bar, très supérieure à la précision réelle du capteur."
+    },
+    {
+     "id": "d",
+     "texte": "Une résistance de charge totale de 2000 Ω admissible sans difficulté sur une boucle 4-20 mA alimentée en 24 V.",
+     "correcte": false,
+     "feedback": "Incorrect. À 20 mA, 2000 Ω exigeraient 40 V pour la seule charge. La limite usuelle se situe plutôt autour de 500 à 600 Ω en alimentation 24 V."
+    },
+    {
+     "id": "e",
+     "texte": "Une longueur de câble Pt100 de 100 mètres en montage deux fils, sans incidence sur la précision.",
+     "correcte": false,
+     "feedback": "Incorrect. La résistance de ligne s'ajoute directement à la mesure et provoquerait une erreur de plusieurs degrés. Le montage trois ou quatre fils s'impose."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Trois propositions sont plausibles."
+    }
+   ],
+   "feedback_general": "Puissances de deux à connaître pour l'instrumentation numérique : 2⁸ = 256, 2¹⁰ = 1024, 2¹² = 4096, 2¹⁶ = 65 536. Rappel important : la résolution du convertisseur n'est pas la précision de la mesure. Un convertisseur 16 bits associé à un capteur précis à 0,5 % ne donne pas une mesure à 0,5 pour mille : c'est toujours le maillon le plus faible de la chaîne qui fixe la précision réelle.",
+   "source": "IEC 60381-1 ; IEC 60751 ; IEC 61131-2."
+  },
+  {
+   "id": "Q20",
+   "domaine": "Maintenance & fiabilité",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUn équipement présente un MTBF de 500 heures et un MTTR de 5 heures. Quelle est sa disponibilité intrinsèque ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 99 %.",
+     "correcte": true,
+     "feedback": "Correct. D = MTBF / (MTBF + MTTR) = 500 / 505 ≈ 0,99."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 90 %.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur correspondrait à un MTTR de l'ordre de 55 heures pour le même MTBF."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 95 %.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur correspondrait à un MTTR d'environ 26 heures."
+    },
+    {
+     "id": "d",
+     "texte": "Environ 1 %.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est l'indisponibilité, complément de la disponibilité."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur d'environ 99 % est exacte."
+    }
+   ],
+   "feedback_general": "Formule : D = MTBF / (MTBF + MTTR). Raccourci mental très commode : l'INDISPONIBILITÉ vaut approximativement MTTR / MTBF lorsque le MTTR est petit devant le MTBF. Ici, 5 / 500 = 1 %, d'où une disponibilité de 99 % sans aucune division difficile.\n\nConséquence de gestion : à partir de ce raccourci, on voit immédiatement que diviser le MTTR par deux — par exemple en constituant un stock de pièces critiques — a exactement le même effet sur la disponibilité que doubler le MTBF, ce qui est généralement bien plus coûteux à obtenir.",
+   "source": "NF EN 13306 ; IEC 60050-192."
+  },
+  {
+   "id": "Q21",
+   "domaine": "Maintenance & fiabilité",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUn équipement présente un taux de disponibilité de 0,80, un taux de performance de 0,90 et un taux de qualité de 0,95. Quel est son taux de rendement synthétique ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 68 %.",
+     "correcte": true,
+     "feedback": "Correct. 0,80 × 0,90 = 0,72, puis 0,72 × 0,95 ≈ 0,684."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 88 %.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est la moyenne arithmétique des trois taux, qui n'a pas de sens ici : les taux se multiplient."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 80 %.",
+     "correcte": false,
+     "feedback": "Incorrect. Le TRS n'est pas déterminé par le plus faible des taux, mais par leur produit."
+    },
+    {
+     "id": "d",
+     "texte": "Environ 95 %.",
+     "correcte": false,
+     "feedback": "Incorrect. Les trois composantes entrent toutes dans le calcul, pas seulement la qualité."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur d'environ 68 % est exacte."
+    }
+   ],
+   "feedback_general": "Astuce de calcul mental pour multiplier des taux : multiplier par 0,95 revient à retrancher 5 %. Ici, 0,72 moins 5 % de 0,72, soit 0,72 − 0,036 ≈ 0,684. De même, multiplier par 0,90 revient à retrancher 10 %.\n\nEnseignement essentiel du TRS : trois taux qui paraissent tous acceptables produisent un rendement d'ensemble médiocre, car ils se multiplient. C'est précisément ce que la moyenne arithmétique masque, et c'est la raison pour laquelle l'option à 88 % est le distracteur le plus séduisant de cette question.",
+   "source": "NF E 60-182 ; référentiels TPM."
+  },
+  {
+   "id": "Q22",
+   "domaine": "Maintenance & fiabilité",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nDeux pompes identiques, de fiabilité individuelle 0,80 sur une période donnée, sont installées en redondance : il suffit que l'une des deux fonctionne pour que la fonction soit assurée. Quelle est la fiabilité de l'ensemble ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "0,64.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est le produit 0,80 × 0,80, qui correspondrait à une architecture en SÉRIE, où les deux pompes devraient fonctionner simultanément."
+    },
+    {
+     "id": "b",
+     "texte": "0,80.",
+     "correcte": false,
+     "feedback": "Incorrect. Ce serait la fiabilité d'une pompe seule : la redondance n'apporterait alors rien."
+    },
+    {
+     "id": "c",
+     "texte": "0,96.",
+     "correcte": true,
+     "feedback": "Correct. R = 1 − (1 − 0,80)² = 1 − 0,20² = 1 − 0,04 = 0,96."
+    },
+    {
+     "id": "d",
+     "texte": "1,60.",
+     "correcte": false,
+     "feedback": "Incorrect. Une fiabilité est une probabilité : elle ne peut jamais dépasser 1."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur de 0,96 est exacte."
+    }
+   ],
+   "feedback_general": "Méthode mentale pour la redondance : raisonner sur les DÉFAILLANCES plutôt que sur les succès. Les deux pompes doivent tomber en panne ensemble pour perdre la fonction, soit 0,20 × 0,20 = 0,04, d'où une fiabilité de 0,96. Ce raisonnement est bien plus rapide que la formule et évite les erreurs de sens.\n\nRéserve capitale à ne jamais oublier : ce calcul suppose l'INDÉPENDANCE des deux pompes. Si elles partagent le même départ électrique, la même aspiration ou la même équipe de maintenance, une défaillance de cause commune ramène la fiabilité réelle bien en dessous de 0,96.",
+   "source": "IEC 61078 (blocs-diagrammes de fiabilité) ; IEC 61508 partie 6."
+  },
+  {
+   "id": "Q23",
+   "domaine": "Maintenance & fiabilité",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "SANS CALCULATRICE.\n\nVous relisez le tableau de bord maintenance de la station. Quelles interprétations sont correctes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Un équipement ayant subi 4 pannes sur 800 heures de fonctionnement présente un MTBF de 200 heures.",
+     "correcte": true,
+     "feedback": "Correct. MTBF = temps de bon fonctionnement divisé par le nombre de défaillances, soit 800 / 4."
+    },
+    {
+     "id": "b",
+     "texte": "Un total de 12 heures d'arrêt réparti sur 4 interventions correspond à un MTTR de 3 heures.",
+     "correcte": true,
+     "feedback": "Correct. Le MTTR est une moyenne par intervention, soit 12 / 4."
+    },
+    {
+     "id": "c",
+     "texte": "Une part de maintenance préventive passant de 20 à 60 % des heures doit s'accompagner d'une baisse des arrêts fortuits pour être jugée bénéfique.",
+     "correcte": true,
+     "feedback": "Correct. Un ratio de préventif n'est pas un résultat en soi : c'est un moyen, dont l'effet se mesure sur la disponibilité et les arrêts subis."
+    },
+    {
+     "id": "d",
+     "texte": "Un MTTR élevé traduit nécessairement un manque de compétence des équipes d'intervention.",
+     "correcte": false,
+     "feedback": "Incorrect. Il traduit le plus souvent l'attente de pièces, la difficulté d'accès ou l'absence de préparation, bien avant la compétence technique."
+    },
+    {
+     "id": "e",
+     "texte": "Une baisse du budget de maintenance sur un exercice démontre une amélioration de la performance du service.",
+     "correcte": false,
+     "feedback": "Incorrect. Elle peut résulter d'un report de préventif, dont le coût réapparaîtra sous forme d'arrêts fortuits les exercices suivants."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Trois interprétations sont correctes."
+    }
+   ],
+   "feedback_general": "Deux divisions simples suffisent à exploiter la plupart des tableaux de bord maintenance : MTBF = heures de bon fonctionnement divisées par le nombre de défaillances, MTTR = heures d'arrêt divisées par le nombre d'interventions. Le piège d'interprétation le plus fréquent est de traiter un indicateur de moyen — part de préventif, budget, heures engagées — comme un indicateur de résultat. Les seuls résultats sont la disponibilité, les arrêts subis et le coût total, coût d'indisponibilité inclus.",
+   "source": "NF EN 13306 ; IEC 60050-192."
+  },
+  {
+   "id": "Q24",
+   "domaine": "Sécurité ATEX & pétrole-gaz",
+   "difficulte": 1,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUn explosimètre indique 20 % LIE dans un local. La limite inférieure d'explosivité du gaz recherché est de 5 % en volume. Quelle est la concentration réelle du gaz dans l'atmosphère ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "1 % en volume.",
+     "correcte": true,
+     "feedback": "Correct. 20 % de la LIE, soit 20 % de 5 %, donne 1 % en volume."
+    },
+    {
+     "id": "b",
+     "texte": "5 % en volume.",
+     "correcte": false,
+     "feedback": "Incorrect. 5 % en volume correspondrait à 100 % LIE, c'est-à-dire à l'entrée dans le domaine d'explosivité."
+    },
+    {
+     "id": "c",
+     "texte": "20 % en volume.",
+     "correcte": false,
+     "feedback": "Incorrect. Confusion entre le pourcentage de la LIE affiché et le pourcentage volumique absolu. C'est le contresens classique sur cet appareil."
+    },
+    {
+     "id": "d",
+     "texte": "0,2 % en volume.",
+     "correcte": false,
+     "feedback": "Incorrect. Erreur d'un facteur cinq dans le calcul."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur de 1 % en volume est exacte."
+    }
+   ],
+   "feedback_general": "Un explosimètre affiche un pourcentage de la LIE, jamais un pourcentage volumique absolu. La conversion est une simple multiplication : concentration volumique = affichage en % LIE × LIE du gaz. Quelques LIE à mémoriser : méthane environ 5 %, propane environ 2 %, hydrogène environ 4 %, vapeurs d'essence environ 1,4 %.\n\nÀ retenir également : les seuils d'alarme sont réglés très bas, typiquement 10 ou 20 % LIE, précisément pour intervenir bien avant d'atteindre le domaine d'explosivité. Une alarme à 20 % LIE ne signifie pas que l'atmosphère est explosive — elle signifie qu'il faut arrêter et ventiler.",
+   "source": "IEC 60079-20-1 ; IEC 60079-29-2."
+  },
+  {
+   "id": "Q25",
+   "domaine": "Sécurité ATEX & pétrole-gaz",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUne cuvette de rétention rectangulaire de 50 mètres sur 40 mètres doit pouvoir contenir la totalité du volume du plus grand bac qu'elle entoure, soit 5000 m³. Quelle hauteur utile de merlon faut-il, en négligeant le volume occupé par les bacs eux-mêmes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 1,0 mètre.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette hauteur ne fournirait que 2000 m³ de rétention."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 2,5 mètres.",
+     "correcte": true,
+     "feedback": "Correct. La surface vaut 50 × 40 = 2000 m², et 5000 / 2000 = 2,5 m."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 5,0 mètres.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette hauteur fournirait 10 000 m³, soit le double du besoin."
+    },
+    {
+     "id": "d",
+     "texte": "Environ 0,5 mètre.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette hauteur ne fournirait que 1000 m³."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur d'environ 2,5 mètres est exacte."
+    }
+   ],
+   "feedback_general": "Calcul mental direct : hauteur = volume divisé par la surface au sol. Ici, 5000 / 2000 = 2,5 m.\n\nDeux réserves qui comptent en pratique. D'abord, le volume réellement occupé par les bacs à l'intérieur de la cuvette réduit la capacité disponible et doit être déduit dans le calcul réel. Ensuite, une cuvette profonde pose des problèmes d'accès, d'évacuation et d'intervention des secours ; on préfère généralement une cuvette large et peu profonde, ce qui rejoint la règle usuelle limitant la hauteur des merlons.",
+   "source": "API 650 ; NFPA 30 ; réglementations nationales relatives aux installations classées."
+  },
+  {
+   "id": "Q26",
+   "domaine": "Sécurité ATEX & pétrole-gaz",
+   "difficulte": 3,
+   "type": "multiple",
+   "enonce": "SANS CALCULATRICE.\n\nVous vérifiez la cohérence d'un marquage ATEX avec les conditions d'installation. Quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "La classe T4 correspond à une température maximale de surface de 135 °C.",
+     "correcte": true,
+     "feedback": "Correct. Échelle à mémoriser : T1 = 450 °C, T2 = 300 °C, T3 = 200 °C, T4 = 135 °C, T5 = 100 °C, T6 = 85 °C."
+    },
+    {
+     "id": "b",
+     "texte": "Un matériel marqué T4 convient pour un gaz dont la température d'auto-inflammation est de 200 °C.",
+     "correcte": true,
+     "feedback": "Correct. La température de surface du matériel, 135 °C, reste inférieure à la température d'auto-inflammation du gaz, 200 °C."
+    },
+    {
+     "id": "c",
+     "texte": "Un matériel certifié pour le groupe IIC convient également en présence de gaz des groupes IIA et IIB.",
+     "correcte": true,
+     "feedback": "Correct. Le groupe IIC est le plus contraignant : un matériel qui lui convient couvre les groupes moins exigeants. L'inverse est faux."
+    },
+    {
+     "id": "d",
+     "texte": "Un matériel marqué T3 convient pour un gaz dont la température d'auto-inflammation est de 150 °C.",
+     "correcte": false,
+     "feedback": "Incorrect. T3 autorise une température de surface de 200 °C, supérieure aux 150 °C d'auto-inflammation du gaz : le matériel pourrait l'enflammer."
+    },
+    {
+     "id": "e",
+     "texte": "Une classe de température de rang plus élevé, comme T6 par rapport à T1, autorise une température de surface plus grande.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est l'inverse : le rang croît quand la température admissible décroît. T6, à 85 °C, est la classe la plus contraignante."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Trois propositions sont exactes."
+    }
+   ],
+   "feedback_general": "Deux échelles à mémoriser, toutes deux d'ordre inverse de l'intuition. Les classes de température : T1 = 450 °C jusqu'à T6 = 85 °C, le rang le plus élevé étant le plus contraignant. Les groupes de gaz : IIA pour le propane, IIB pour l'éthylène, IIC pour l'hydrogène et l'acétylène, la lettre la plus avancée étant la plus contraignante.\n\nRègle de vérification, applicable de tête : la température de surface du matériel doit rester INFÉRIEURE à la température d'auto-inflammation du gaz présent, et le groupe du matériel doit être au moins aussi contraignant que celui du gaz.",
+   "source": "IEC 60079-0 ; IEC 60079-14 ; IEC 60079-20-1."
+  },
+  {
+   "id": "Q27",
+   "domaine": "Sécurité ATEX & pétrole-gaz",
+   "difficulte": 3,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUne soupape de sécurité est tarée à 20 bar. La règle de conception impose que la perte de charge non récupérable dans sa tuyauterie d'entrée reste inférieure à 3 % de la pression de tarage. Quelle est la valeur limite admissible ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "0,2 bar.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur correspondrait à 1 % du tarage."
+    },
+    {
+     "id": "b",
+     "texte": "1 bar.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur correspondrait à 5 % du tarage."
+    },
+    {
+     "id": "c",
+     "texte": "2 bar.",
+     "correcte": false,
+     "feedback": "Incorrect. Cette valeur correspondrait à 10 % du tarage."
+    },
+    {
+     "id": "d",
+     "texte": "3 bar.",
+     "correcte": false,
+     "feedback": "Incorrect. Confusion entre le pourcentage, 3 %, et une valeur exprimée en bar."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": true,
+     "feedback": "Correct. 3 % de 20 bar valent 0,6 bar, valeur qui ne figure dans aucune des propositions."
+    }
+   ],
+   "feedback_general": "Calcul mental : 1 % de 20 vaut 0,2, donc 3 % valent 0,6 bar. Prendre systématiquement 1 % comme unité de calcul est le réflexe le plus efficace pour tous les pourcentages sous pression de temps.\n\nRappel technique : dépasser cette limite de 3 % provoque le phénomène de claquement répété, ou chattering. Lorsque la soupape s'ouvre, la perte de charge dans la ligne d'entrée fait chuter la pression sous le clapet en dessous de la pression de refermeture ; la soupape se referme, la pression remonte aussitôt, et un cycle à haute fréquence s'installe, qui détruit le siège et fatigue la tuyauterie. La distraction proposée « 3 bar » est le piège classique de confusion entre pourcentage et valeur absolue.",
+   "source": "API 520 partie II ; API 521 ; ASME Section VIII."
+  },
+  {
+   "id": "Q28",
+   "domaine": "HSE, réglementation & gestion de projet",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nUn projet présente les valeurs suivantes : valeur acquise 600, coût réel 750, valeur planifiée 800. Que peut-on conclure ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Indice de coût de 0,80 et indice de délai de 0,75 : le projet est à la fois en dépassement de coût et en retard.",
+     "correcte": true,
+     "feedback": "Correct. CPI = 600/750 = 0,80 et SPI = 600/800 = 0,75. Les deux indices étant inférieurs à 1, la performance est défavorable sur les deux axes."
+    },
+    {
+     "id": "b",
+     "texte": "Indice de coût de 1,25 : le projet dégage une économie.",
+     "correcte": false,
+     "feedback": "Incorrect. Le rapport a été inversé : le CPI se calcule en divisant la valeur acquise par le coût réel, non l'inverse."
+    },
+    {
+     "id": "c",
+     "texte": "Le projet est en avance sur le planning, la valeur planifiée étant supérieure à la valeur acquise.",
+     "correcte": false,
+     "feedback": "Incorrect. Une valeur acquise inférieure à la valeur planifiée signifie précisément que l'avancement réel est en RETARD sur le prévu."
+    },
+    {
+     "id": "d",
+     "texte": "Les données sont insuffisantes pour conclure sans connaître le budget total à l'achèvement.",
+     "correcte": false,
+     "feedback": "Incorrect. Les deux indices se calculent à partir de ces trois seules grandeurs."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La première proposition est exacte."
+    }
+   ],
+   "feedback_general": "Deux divisions mentales simples : CPI = valeur acquise / coût réel, soit 600/750 = 0,8 ; SPI = valeur acquise / valeur planifiée, soit 600/800 = 0,75. Moyen mnémotechnique : la valeur acquise est TOUJOURS au numérateur des deux indices. Un indice inférieur à 1 est toujours défavorable.\n\nContrôle de bon sens sans aucun calcul : le projet a dépensé 750 pour produire 600 de valeur, alors qu'il aurait dû en produire 800. Il dépense donc plus que ce qu'il produit et produit moins que prévu — les deux mauvaises nouvelles à la fois.",
+   "source": "Corpus PMBOK, gestion par la valeur acquise ; ANSI/EIA-748."
+  },
+  {
+   "id": "Q29",
+   "domaine": "HSE, réglementation & gestion de projet",
+   "difficulte": 2,
+   "type": "unique",
+   "enonce": "SANS CALCULATRICE.\n\nL'installation d'un variateur de vitesse coûte 6000 unités et permet d'économiser 15 000 kWh par an. Le prix de l'énergie est de 0,10 unité par kilowattheure. Quel est le temps de retour brut de l'investissement ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "Environ 4 ans.",
+     "correcte": true,
+     "feedback": "Correct. Économie annuelle : 15 000 × 0,10 = 1500 unités. Temps de retour : 6000 / 1500 = 4 ans."
+    },
+    {
+     "id": "b",
+     "texte": "Environ 2 ans.",
+     "correcte": false,
+     "feedback": "Incorrect. Cela supposerait une économie annuelle de 3000 unités, soit un prix de l'énergie double."
+    },
+    {
+     "id": "c",
+     "texte": "Environ 6 ans.",
+     "correcte": false,
+     "feedback": "Incorrect. Cela supposerait une économie annuelle de 1000 unités seulement."
+    },
+    {
+     "id": "d",
+     "texte": "Environ 10 ans.",
+     "correcte": false,
+     "feedback": "Incorrect. Erreur probable d'un facteur dans la conversion des kilowattheures en unités monétaires."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. La valeur d'environ 4 ans est exacte."
+    }
+   ],
+   "feedback_general": "Enchaînement mental : convertir l'économie physique en économie monétaire, puis diviser l'investissement par cette économie annuelle. Multiplier par 0,10 revient simplement à décaler la virgule d'un rang.\n\nRepère de décision usuel : un temps de retour inférieur à deux ou trois ans emporte généralement l'adhésion sans discussion ; au-delà de cinq ans, il faut argumenter sur les bénéfices annexes — meilleure conduite du procédé, réduction des à-coups mécaniques, allongement de la durée de vie des équipements. Ce calcul reste brut : il ignore l'actualisation, la maintenance du matériel installé et l'évolution du prix de l'énergie.",
+   "source": "ISO 50001 ; ISO 55001 ; méthodes de coût du cycle de vie."
+  },
+  {
+   "id": "Q30",
+   "domaine": "HSE, réglementation & gestion de projet",
+   "difficulte": 2,
+   "type": "multiple",
+   "enonce": "SANS CALCULATRICE.\n\nUn moteur de 100 kW fonctionne 8000 heures par an à pleine charge, avec un prix de l'énergie de 0,10 unité par kilowattheure. Quelles affirmations sont exactes ?",
+   "options": [
+    {
+     "id": "a",
+     "texte": "La consommation annuelle avoisine 800 000 kWh.",
+     "correcte": true,
+     "feedback": "Correct. 100 kW × 8000 h = 800 000 kWh, calcul immédiat de tête."
+    },
+    {
+     "id": "b",
+     "texte": "La facture énergétique annuelle avoisine 80 000 unités.",
+     "correcte": true,
+     "feedback": "Correct. 800 000 × 0,10 = 80 000 unités par an, soit bien plus que le prix d'achat de la machine."
+    },
+    {
+     "id": "c",
+     "texte": "Un gain de rendement de deux points représenterait une économie annuelle de l'ordre de 1600 unités.",
+     "correcte": true,
+     "feedback": "Correct. Deux pour cent de 80 000 valent 1600 unités par an, ce qui amortit rapidement le surcoût d'une classe de rendement supérieure."
+    },
+    {
+     "id": "d",
+     "texte": "Sur la durée de vie de la machine, le prix d'achat représente l'essentiel du coût global de possession.",
+     "correcte": false,
+     "feedback": "Incorrect. C'est l'inverse : l'énergie représente couramment plus de 90 % du coût global d'un moteur en service continu."
+    },
+    {
+     "id": "e",
+     "texte": "Le fonctionnement 8000 heures par an correspond à environ six mois de service continu.",
+     "correcte": false,
+     "feedback": "Incorrect. Une année compte environ 8760 heures : 8000 heures représentent donc plus de 90 % du temps calendaire, soit un service quasi permanent."
+    },
+    {
+     "id": "z",
+     "texte": "Aucune des réponses proposées.",
+     "correcte": false,
+     "feedback": "Incorrect. Trois propositions sont exactes."
+    }
+   ],
+   "feedback_general": "Repères temporels à mémoriser : une année compte 8760 heures, un mois environ 730 heures, une semaine 168 heures. Un fonctionnement de 8000 heures par an correspond donc à un service pratiquement continu.\n\nRaccourci d'estimation économique très efficace : en 400 V, un kilowatt consommé en continu pendant une année coûte environ 8760 fois le prix du kilowattheure, soit ici près de 880 unités. Multiplier par la puissance de la machine donne instantanément l'enjeu annuel, et permet d'argumenter un investissement d'efficacité énergétique sans aucun tableur.",
+   "source": "ISO 50001 ; IEC 60034-30-1 ; méthodes de coût du cycle de vie."
+  }
+ ]
+}

@@ -43,6 +43,16 @@
       "statut": "publie"
     },
     {
+      "slug": "exam-E",
+      "fichier": "exams/exam-E.json",
+      "titre": "Épreuve E — sans calculatrice",
+      "resume": "30 questions de calcul mental et d'ordres de grandeur, calculatrice interdite. Chaque correction donne le raccourci de calcul à mémoriser.",
+      "niveau": "Confirmé · format court",
+      "questions": 30,
+      "duree_min": 75,
+      "statut": "publie"
+    },
+    {
       "slug": "exam-A-calibration",
       "fichier": "exams/exam-A-calibration.json",
       "titre": "Échantillon de calibration",
